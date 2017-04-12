@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="/manual/reveal.js/css/reveal.css">
+		
+		
+		<link rel="stylesheet" href="/manual/reveal.js/lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="/manual/reveal.js/css/theme/boblack.css">
+		<link rel="stylesheet" href="/manual/reveal.js/css/theme/boRevealStyle.css">
+
+		
+		
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				 
+				<script type="text/javascript">
+
+					var parser = document.createElement('a');
+					parser.href = document.URL;
+					var request = parser.search;
+					document.write('<section ');
+					if (request){
+						document.write('data-markdown="https://raw.githubusercontent.com/BeRANDON/ResearchReport/master/');
+						document.write(request.split('/')[0].split('?')[1]);
+						document.write('.md" ');
+					}
+					else{
+						document.write('data-markdown="https://raw.githubusercontent.com/BeRANDON/ResearchReport/master/2016-10-31-%5BQuickReport%5D_Analysis_Social_Interactions_with_ActivityNet_classification.md" ');
+					}
+					document.write('data-separator="^\n\n\n"  data-separator-vertical="^\n\n"  data-separator-notes="^Note:"  data-charset="utf-8"></section>');
+
+				</script>
+						 
+				
+			</div>
+		</div>
+
+		<script src="/manual/reveal.js/lib/js/head.min.js"></script>
+		<script src="/manual/reveal.js/js/reveal.js"></script>
+
+		<script>
+			
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				slideNumber: true,
+				history: true,
+				center: false,
+				margin: 0,
+				minScale: 0.618,
+				maxScale: 1,
+
+				transition: 'convex', 
+
+				
+				dependencies: [
+					{ src: '/manual/reveal.js/plugin/markdown/marked.js' },
+					{ src: '/manual/reveal.js/plugin/markdown/markdown.js' },
+					
+					{ src: '/manual/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

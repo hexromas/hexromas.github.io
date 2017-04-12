@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://hexromas.github.io/index.xml</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Apr 2017 11:38:22 +0000</lastBuildDate>
+    <atom:link href="https://hexromas.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Debate_videos_on_youtube</title>
+      <link>https://hexromas.github.io/2017-04-07-Debate_videos_on_youtube/</link>
+      <pubDate>Fri, 07 Apr 2017 11:38:22 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-04-07-Debate_videos_on_youtube/</guid>
+      <description>
+
+&lt;h2 id=&#34;review-for-progress&#34;&gt;Review for Progress&lt;/h2&gt;
+
+&lt;p&gt;We aim to provide a primary pipline to build up videos dataset from youtube for &lt;code&gt;(dis)agreement video classification&lt;/code&gt; issue.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;How to define agreement in psychology? What is &amp;lsquo;Direct agreement&amp;rsquo;?&lt;/li&gt;
+&lt;li&gt;Search youtube-8M dataset for suitable video.&lt;/li&gt;
+&lt;li&gt;Search youtube for suitable video for (dis)agreement classification issue.&lt;/li&gt;
+&lt;li&gt;Investigate youtube standard permission.&lt;/li&gt;
+&lt;li&gt;How to download youtube videos.&lt;/li&gt;
+&lt;li&gt;Write a primary pipline about how to build up the suitable dataset from youtube, including labeling scheme.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;progress-1-psychology-definition-about-direct-agreement&#34;&gt;Progress{{1}} - Psychology definition about &amp;lsquo;direct agreement&amp;rsquo;.&lt;/h3&gt;
+
+&lt;p&gt;Before searching videos in youtube, we need to firstly answer the question &lt;strong&gt;&amp;ldquo;What is agreement? How to define it?&amp;rdquo;.&lt;/strong&gt; One can skip to the Appendix-A to have a look at the example about the (dis)agreement analysis for one NBA TV show.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bousmalis defines three kinds of (dis)agreement&lt;/strong&gt;, i.e. &lt;code&gt;(1) Direct Speaker&#39;s (Dis)Agreement&lt;/code&gt;, &lt;code&gt;(2) Indirect Speaker&#39;s (Dis)Agreement&lt;/code&gt; &amp;amp; &lt;code&gt;(3) Nonverbal Listener&#39;s (Dis)Agreement&lt;/code&gt;, in section 2 of paper [1].&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bousmalis only focus on (1)&lt;em&gt;direct&lt;/em&gt; and (2)&lt;em&gt;indirect agreement &amp;amp; disagreement&lt;/em&gt; situations, which can be judged by verbal content.&lt;/strong&gt; In detail, Bousmalis clips videos from &lt;code&gt;Canal9 database&lt;/code&gt;, which contains &lt;em&gt;70 TV-show videos&lt;/em&gt; and lasts about &lt;em&gt;43 hours&lt;/em&gt;, to form a sub-database which contains &lt;em&gt;267 episodes&lt;/em&gt; with manually labeled agreement/disagreement. The sub-database involves 28 participants &amp;amp; each episode last for just few seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;That means we would better annotate the video clips which show up as direct (dis)agreement.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;progress-2-youtube-8m&#34;&gt;Progress{{2}} - Youtube-8M&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Youtube-8M doesn&amp;rsquo;t contain suitable videos.&lt;/strong&gt; One can search with keywords, like &amp;lsquo;debate&amp;rsquo;, &amp;lsquo;agreement&amp;rsquo;, &amp;lsquo;group&amp;rsquo;, &amp;lsquo;argue&amp;rsquo;, &amp;lsquo;show&amp;rsquo;, in this link &lt;a href=&#34;https://research.google.com/youtube8m/explore.html&#34;&gt;youtube8m&lt;/a&gt; and get no suitable results.&lt;/p&gt;
+
+&lt;h3 id=&#34;progress-3-suitable-videos-on-youtube&#34;&gt;Progress{{3}} - Suitable Videos on Youtube&lt;/h3&gt;
+
+&lt;p&gt;Yes&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion-next-step&#34;&gt;Conclusion &amp;amp; Next Step&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-thanks&#34;&gt;Source &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;[&lt;a href=&#34;https://www.youtube.com/watch?v=rAq6YV5O0mQ&#34;&gt;Can LeBron win in one-on-one to Jordan?&lt;/a&gt;]:&lt;a href=&#34;https://www.youtube.com/watch?v=rAq6YV5O0mQ&#34;&gt;https://www.youtube.com/watch?v=rAq6YV5O0mQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;appendix-a-example-for-dis-agreement-video-analysis&#34;&gt;Appendix-A: Example for (Dis)Agreement Video analysis.&lt;/h2&gt;
+
+&lt;p&gt;We take the video of &lt;a href=&#34;https://www.youtube.com/watch?v=rAq6YV5O0mQ&#34;&gt;Can LeBron win in one-on-one to Jordan?&lt;/a&gt; for example, in which two participants discuss about whether LeBron can beat Michal Jordan in one-on-one play.&lt;/p&gt;
+
+&lt;p&gt;In [01:44], &lt;code&gt;participant A&lt;/code&gt; said he do not care about&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Labels_in_Canal9</title>
+      <link>https://hexromas.github.io/2017-03-06-@QuickReport@_Labels_in_Canal9/</link>
+      <pubDate>Mon, 06 Mar 2017 10:27:05 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-03-06-@QuickReport@_Labels_in_Canal9/</guid>
+      <description>
+
+&lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identify the labels in Canal9 database annotated by Bousmalis&amp;rsquo;s [2].&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[2]K. Bousmalis, L.-P. Morency, and M. Pantic, “Modeling Hidden Dynamics of Multimodal Cues for Spontaneous Agreement and Disagreement Recognition,” Mind, vol. 1005, p. 9.&lt;/p&gt;
+
+&lt;p&gt;There is a more completed report.&lt;/p&gt;
+
+&lt;h2 id=&#34;highlight&#34;&gt;Highlight&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bousmali&amp;rsquo;s annotated dataset contains 60 clips, each clip of about 3 seconds. They are labeled with three categories, i.e. agreement (20 clips), disagreement (20 clips) and natural (20 clips).&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;process&#34;&gt;Process&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Verbal cues are not suitable for this research, because the verbal are based on dial, and different culture.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nonverbal auditory features are fundamental frequency (F0) and energy. The gestures are manually labeled, which are based off the relevant list of cues from the social psychology literature, addition with the &amp;lsquo;Shoulder Shrug&amp;rsquo; and &amp;lsquo;Forefinger Raise-Like&amp;rsquo; gestures.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Social psychology literature has listed some cues which could be presented during (dis)agreement acts.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusion-next-step&#34;&gt;Conclusion &amp;amp; Next Step&lt;/h2&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools☆,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.
+[2]K. Bousmalis, L.-P. Morency, and M. Pantic, “Modeling Hidden Dynamics of Multimodal Cues for Spontaneous Agreement and Disagreement Recognition,” Mind, vol. 1005, p. 9.&lt;/p&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Canal9_Dataset_Clips</title>
+      <link>https://hexromas.github.io/2017-01-25-@QuickReport@_Canal9_Dataset_Clips/</link>
+      <pubDate>Wed, 25 Jan 2017 11:27:05 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-01-25-@QuickReport@_Canal9_Dataset_Clips/</guid>
+      <description>
+
+&lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
+
+&lt;p&gt;We take the video &lt;code&gt;08-01-09.avi&lt;/code&gt; from Canal9 Dataset as example to analysis the agreement/disagreement scenarios.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-opinions&#34;&gt;State Opinions&lt;/h2&gt;
+
+&lt;p&gt;At the beginning of discussion, moderator will introduce all the participants into the screen. From left to right (except the moderator), we label the participants as A, B, C, D. Then the standing spatial position will indicate their group situation. In this clip, two participants on the left are &lt;code&gt;group1&lt;/code&gt;, while the other two participants on the right side are &lt;code&gt;group2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Video - Introduction and state &lt;code&gt;Yes&lt;/code&gt; or &lt;code&gt;No&lt;/code&gt;:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/pWf1m2-qDOk?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;disagreement-scenario&#34;&gt;Disagreement Scenario&lt;/h2&gt;
+
+&lt;p&gt;Some clips will contain only one participant on the opposite group from the talking participant. As the following videos, we can see, while A is talking, camera shows C&amp;rsquo;s face reaction which should be regarded as disagreement.&lt;/p&gt;
+
+&lt;p&gt;Video - Disagreement:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/uVnyvtM2sl0?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly, the smile should not always regarded as agreement. In the following video, after B&amp;rsquo;s talking turn, he shows a smile to opposite group. Then A continue to talk his group&amp;rsquo;s idea. This smile is not a symbol for agreement.&lt;/p&gt;
+
+&lt;p&gt;Video - Disagreement with a smile:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YNAUEm_Hpm4?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;In some extreme situation, two participants from different groups will talking at the same time. The camera shot will cut to their single view at interval. The conflict should be regarded as disagreement. In the annotation file, it will mark such conflict talking turn as one turn and annotate both participants name.&lt;/p&gt;
+
+&lt;p&gt;Video - conflict discussion:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/3iq3mK0xLiw?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;agreement-scenario&#34;&gt;Agreement Scenario&lt;/h2&gt;
+
+&lt;p&gt;The following two clips show the agreement scenario. During D&amp;rsquo;s talking turn, the camera show the C&amp;rsquo;s reaction on the screen. Since they are the same group, their reactions are regarded as agreement. However, there is none (or little) single shot for the participant in the same group. Therefore, I suggest that the talking participant should be also regarded as agreement situation.&lt;/p&gt;
+
+&lt;p&gt;Video - Agreement on close shot:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MbIRRi1BuyA?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Video - Agreement on whole shot:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/dZXK2bvbvpA?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;neutral&#34;&gt;Neutral&lt;/h2&gt;
+
+&lt;p&gt;In some experiments, they will judge three kind of reactions, agree, disagree and neutral. (The accuracy is only about forty percent.) Basically, the moderator should be neutral. Therefore, when the participant shot during moderator&amp;rsquo;s talking or moderator&amp;rsquo;s shot during participant&amp;rsquo;s talking should be regarded as &lt;code&gt;Neutral&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Video - Neutral:&lt;br /&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/NiD94PBTlqI?list=PLYnSTPFmcCfTvJ603MPpeWaLvnOVloXoj&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion-next-step&#34;&gt;Conclusion &amp;amp; Next Step&lt;/h2&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adrian_Human_Pose_Estimation_on_Torch</title>
+      <link>https://hexromas.github.io/2017-01-23-Adrian_Human_Pose_Estimation_on_Torch/</link>
+      <pubDate>Mon, 23 Jan 2017 18:04:53 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-01-23-Adrian_Human_Pose_Estimation_on_Torch/</guid>
+      <description>
+
+&lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
+
+&lt;p&gt;We run Adrian&amp;rsquo;s Human-pose-estimation code on crop frames produced by faster-RCNN. &lt;a href=&#34;https://github.com/1adrianb/human-pose-estimation&#34;&gt;https://github.com/1adrianb/human-pose-estimation&lt;/a&gt; In this section, we try to describe the difficulties during installation of Adrian&amp;rsquo;s code.&lt;/p&gt;
+
+&lt;p&gt;Basically, there is a demo script which can download the trained models directly and test on sample dataset lsp on relative directory path &lt;code&gt;./data/lsp/image&lt;/code&gt;. Once that you need to test on your own dataset, just replace the directory or specify another directory under the path &lt;code&gt;./data/[yourdataset]/image&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;use-the-code&#34;&gt;Use the code&lt;/h2&gt;
+
+&lt;p&gt;The torch environment is little different from the lua. Therefore, we can not run the torch code via &lt;code&gt;lua xxx.lua&lt;/code&gt;, it will throw error as &lt;code&gt;lua error loading module undefined symbol&lt;/code&gt; or &lt;code&gt;attempt to index global &#39;path&#39; (a nil value)&lt;/code&gt; or &lt;code&gt;unable to locate HDF5 header file at hdf5.h&lt;/code&gt;. Instead we need to run as &lt;code&gt;th xxx.lua&lt;/code&gt;. ( from lua )&lt;/p&gt;
+
+&lt;h2 id=&#34;requirement&#34;&gt;Requirement&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lua&lt;/li&gt;
+&lt;li&gt;python2.7 // Packages &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;matplotlib&lt;/code&gt; are required.&lt;/li&gt;
+&lt;li&gt;Torch&lt;/li&gt;
+&lt;li&gt;nn&lt;/li&gt;
+&lt;li&gt;cunn or cudnn (preffered) if you have a CUDA enabled GPU&lt;/li&gt;
+&lt;li&gt;optnet&lt;/li&gt;
+&lt;li&gt;xlua&lt;/li&gt;
+&lt;li&gt;image&lt;/li&gt;
+&lt;li&gt;sh&lt;/li&gt;
+&lt;li&gt;fb.python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From &lt;code&gt;Torch&lt;/code&gt; to &lt;code&gt;image&lt;/code&gt;, we can simply run command &lt;code&gt;luarocks install [packagename]&lt;/code&gt; to install them.&lt;/p&gt;
+
+&lt;p&gt;For &lt;code&gt;sh&lt;/code&gt;, we need to install it by &lt;code&gt;luarocks install --server=http://luarocks.org/dev luash&lt;/code&gt;, referring to &lt;a href=&#34;https://github.com/zserge/luash&#34;&gt;https://github.com/zserge/luash&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fb-python-install&#34;&gt;fb.python install&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;fb.python&lt;/code&gt; is just part code in facebook&amp;rsquo;s open-sourced project &lt;code&gt;fblualib&lt;/code&gt; &lt;a href=&#34;https://github.com/facebook/fblualib&#34;&gt;https://github.com/facebook/fblualib&lt;/a&gt;. Try to clone it entirely &amp;amp; install only fb.python part.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Since I have not administrator permission on the linux machine, therefore, when I try to install fb.python, I met a lot problems (2017-01-23T18:45:39Z). In &lt;a href=&#34;https://github.com/facebook/fblualib/blob/master/fblualib/python/README.md&#34;&gt;https://github.com/facebook/fblualib/blob/master/fblualib/python/README.md&lt;/a&gt;, one can find the dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;python2.7 (3+ is not supported)&lt;/li&gt;
+&lt;li&gt;boost&lt;/li&gt;
+&lt;li&gt;glog (&lt;strong&gt;Administrator sudo install&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;thpp (If you do not install &lt;code&gt;folly&lt;/code&gt;, just build with &lt;code&gt;THPP_NOFB=1 ./build.sh&lt;/code&gt;.)&lt;/li&gt;
+&lt;li&gt;OpenBLAS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;When I try to install &lt;code&gt;glog&lt;/code&gt;, it is reported I need to modify alocal-1.14 to aclocal-1.15. Then I turn to Administrator for help. He installed the &lt;code&gt;glog&lt;/code&gt; and &lt;code&gt;gflags&lt;/code&gt; as well for me.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install &lt;code&gt;thpp&lt;/code&gt; is very complicated, some steps are finished by Administrator, therefore, I will record every error problem I met.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;[Not Sure] It is said &lt;code&gt;thpp&lt;/code&gt; has some issue with the master HEAD &lt;a href=&#34;https://github.com/facebook/thpp/&#34;&gt;https://github.com/facebook/thpp/&lt;/a&gt;, then we need to checkout commit &lt;code&gt;d358a52&lt;/code&gt;, then run &lt;code&gt;build.sh&lt;/code&gt; in thpp directory.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[Sure] It will throw error &lt;code&gt;REQUIRED_ARGS (missing: FOLLY_INCLUDE_DIR FOLLY_LIBRARIES)&lt;/code&gt; if you install directly via &lt;code&gt;build.sh&lt;/code&gt;. It should be &lt;code&gt;THPP_NOFB=1 ./build.sh&lt;/code&gt; instead.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you do not install &lt;code&gt;OpenBLAS&lt;/code&gt;, you may meet error as &lt;code&gt;Lapack library not found in compile time  at /tmp/luarocks_torch-scm-1-1048/torch7/lib/TH/generic/THLapack.c:138&lt;/code&gt;. &amp;lt; &lt;a href=&#34;https://github.com/torch/torch7/issues/174&#34;&gt;https://github.com/torch/torch7/issues/174&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;After install &lt;code&gt;OpenBLAS&lt;/code&gt;, we need to re-install the torch as the issue said &lt;a href=&#34;https://gitter.im/torch/torch7/archives/2015/04/07&#34;&gt;https://gitter.im/torch/torch7/archives/2015/04/07&lt;/a&gt;. The install command is &lt;code&gt;CMAKE_LIBRARY_PATH=/opt/OpenBLAS/include:/opt/OpenBLAS/lib:$CMAKE_LIBRARY_PATH luarocks install torch&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Finally, we go into the python directory in &lt;code&gt;fblualib&lt;/code&gt;, and install &lt;code&gt;fb.python&lt;/code&gt; via &lt;code&gt;luarocks make rockspeck/*&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Review_of_Previous_Work</title>
+      <link>https://hexromas.github.io/2017-01-20-@QuickReport@_Review_of_Previous_Work/</link>
+      <pubDate>Fri, 20 Jan 2017 08:31:26 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-01-20-@QuickReport@_Review_of_Previous_Work/</guid>
+      <description>
+
+&lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;[Done] Find out the state-of-art on Canal9 database.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;[Working] Understand the data format and labels about Canal9.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;[Working] Run the human pose estimation codes on the videos in Canal9.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;[Working] Review on LSTM&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;[Done] Book the CELE course about Academic Writing.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;state-of-art-on-canal9-database&#34;&gt;State-of-art on Canal9 database&lt;/h3&gt;
+
+&lt;p&gt;Bousmalis et.al have been worked on Canal9 dataset for several years. In 2015, they proposed a variation from their proposed infinite hidden conditional random fields method (2013), which is the state-of-art to the best of my knowledge. Bousmalis et.al process two experiments ADA2 (&lt;code&gt;Agreement-Disagreement-Annotation&lt;/code&gt; with 2 labels) &amp;amp; ADA3 (3 labels are &lt;code&gt;Agreement&lt;/code&gt; versus &lt;code&gt;Disagreement&lt;/code&gt; versus &lt;code&gt;neutral&lt;/code&gt;) , while get 76.1% accuracy for ADA2 and 49.8% for ADA3.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;K. Bousmalis, S. Zafeiriou, L. P. Morency, M. Pantic, and Z. Ghahramani, “Variational Infinite Hidden Conditional Random Fields,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 37, no. 9, pp. 1917–1929, Sep. 2015.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;canal9-dataset-format-and-labels&#34;&gt;Canal9 Dataset Format and Labels&lt;/h3&gt;
+
+&lt;p&gt;The label files in Canal9 just contain the talking turn in the video. But we need to know the agree/disagree ground truth. For clear, the ground truth refers to that in each talking turn, the same group participant (including the talker) will agree with the talker, the opposite group participant will disagree.&lt;/p&gt;
+
+&lt;p&gt;As the original paper said, each video contains several debating participants, while they belong to two opposite groups. Refer as follows.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Each debate revolves around a central question, while debate participants state explicitly their answers at the beginning of the discussion. The spatial arrangement of the participants reflects their group situation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That means we need to split videos into clips with only one participant shown in the clip frame.&lt;/p&gt;
+
+&lt;h3 id=&#34;review-on-lstm&#34;&gt;Review on LSTM&lt;/h3&gt;
+
+&lt;p&gt;There is an existed review section (10.10) on LSTM in the book &lt;code&gt;Deep Learning&lt;/code&gt; (2016) written by &lt;code&gt;Ian Goodfellow&lt;/code&gt;, &lt;code&gt;Yoshua Bengio&lt;/code&gt; and &lt;code&gt;Aaron Courville&lt;/code&gt;. Refers to follows.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ian Goodfellow, Yoshua Bengio and Aaron Courville, “Deep Learning.” [Online]. Available: &lt;a href=&#34;http://www.deeplearningbook.org/&#34;&gt;http://www.deeplearningbook.org/&lt;/a&gt;. [Accessed: 30-Nov-2016].&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Basically, there are three kinds of gates (input, output, forget gate) on LSTM. Afterwards, some variations try to modify the gates, such as share the forget gate across multiple hidden units, use a global gate and local gates for control, add a bias of 1 to the LSTM forget gate.&lt;/p&gt;
+
+&lt;p&gt;I still need some time to read and repeat the LSTM experiments and their variations.&lt;/p&gt;
+
+&lt;h3 id=&#34;human-pose-estimation-on-canal9&#34;&gt;Human pose estimation on Canal9&lt;/h3&gt;
+
+&lt;p&gt;1※ [Done] The original faster-RCNN code &lt;a href=&#34;https://github.com/Shaoqingren/faster_rcnn&#34;&gt;https://github.com/Shaoqingren/faster_rcnn&lt;/a&gt; written by &lt;code&gt;Shaoqing Ren&lt;/code&gt;, &lt;code&gt;Kaiming He&lt;/code&gt; &amp;amp; fast-RCNN &lt;a href=&#34;https://github.com/rbgirshick/fast-rcnn&#34;&gt;https://github.com/rbgirshick/fast-rcnn&lt;/a&gt;written by &lt;code&gt;Ross Girshick&lt;/code&gt; are based on Caffe &amp;amp; Matlab. We need to find a torch version.&lt;/p&gt;
+
+&lt;p&gt;There is one &lt;a href=&#34;https://github.com/ruotianluo/Faster-RCNN-Densecap-torch&#34;&gt;Faster-RCNN-Densecap-torch&lt;/a&gt; &lt;a href=&#34;https://drive.google.com/open?id=0B7fNdx_jAqhtY25NRkNyRjczekE&#34;&gt;pre-trained model on PASCAL VOC&lt;/a&gt; (2.7G), but the model is trained based on PASCAL VOC dataset for classification. PASCAL VOC dataset has a challenge for Action Classification Competition as well, but limited in 10 classes. If we need to do the human action classification, we need change the database. Please refer to &lt;a href=&#34;http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00035000000000000000&#34;&gt;PASCAL VOC online guideline&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;p&gt;2※ [Working] Do human pose estimation on images, referring to the previous codes &lt;a href=&#34;https://www.adrianbulat.com/human-pose-estimation&#34;&gt;https://www.adrianbulat.com/human-pose-estimation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks for Aaron&amp;rsquo;s help, I run the codes successful. If we need to test a new images or a bunch of images, just need to re-write the main.lua file in Adrain&amp;rsquo;s code.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion-next-step&#34;&gt;Conclusion &amp;amp; Next Step&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Human-pose-estimation is just Practice&lt;br /&gt;
+This task is not related to our final purpose, and not very important.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Find the codes from Previous Work on Canal9&lt;br /&gt;
+The previous code can give us some cues about how to process the label annotation files. Currently, I did not find some.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Split Videos into Clips&lt;br /&gt;
+According to the annotation file xx.trs, we split one video into several clips, each with only one talking turn. Then, we need continually to split each clip into several smaller clips (we call them &lt;code&gt;single-view&lt;/code&gt;), each clip with only one single participant in the frame.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Annotate Ground Truth&lt;br /&gt;
+Use some human visual recognition techniques to identify each participant in the &lt;code&gt;single-view&lt;/code&gt;. Classify the participants into two different groups according to the spatial positions at the beginning of video. The talker&amp;rsquo;s group and &lt;code&gt;single-view&lt;/code&gt; participant&amp;rsquo;s group indicate the ground truth of agreement/disagreement.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;RCNN Training on ADA2&lt;br /&gt;
+Use LSTM to train based on the &lt;code&gt;single-view&lt;/code&gt; clips and ground truth.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Database_of_Canal9</title>
+      <link>https://hexromas.github.io/2016-12-13-@QuickReport@_Database_of_Canal9/</link>
+      <pubDate>Tue, 13 Dec 2016 08:31:26 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-12-13-@QuickReport@_Database_of_Canal9/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;What kind of experiments can we do on Canal9 database?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;What kind of format did Canal9 provided?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;conclusion-problems&#34;&gt;Conclusion / Problems&lt;/h2&gt;
+
+&lt;h3 id=&#34;dataset-selection-for-experiments&#34;&gt;Dataset selection for experiments:&lt;/h3&gt;
+
+&lt;p&gt;This section talks about how the dataset Canal9 is analyzed in experiments of paper &lt;code&gt;K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Select episode of speaker&amp;rsquo;s personal close-up shot.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;As the debates were filmed with multiple cameras, and edited live to one feed, the episodes selected for the dataset were only the ones that were contained within one personal, close–up shot of the speaker.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Cues for training. (Fundamental frequency &amp;amp; gestures recognition.)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;extracted nonverbal auditory features used in related work, specifically the fundamental frequency (F0) and energy, by using a freely–available tool, OpenEar[19].&lt;/p&gt;
+
+&lt;p&gt;The later values did not take into account the undefined areas of F0, andall values were scaled from -1 to 1.&lt;/p&gt;
+
+&lt;p&gt;our dataset was manuallly annotated to gather as accurate temporal information about the gestures as possible.&lt;/p&gt;
+
+&lt;p&gt;[20] L.-P. Morency, J. Whitehill, and J. Movellan, “Generalized adaptive view–based appearance model: Integrated framework for monocular head pose estimation,” in Proc. Int’l Conf. Automatic Face and Gesture
+Recognition, 2008.&lt;/p&gt;
+
+&lt;p&gt;[21] A. Oikonomopoulos, I. Patras, and M. Pantic, “An implicit spatiotemporal shape model for human activity localisation and recognition,”  in Proc. IEEE Int’l Conf. Computer Vision and Pattern Recognition, vol. 3, 2009, pp. 27–33&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Methodology for features extraction on Video frames&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For SVMs, the features of each gesture were the start frame and the duration (total number of frames) of the gesture within the segment of interest.&lt;/p&gt;
+
+&lt;p&gt;For the auditory features we used the mean, standard deviation, and the first, second(median), and third quartiles of each segment of interest.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Three-fold validation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All our experiments were run in a leave–one–debate–out fashion, i.e. the testing set always comprised of examples from the one debate which was not included in the training and validation sets. The optimal model parameters for each test set were chosen by a three–fold validation on the remaining debates.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Illustration for HCRF Model&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;[!image/HCRF_model.PNG]&lt;/p&gt;
+
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+
+&lt;h3 id=&#34;canal9-database-format&#34;&gt;Canal9 Database format&lt;/h3&gt;
+
+&lt;p&gt;There are 8 kinds of annotations for videos, but not each video has all of these kinds of annotations:&lt;br /&gt;
+1. Manual Speaker Segmentation - who is speaking (show in manual.trs file)&lt;br /&gt;
+2. Role - moderator / participant (show in trs file)&lt;br /&gt;
+3. Agreement &amp;amp; Disagreement - group1 / group2 (Not Found ????)&lt;br /&gt;
+4. Automatic Speaker Segmentation -&lt;br /&gt;
+5. Manual Shot Segmentation - No&lt;br /&gt;
+6. Automatic Shot Segmentation - No&lt;br /&gt;
+7. Manual Shot Classification - No&lt;br /&gt;
+8. Manual Identification of Participants in Personal Shots - No&lt;/p&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Prior_Works_on_Video_Recognition</title>
+      <link>https://hexromas.github.io/2016-11-28-@QuickReport@_Prior_Works_on_Video_Recognition/</link>
+      <pubDate>Mon, 28 Nov 2016 14:21:15 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-11-28-@QuickReport@_Prior_Works_on_Video_Recognition/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1503.08909v2.pdf&#34;&gt;https://arxiv.org/pdf/1503.08909v2.pdf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/1608.00797v1.pdf&#34;&gt;https://arxiv.org/pdf/1608.00797v1.pdf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/1608.00859v1.pdf&#34;&gt;https://arxiv.org/pdf/1608.00859v1.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion-problems&#34;&gt;Conclusion / Problems&lt;/h2&gt;
+
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+
+&lt;h3 id=&#34;beyond-short-snippets-deep-networks-for-video-classification&#34;&gt;Beyond Short Snippets: Deep Networks for Video Classification&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1503.08909v2.pdf&#34;&gt;https://arxiv.org/pdf/1503.08909v2.pdf&lt;/a&gt;&lt;br /&gt;
+[]&lt;/p&gt;
+
+&lt;h3 id=&#34;cuhk-ethz-siat-submission-to-activitynet-challenge-2016&#34;&gt;CUHK &amp;amp; ETHZ &amp;amp; SIAT Submission to ActivityNet Challenge 2016&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1608.00797v1.pdf&#34;&gt;https://arxiv.org/pdf/1608.00797v1.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;temporal-segment-networks-towards-good-practices-for-deep-action-recognition&#34;&gt;Temporal Segment Networks: Towards Good Practices for Deep Action Recognition&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/1608.00859v1.pdf&#34;&gt;https://arxiv.org/pdf/1608.00859v1.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_State-of-art_for_Agreement_Disagreement_Database</title>
+      <link>https://hexromas.github.io/2016-11-22-@QuickReport@_State-of-art_for_Agreement_Disagreement_Database/</link>
+      <pubDate>Tue, 22 Nov 2016 13:33:19 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-11-22-@QuickReport@_State-of-art_for_Agreement_Disagreement_Database/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
+
+&lt;p&gt;Find out which paper is the state-of-the-art for Canal9 database for vision task of classifying agreement/disagreement.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ibug.doc.ic.ac.uk/media/uploads/documents/bousmalis2013towards.pdf&#34;&gt;http://ibug.doc.ic.ac.uk/media/uploads/documents/bousmalis2013towards.pdf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://scholar.google.co.uk/scholar?cites=15661390613055662821&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;https://scholar.google.co.uk/scholar?cites=15661390613055662821&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion-problems&#34;&gt;Conclusion / Problems&lt;/h2&gt;
+
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+
+&lt;h3 id=&#34;canal9-based-method&#34;&gt;Canal9 based method&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Year&lt;/th&gt;
+&lt;th&gt;Author&lt;/th&gt;
+&lt;th&gt;Article&lt;/th&gt;
+&lt;th&gt;Dataset&lt;/th&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2011&lt;/td&gt;
+&lt;td&gt;Bousmalis&lt;/td&gt;
+&lt;td&gt;Modeling Hidden Dynamics of Multimodal Cues for Spontaneous Agreement and Disagreement Recognition&lt;/td&gt;
+&lt;td&gt;Canal 9.&lt;/td&gt;
+&lt;td&gt;HCRF (Hidden Conditional Random Field)&lt;/td&gt;
+&lt;td&gt;Out-performance Hidden Markov Models &amp;amp; Support Vector Machines. 64.22% accuracy on &lt;code&gt;Prosody and Gestures&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Yale Song&lt;/td&gt;
+&lt;td&gt;Multimodal Human Behavior Analysis: Learning Correlation and Interaction Across Modalities&lt;/td&gt;
+&lt;td&gt;Canal9&lt;/td&gt;
+&lt;td&gt;multi-chain structured graphical model&lt;/td&gt;
+&lt;td&gt;72%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CVPR2013&lt;/td&gt;
+&lt;td&gt;Yale Song&lt;/td&gt;
+&lt;td&gt;Action Recognition by Hierarchical Sequence Summarization&lt;/td&gt;
+&lt;td&gt;Canal9&lt;/td&gt;
+&lt;td&gt;HSS (Hierarchical Sequence Summarization)&lt;/td&gt;
+&lt;td&gt;75.56%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2013 Jan&lt;/td&gt;
+&lt;td&gt;Bousmalis&lt;/td&gt;
+&lt;td&gt;Infinite Hidden Conditional Random Fields for Human Behavior Analysis&lt;/td&gt;
+&lt;td&gt;Canal9&lt;/td&gt;
+&lt;td&gt;infinite Hidden conditional random fields (iHCRFs)&lt;/td&gt;
+&lt;td&gt;iHCRF gets 60.3% accuracy on two-label classification for Canal9 vs HCRFs&amp;rsquo; 50.7%. On dataset UNBC, iHCRFs gets 88.4%.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2015&lt;/td&gt;
+&lt;td&gt;Bousmalis&lt;/td&gt;
+&lt;td&gt;K. Bousmalis, S. Zafeiriou, L. P. Morency, M. Pantic, and Z. Ghahramani, “Variational Infinite Hidden Conditional Random Fields,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 37, no. 9, pp. 1917–1929, Sep. 2015.&lt;/td&gt;
+&lt;td&gt;Canal9 and others&lt;/td&gt;
+&lt;td&gt;variation iHCRFs&lt;/td&gt;
+&lt;td&gt;76.1% for ADA2 (Agreement-&amp;amp;-Disagreement-with two labels. 49.8% for ADA3.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;other-database-based-method&#34;&gt;Other database based method&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Year&lt;/th&gt;
+&lt;th&gt;Author&lt;/th&gt;
+&lt;th&gt;Article&lt;/th&gt;
+&lt;th&gt;Dataset&lt;/th&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Yale Song&lt;/td&gt;
+&lt;td&gt;Continuous Body and Hand Gesture Recognition for Natural Human-Computer Interaction&lt;/td&gt;
+&lt;td&gt;NATOPS dataset&lt;/td&gt;
+&lt;td&gt;&amp;mdash;&lt;/td&gt;
+&lt;td&gt;&lt;font color=&#39;red&#39;&gt;We present a new approach to gesture recognition that attends to both body and hands, and interprets gestures continuously from an unsegmented and unbounded input stream.&lt;/font&gt; Our system achieves a recognition accuracy of 75.37% on a set of twenty-four NATOPS gestures.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;Dongcheol Hur(Korea)&lt;/td&gt;
+&lt;td&gt;Recognizing Conversational Expressions using Latent Dynamic Conditional Random Fields&lt;/td&gt;
+&lt;td&gt;MPI conversational expression database&lt;/td&gt;
+&lt;td&gt;Latent Dynamic CRFs&lt;/td&gt;
+&lt;td&gt;LDCRFs get 88.61% F-measure value in total. &lt;font color=&#39;red&#39;&gt;Not the same database with Canal9. But how can they get so high accuracy on a more complicated issue???? &lt;/font&gt; (The database contains PAL-resolution video sequences for 55 German conversational expressions from 10 actors. Contains labels as &amp;lsquo;considered agree&amp;rsquo;,&amp;lsquo;disagree&amp;rsquo;,&amp;lsquo;disgust&amp;rsquo;,&amp;lsquo;sad&amp;rsquo;,&amp;lsquo;I donot care&amp;rsquo;,&amp;lsquo;happy laughing&amp;rsquo;)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;Panagakis&lt;/td&gt;
+&lt;td&gt;Audiovisual Conflict Detection in Political Debates&lt;/td&gt;
+&lt;td&gt;Another Greek Debating TV Show clips database.&lt;/td&gt;
+&lt;td&gt;SVM &amp;amp; CRC (collaborative representation-based classifier)&lt;/td&gt;
+&lt;td&gt;With both audio &amp;amp; video, the accuracy reaches 85.59% to detect excerpt-level conflict.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;Khaki(Turkey)&lt;/td&gt;
+&lt;td&gt;H. Khaki, E. Bozkurt, and E. Erzin, “Agreement and disagreement classification of dyadic interactions using vocal and gestural cues,” in 2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2016, pp. 2762–2766.&lt;/td&gt;
+&lt;td&gt;His own database.&lt;/td&gt;
+&lt;td&gt;Employ both unimodal and multimodal speech and arm motion features. Via SVM.&lt;/td&gt;
+&lt;td&gt;It is said to get 98% accuracy on their database.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;unrelated-papers&#34;&gt;Unrelated Papers&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Reason&lt;/th&gt;
+&lt;th&gt;Others paper&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[Physiological Paper]&lt;/td&gt;
+&lt;td&gt;M. Pantic et al., “Social Signal Processing: The Research Agenda.”&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Survey]&lt;/td&gt;
+&lt;td&gt;K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, no. 2, pp. 203–221, Feb. 2013.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not Related]&lt;/td&gt;
+&lt;td&gt;Emotional Expression Classification using Time-Series Kernels&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Psychology]&lt;/td&gt;
+&lt;td&gt;J. J. Lee, W. B. Knox, J. B. Wormwood, C. Breazeal, and D. DeSteno, “Computationally modeling interpersonal trust,” Front Psychol, vol. 4, Dec. 2013.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Event Classification, not so related. by kernel structued sparsity (KSS)]&lt;/td&gt;
+&lt;td&gt;Spatio-temporal Event Classification using Time-series Kernel based Structured Sparsity&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Conflict Perception Prediction]&lt;/td&gt;
+&lt;td&gt;Base on dataset &lt;code&gt;SSPNet Conflict Corpus&lt;/code&gt;, which is a publicly available collection of 1,430 clips extracted from televised political debates (roughly 12 hours of material for 138 subjects in total)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related]&lt;/td&gt;
+&lt;td&gt;S. Essid and G. Richard, “Fusion of Multimodal Information in Music Content Analysis,” Multimodal Music Processing, p. 37, 2012.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related] - Their own database, 30 conversations. Eight are fully annoted for activity, facial expresions, head motion, and non-verbal utterances.&lt;/td&gt;
+&lt;td&gt;[1]A. J. Aubrey, D. Marshall, P. L. Rosin, J. Vandeventer, D. W. Cunningham, and C. Wallraven, “Cardiff Conversation Database (CCDb): A Database of Natural Dyadic Conversations.”&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related] - different visual task. another social signal processing&lt;/td&gt;
+&lt;td&gt;Do They Like Me? Using Video Cues to Predict Desires during Speed-dates&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Multimodal gesture recognition] recent gesture recognition challenge (ChaLearn 2013)&lt;/td&gt;
+&lt;td&gt;V. Pitsikalis, A. Katsamanis, S. Theodorakis, and P. Maragos, “Multimodal Gesture Recognition via Multiple Hypotheses Rescoring,” J. Mach. Learn. Res., vol. 16, no. 1, pp. 255–284, Jan. 2015.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[A good survey that conclude the human activity recognition]&lt;/td&gt;
+&lt;td&gt;[1]M. Vrigkas, C. Nikou, and I. A. Kakadiaris, “A Review of Human Activity Recognition Methods,” Front. Robot. AI 2: 28. doi: 10.3389/frobt, 2015.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related] - facial expression based on both voice &amp;amp; image&lt;/td&gt;
+&lt;td&gt;[1]M. Shah, D. G. Cooper, H. Cao, R. C. Gur, A. Nenkova, and R. Verma, “Action Unit Models of Facial Expression of Emotion in the Presence of Speech.”&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related]&lt;/td&gt;
+&lt;td&gt;T. Vodlan, M. Tkalčič, and A. Košir, “The impact of hesitation, a social signal, on a user’s quality of experience in multimedia content retrieval,” 2014.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[Not related]&lt;/td&gt;
+&lt;td&gt;P. Liu and L. Yin, “Spontaneous facial expression analysis based on temperature changes and head motions,” in 2015 11th IEEE International Conference and Workshops on Automatic Face and Gesture Recognition (FG), 2015, vol. 1, pp. 1–6.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[short version for iHCRFs]&lt;/td&gt;
+&lt;td&gt;[1]K. Bousmalis, L.-P. Morency, S. Zafeiriou, and M. Pantic, “A Discriminative Nonparametric Bayesian Model: Infinite Hidden Conditional Random Fields.”&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[survey/insight]&lt;/td&gt;
+&lt;td&gt;A. Ěerekoviæ, “An insight into multimodal databases for social signal processing: acquisition, efforts, and directions,” Artif Intell Rev, vol. 42, no. 4, pp. 663–692, Dec. 2014.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[not related]&lt;/td&gt;
+&lt;td&gt;Across Cultures: A Cognitive and Computational Analysis of Emotional and Conversational Facial Expressions in Germany and Korea&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreement</title>
+      <link>https://hexromas.github.io/2016-11-21-@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</link>
+      <pubDate>Mon, 21 Nov 2016 14:14:42 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-11-21-@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Is this the only dataset&lt;/li&gt;
+&lt;li&gt;What is the state-of-the-art&lt;/li&gt;
+&lt;li&gt;download activity net&lt;/li&gt;
+&lt;li&gt;check also other method&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;conclusion-problems&#34;&gt;Conclusion / Problems&lt;/h2&gt;
+
+&lt;p&gt;1&lt;/p&gt;
+
+&lt;h3 id=&#34;details-download-the-activitynet-dataset&#34;&gt;Details - Download the ActivityNet Dataset&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ActivityNet release version 1.3 at Mar/2016 by &lt;a href=&#34;http://ec2-52-11-11-89.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json&#34;&gt;ActivityNet v1.3 json&lt;/a&gt; file. Because of the copyright issue, one need to download videos himself from youtube by the links provided in json file.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Dataset v1.3 contains &lt;code&gt;200 activity classes / 10,024 training videos (15,410 instances) / 4,926 validation videos (7,654 instances) / 5,044 testing videos (labels withheld)&lt;/code&gt;. &lt;font color=&#39;red&#39;&gt;The dataset occupies at least 600G storage. Reporter suggest to store on public server.&lt;/font&gt; [&lt;a href=&#34;http://activity-net.org/challenges/2016/data/anet_challenge_summary.pdf&#34;&gt;ActivityNet_Challenge_summary_2016&lt;/a&gt;]&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;For facility, the author provides &lt;a href=&#34;https://github.com/activitynet/ActivityNet/tree/master/Crawler&#34;&gt;ActivityNet Download Script&lt;/a&gt; to &lt;a href=&#34;https://groups.google.com/forum/#!topic/activity-net/n9v9oJV6vzI&#34;&gt;download the whole ActivityNet&lt;/a&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;However, some videos may be blocked or moved out. The author said the missing videos occupy less than 1% of whole dataset. Therefore, the training result will not be affected.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Author encourages user to test their algorithm via their &lt;a href=&#34;http://activity-net.org/challenges/2016/evaluation.html&#34;&gt;ActivityNet Evaluation Server&lt;/a&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;details-best-activitynet-classification-algorithm-on-torch&#34;&gt;Details - Best ActivityNet Classification Algorithm on Torch&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(a) Untrimmed Classification Challenge: Given a long video, predict the labels of the activities present in the video&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;We re-use the activityNet classification algorithm to do experiment on (Dis)agreement dataset.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Ranked-first activityNet classification algorithm is based on Caffe, we need to find some algorithm that is based on torch.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Not all these authors publish their papers. One can refer to the &lt;a href=&#34;http://activity-net.org/challenges/2016/data/anet_challenge_summary.pdf&#34;&gt;ActivityNet_Challenge_summary_2016&lt;/a&gt; for more information.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Ranking&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Username&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;DeepLearning Framework&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Organization&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Upload-time&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;mAP&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Top-1&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Top-3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Limin Wang&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;caffe&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CUHK &amp;amp; ETHZ &amp;amp; SIAT&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-06-08 14:10:36&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.93233&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.88136&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.96421&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ruxin Wang&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;QCIS&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-06-09 06:47:55&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.92413&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.87792&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.97084&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ting Yao&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Multimedia Search and Mining Group, MSRA&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-06-09 07:26:36&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.91937&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.86685&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.95535&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Linchao Zhu&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;UTS&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-05-08 12:01:45&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.87163&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.849&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.9504&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Masatoshi Hidaka&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Based on [Two-stream video classification] &amp;amp; several CNN&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;The University of Tokyo&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-06-09 05:28:49&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.86458&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.80434&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.9262&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ke Ning&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;multi CNN &amp;amp; one-vs-the-rest SVM&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Zhejiang University&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-06-09 05:22:02&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.84104&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.8339&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.93525&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Cong Guo&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;University of Science and Technology of China&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2016-05-18 17:18:53&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.84067&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.79654&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.91355&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[Two-stream video classification]: Karen Simonyan and Andrew Zisserman. Two­Stream Convolutional Networks for Action Recognition in Videos. NIPS 2014&lt;/p&gt;
+
+&lt;h3 id=&#34;cuhk-activitynet-classification&#34;&gt;CUHK - ActivityNet Classification&lt;/h3&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/&#34;&gt;ActivityNet&lt;/a&gt;: B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015&lt;br /&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification</title>
+      <link>https://hexromas.github.io/2016-10-31-@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification/</link>
+      <pubDate>Mon, 31 Oct 2016 14:27:29 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-10-31-@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification/</guid>
+      <description>
+
+&lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We try to re-use the existed untrimmed video classification algorithm [&lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;CUHK Li&amp;rsquo;s algorithm&lt;/a&gt;] in ActivityNet Challenge 2016, to analysis the political debates video dataset [&lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt;].&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;conclusion-problems&#34;&gt;Conclusion / Problems&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;There will still be some days before we get the download permission for &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt; dataset.&lt;/li&gt;
+&lt;li&gt;We need a GPU machine. Because the first-ranked activityNet untrimmed video classification algorithm &lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;CUHK Li&amp;rsquo;s algorithm&lt;/a&gt; requires NVIDIA GPU with CUDA support.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;details-canal9-website-political-debates-dataset-videos&#34;&gt;Details - &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt; Political Debates Dataset (Videos)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We focus on a recently published video dataset &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt;, which is built for analysis of social interactions [&lt;a href=&#34;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&#34;&gt;Canal9&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;The dataset will only open to European research students for free. It may take one week for them to confirm my download permission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;details-activitynet-classification-algorithm&#34;&gt;Details - ActivityNet Classification Algorithm&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;font color=&#39;red&#39;&gt;Cannot continue to deploy because we have not suitable machine with GPU.&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Limin Wang&lt;/code&gt; from CUHK &amp;amp; ETHZ &amp;amp; SIAT won the first prize in untrimmed video classification task of ActivityNet Challenge.&lt;/li&gt;
+&lt;li&gt;Find paper in arxiv [&lt;a href=&#34;https://arxiv.org/abs/1608.00797&#34;&gt;anet2016_cuhk&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Find code in [&lt;a href=&#34;https://github.com/yjxiong/anet2016-cuhk&#34;&gt;github/anet2016_cuhk&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Find online demo in [&lt;a href=&#34;http://action-demo.ie.cuhk.edu.hk/&#34;&gt;anet2016_cuhk_demo&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cuhk-activitynet-classification&#34;&gt;CUHK - ActivityNet Classification&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Previous efforts focus mainly on the analysis of short video clips, not designed for untrimmed videos.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Task&lt;/td&gt;
+&lt;td&gt;Untrimmed video classification task of ActivityNet Challenge 2016&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Test Data&lt;/td&gt;
+&lt;td&gt;[&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;ActivityNet&lt;/a&gt;] v1.3 dataset (10,024 videos for training, enclosing 15410 activity instances from 200 activity classes)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Performance&lt;/td&gt;
+&lt;td&gt;Attains a high classification accuracy mAP 93.23%.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Approach&lt;/td&gt;
+&lt;td&gt;1)Use ResNet and Inception V3 to train snippet-wise predictor. 2)With the snippet-wise class scores for 1FPS sampling video snippet (from 1), to do video-level classification.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Moreover, author build an additional Acoustic Analysis System based on standard [&lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;MFCC&lt;/a&gt;], to take advantages of the audio cues to improve the prediction result.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;p&gt;[Canal9 Website]: &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;http://canal9-db.sspnet.eu/&lt;/a&gt;&lt;br /&gt;
+[CUHK Li&amp;rsquo;s algorithm]: &lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;http://activity-net.org/challenges/2016/program.html#leaderboard&lt;/a&gt;&lt;br /&gt;
+[Canal9]: &lt;a href=&#34;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&#34;&gt;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&lt;/a&gt;&lt;br /&gt;
+[anet2016_cuhk]: &lt;a href=&#34;https://arxiv.org/abs/1608.00797&#34;&gt;https://arxiv.org/abs/1608.00797&lt;/a&gt;&lt;br /&gt;
+[github/anet2016_cuhk]: &lt;a href=&#34;https://github.com/yjxiong/anet2016-cuhk&#34;&gt;https://github.com/yjxiong/anet2016-cuhk&lt;/a&gt;&lt;br /&gt;
+[anet2016_cuhk_demo]: &lt;a href=&#34;http://action-demo.ie.cuhk.edu.hk/&#34;&gt;http://action-demo.ie.cuhk.edu.hk/&lt;/a&gt;&lt;br /&gt;
+[ActivityNet]: &lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&lt;/a&gt;&lt;br /&gt;
+[MFCC]: &lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;http://fulltext.study/preview/pdf/531553.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;ActivityNet&lt;/a&gt;: B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015&lt;br /&gt;
+&lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;MFCC&lt;/a&gt;: D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008&lt;br /&gt;
+&lt;/dd&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet</title>
+      <link>https://hexromas.github.io/2016-10-25-@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</link>
+      <pubDate>Tue, 25 Oct 2016 22:55:33 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-10-25-@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</guid>
+      <description>
+
+&lt;h2 id=&#34;social-events-in-wordnet&#34;&gt;&amp;lsquo;Social Events&amp;rsquo; in WordNet&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;According to &lt;a href=&#34;http://www-sop.inria.fr/acacia/personnel/phmartin/ontologies/coWordNet.html&#34;&gt;WordNet_Ontology&lt;/a&gt;, there is a &amp;lsquo;Social Events&amp;rsquo; branch in the second level of wordnet 1.5 ontology.&lt;/li&gt;
+&lt;li&gt;Search &lt;code&gt;WordNet Search Engine&lt;/code&gt; with keyword &amp;lsquo;Social Event&amp;rsquo; &lt;a href=&#34;http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;amp;o0=1&amp;amp;o8=1&amp;amp;o1=1&amp;amp;o7=&amp;amp;o5=&amp;amp;o9=&amp;amp;o6=&amp;amp;o3=&amp;amp;o4=&amp;amp;r=1&amp;amp;s=social+event&amp;amp;i=1&amp;amp;h=100#c&#34;&gt;WordNet_Social_Event&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;One will get a full hyponym structure with 418 nouns, listing as following.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;show&#39;, &#39;stage dancing&#39;, &#39;choreography&#39;, &#39;ballet&#39;, &#39;concert dance&#39;, &#39;classical ballet&#39;,
+&#39;modern ballet&#39;, &#39;comedy ballet&#39;, &#39;modern dance&#39;, &#39;interpretive dance&#39;, &#39;interpretive dancing&#39;, 
+&#39;interpretative dance&#39;, &#39;interpretative dancing&#39;, &#39;apache dance&#39;, &#39;belly dance&#39;, &#39;belly dancing&#39;,
+&#39;danse du ventre&#39;, &#39;bolero&#39;, &#39;cakewalk&#39;, &#39;cancan&#39;, &#39;nude dancing&#39;, &#39;fan dance&#39;, &#39;strip&#39;,
+&#39;striptease&#39;, &#39;strip show&#39;, &#39;bubble dance&#39;, &#39;movie&#39;, &#39;film&#39;, &#39;picture&#39;, &#39;moving picture&#39;,
+&#39;moving-picture show&#39;, &#39;motion picture&#39;, &#39;motion-picture show&#39;, &#39;picture show&#39;, &#39;pic&#39;, 
+&#39;rubber&#39;, &#39;series&#39;, &#39;home stand&#39;, &#39;world series&#39;, &#39;field trial&#39;, &#39;match&#39;, &#39;boxing match&#39;, 
+...... 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;font size=&#34;1&#34;&gt;
+[WordNet_Ontology]: &lt;a href=&#34;http://www-sop.inria.fr/acacia/personnel/phmartin/ontologies/coWordNet.html&#34;&gt;http://www-sop.inria.fr/acacia/personnel/phmartin/ontologies/coWordNet.html&lt;/a&gt;&lt;br /&gt;
+[WordNet_Social_Event]: &lt;a href=&#34;http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;amp;o0=1&amp;amp;o8=1&amp;amp;o1=1&amp;amp;o7=&amp;amp;o5=&amp;amp;o9=&amp;amp;o6=&amp;amp;o3=&amp;amp;o4=&amp;amp;r=1&amp;amp;s=social+event&amp;amp;i=1&amp;amp;h=100#c&#34;&gt;http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;amp;o0=1&amp;amp;o8=1&amp;amp;o1=1&amp;amp;o7=&amp;amp;o5=&amp;amp;o9=&amp;amp;o6=&amp;amp;o3=&amp;amp;o4=&amp;amp;r=1&amp;amp;s=social+event&amp;amp;i=1&amp;amp;h=100#c&lt;/a&gt;
+&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;classes-in-youtube8m-dataset&#34;&gt;Classes in Youtube8M Dataset&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;One can find out the classes csv file in [youtube8m_csv]&lt;/li&gt;
+&lt;li&gt;The 4,800 classes labels are listed as following.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;Vehicle&#39;, &#39;Concert&#39;, &#39;Animation&#39;, &#39;Music video&#39;, &#39;Video game&#39;, &#39;Football&#39;, &#39;Dance&#39;, &#39;Food&#39;,
+&#39;Motorsport&#39;, &#39;Animal&#39;, &#39;Car&#39;, &#39;Guitar&#39;, &#39;Disc jockey&#39;, &#39;Trailer&#39;, &#39;Fashion&#39;, &#39;Mobile phone&#39;,
+&#39;Minecraft&#39;, &#39;Action-adventure game&#39;, &#39;Smartphone&#39;, &#39;Fishing&#39;, &#39;Bollywood&#39;, &#39;Cooking&#39;,
+&#39;Musical ensemble&#39;, &#39;Orchestra&#39;, &#39;Motorcycle&#39;, &#39;Choir&#39;, &#39;Personal computer&#39;, &#39;Video game console&#39;,
+&#39;Comedy&#39;, &#39;Piano&#39;, &#39;Winter sport&#39;, &#39;Basketball&#39;, &#39;Toy&#39;, &#39;Cartoon&#39;, &#39;Strategy video game&#39;,
+&#39;Highlight film&#39;, &#39;Wrestling&#39;, &#39;Comics&#39;, &#39;Nature&#39;, &#39;American football&#39;, &#39;Album&#39;, &#39;Train&#39;,
+&#39;Cycling&#39;, &#39;Hair&#39;, &#39;Cosmetics&#39;, &#39;Games&#39;, &#39;Bicycle&#39;, &#39;Dashcam&#39;,
+......
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;font siez=&#34;1&#34;&gt;
+[youtube8m_csv]&lt;a href=&#34;https://research.google.com/youtube8m/csv/train-labels-histogram.csv&#34;&gt;https://research.google.com/youtube8m/csv/train-labels-histogram.csv&lt;/a&gt;
+&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-common-word-between-youtube8m-wordnet&#34;&gt;The common word between Youtube8M &amp;amp; WordNet&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extract the common words, then we concluded as following. (via Python)&lt;/li&gt;
+&lt;li&gt;Totally 754633 videos. However, it cannot form a whole taxonomy &amp;amp; some categories are not suitable, like &amp;lsquo;Cartoon&amp;rsquo;, &amp;lsquo;Number&amp;rsquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;LabelName&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;NumTrainVideos&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Wedding&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28094&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Downhill&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;205&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Race&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;755&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Classical ballet&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;137&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Hurdling&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;276&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Sitcom&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;9691&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Concert&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;386872&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Harness racing&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1040&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Chicken&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;4577&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Diving&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;8183&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Dance&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;215675&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cartoon&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;48432&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Ballet&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;25565&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Shot put&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Dogfight&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;254&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Auto Race&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;304&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Prom&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1069&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Match&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;230&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;News program&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14943&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Number&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2351&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Ball&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3207&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Marathon&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2648&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&#34;next-step&#34;&gt;Next Step&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The videos are enough, but not all of them are suitable for our training.&lt;/li&gt;
+&lt;li&gt;1. How to filter some un-related videos.&lt;/li&gt;
+&lt;li&gt;2. How to cut the videos according to our social-relation training purpose.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note:
+This will only display in the notes window.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Citations beyond Papers and Websites</title>
+      <link>https://hexromas.github.io/2016-10-01-Citations_beyond_Papers_and_Website/</link>
+      <pubDate>Mon, 03 Oct 2016 17:02:59 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-10-01-Citations_beyond_Papers_and_Website/</guid>
+      <description>
+
+&lt;h2 id=&#34;letex-citation&#34;&gt;LeTex Citation&lt;/h2&gt;
+
+&lt;p&gt;Bibtex is the common way to manage citations in latex file. Basically, one can generate bibtex file from paper manager software, like EndNote, Zotero, Mendeley. Then latex file can read the bibtex file in the same directory level and generate the citation &amp;amp; references list automatically.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\bibliography{BibtexFile} 
+\bibliographystyle{ieeetr}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are some other tips when using bibtex.
+* One can keep updating the bibtex file with database in paper manage software, like Zotero.
+* One can use Overleaf to modify the latex file online, which can import the bibtex automatically from online paper database, including Zotero, Mendeley, CiteULike.
+* One can modify the latex file with SublimeText and insert the citations with package of &amp;lsquo;latexing&amp;rsquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;citation-style&#34;&gt;Citation Style&lt;/h2&gt;
+
+&lt;p&gt;Some software, like sublimeText Latexing Package &amp;amp; Overleaf Bibtex, has the ability of citation auto-complement. Therefore, it is important to set reasonable citation-key automatically from software database. In my opinion, I would better to remember the nick-name of one paper more than the paper title. However, the first title word (exclude &amp;lsquo;the&amp;rsquo;, &amp;lsquo;an&amp;rsquo;, &amp;lsquo;a&amp;rsquo;) would also remind some information. Therefore, the citation style would better be presented in format of &amp;lsquo;AuthorYearTitlehead_Nickname&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Besides, Zotero has one plugin named &amp;lsquo;better bibtex&amp;rsquo;, which can generate the citation-key from &amp;lsquo;short-title&amp;rsquo; field. Therefore, you can manually add the short-title, then you can get the customized citation keys in bibtex file.&lt;/p&gt;
+
+&lt;p&gt;For advanced usage, we are trying to output the bibtex which contains the customized citation-key format automatically from database. Here, we will discuss the workflow to output the citation from paper manager software to latex writing software. Actually, there is still not such a completed workflow. The alternative solution is 1) Generate bibtex via &amp;lsquo;better-bibtex&amp;rsquo; plugin in zotero, 2)Add citation in text via &amp;lsquo;latexing&amp;rsquo; plugin in sublimetext.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People</title>
+      <link>https://hexromas.github.io/2016-09-11-@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</link>
+      <pubDate>Sun, 11 Sep 2016 14:52:03 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-09-11-@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;每天学习三分钟，增加深度一点点。大家好，这里是“数据与机器学习”，是一档围绕deep learning展开的个人资讯类节目。
+你收听到的是第一期节目，现在是2016年9月11号星期天，这里是诺丁汉。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;这是我第一次尝试利用播客的手段来传播资讯；而我所研究和关注的课题就是deep learning深度学习，一门开始于上个世纪80年代的计算机科学技术，而当时还叫做neural network神经网络。近五年，随着硬件的升级换代以及算子的不断改进，deep learning焕发新生命，在各个领域都得到非常好的应用前景，包括图像识别处理，文字翻译，艺术创作，如Prisma，甚至是人类高级游戏，如高级围棋智能AlphaGo等。而我的节目则主要涵盖一些最新的深度学习的应用范例，科研文章，或者是基于数据调查，所发布的结果。&lt;/p&gt;
+
+&lt;p&gt;我想籍着这样一个平台和方式，与大家分享相关数据，或者机器学习的方法和资讯。在完成分享的同时，我自身也能更加清晰地看到业界的发展方向。由于这是一档科研相关的节目，略显枯燥乏味；因此我会尽量涵盖一些有趣的资讯，希望能让你在三分钟内对“数据和机器学习”又有一层更深的理解。&lt;/p&gt;
+
+&lt;h2 id=&#34;data-result&#34;&gt;Data Result&lt;/h2&gt;
+
+&lt;p&gt;今天我们从一项有趣的用户数据调查开始说起。&lt;/p&gt;
+
+&lt;p&gt;著名社交媒体Facebook的用户经常会把自己宠物的照片po到社交网络上，其中最常见的宠物应该就属猫和狗了。猫和狗给我们留下的印象是截然不同的，我们偏向于认为狗更加随和，而猫咪则矜持独立，略显神秘。有人关心，养猫和养狗的人之间是否也会和他们所养的宠物一样，存在着一定的性情上的差异；于是他们想通过调查facebook的数据来验证这样的假设。这项调查以大约16万美国籍的facebook用户作为数据样本，首先利用机器学习技术来识别这些用户所上传照片中的宠物，究竟是属于猫还是狗；然后通过Facebook中一些其它信息来判定宠物主人的性情，这些信息通常包括用户的好友数量，个人注册资料，以及他们所po出来的文字记录,情绪状态等。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;结果呢，我们的刻板印象是对的！&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;从用户的好友数量来说&lt;/code&gt;:养狗的人平均比养猫人士拥有多26个Facebook好友,养狗人士偏向于更频繁地保持线上联系。而爱猫人士倾向于和其他爱猫人士交朋友，具体来说，爱猫人士结交其他爱猫人士的概率比在人群中随机交友的高出2.2倍。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;从用户的注册信息来说&lt;/code&gt;:爱猫人士比爱狗人士更有可能是单身，大约30%的爱猫人士是单身，相比较而言，爱狗人士只有24%是单身。可是调查显示，单身和爱猫人士与年龄、性别无关，年轻一些的爱猫人士和大龄爱猫女性一样可能是单身。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;从用户所分享的内容来说&lt;/code&gt;:爱猫人士看起来更喜爱室内活动：他们十分偏爱书籍、电视和电影。同时，爱猫人士特别着迷于奇幻小说、科幻小说和动漫，而爱狗人士喜欢爱情片,以及一些与狗相关的艺术品。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;从用户所表达的情绪来说&lt;/code&gt;:facebook用户可以利用通过按钮来标注他们当天的情绪状态,例如“feeling excited”,“feeling blue”等.通过这些感受特征数据，我们发现大部分爱猫人士很容易提到他们感到疲惫，高兴和受人喜爱，他们偏向于在社交网络上表达更多种类的情绪感受。而爱狗人士则更容易表达出兴奋和骄傲自豪。&lt;/p&gt;
+
+&lt;p&gt;总的来说,宠物的确能在一定程度上反应主人的性情.而养猫的铲屎官比养狗的二哈主人(大哈)更有个可能是单身.本来我还挺想养只小猫咪的，可是看完这项调查之后,我就只能放弃这个想法了，因为我不想做单身狗.不要叫我单身狗,请叫我孤狼.&lt;/p&gt;
+
+&lt;p&gt;详细的报告,大家可以参考链接&lt;br /&gt;
+[1](&lt;a href=&#34;https://research.facebook.com/blog/cat-people-dog-people/&#34;&gt;https://research.facebook.com/blog/cat-people-dog-people/&lt;/a&gt;)&lt;br /&gt;
+[2](&lt;a href=&#34;http://www.cbdio.com/BigData/2016-08/30/content_5225203.htm&#34;&gt;http://www.cbdio.com/BigData/2016-08/30/content_5225203.htm&lt;/a&gt;)&lt;br /&gt;
+[3](&lt;a href=&#34;http://www.pingwest.com/facebook-finds-cat-owners-tend-to-feel-sad-and-lonely-more-than-average-people/&#34;&gt;http://www.pingwest.com/facebook-finds-cat-owners-tend-to-feel-sad-and-lonely-more-than-average-people/&lt;/a&gt;)&lt;br /&gt;
+[4](&lt;a href=&#34;http://www.ithome.com/html/it/249109.htm&#34;&gt;http://www.ithome.com/html/it/249109.htm&lt;/a&gt;)&lt;br /&gt;
+[5](&lt;a href=&#34;http://www.weibo.com/ttarticle/p/show?id=2309614007915852817107&#34;&gt;http://www.weibo.com/ttarticle/p/show?id=2309614007915852817107&lt;/a&gt;)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;结尾处,说一些个人生活上的感悟吧.最近搬家了，虽然心里是不舍的，但也必须尝试去开始新的生活。生活就是如此，充满了遗憾，又不随你的意志所改变；或许人生在一定程度上是遵循等价交换的原则的，精彩的瞬间需要你付出足够多的努力和耐心才能等到的；而在那一瞬间来临之前，你需要做的就是坚持自己的方向，不断前行，静静地等风来。只有让自己变得足够的好，你才不会失去更多。对我无力挽回的,我只能说一声抱歉.
+我是王大仙，一个漂泊迷茫的研究猿；这里是诺丁汉，我在这里等你。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Potential PhD Thesis</title>
+      <link>https://hexromas.github.io/2016-03-16-Potential_PhD_Thesis/</link>
+      <pubDate>Thu, 17 Mar 2016 21:49:06 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-03-16-Potential_PhD_Thesis/</guid>
+      <description>
+
+&lt;p&gt;Against the four potential PhD thesis provided by prof. Yorgos, I prefer &lt;code&gt;facial attributes&lt;/code&gt; (first one) and &lt;code&gt;social traits&lt;/code&gt; (second one) more. First three research topics come from the same CV group in cuhk led by TangXiaoOu, while the last one comes from &lt;code&gt;Robotical Institute (CSIC-UPC) &amp;amp; University of Toronto&lt;/code&gt;.
+The four topic issues will be concluded briefly as following:&lt;/p&gt;
+
+&lt;h2 id=&#34;facial-attibutes&#34;&gt;facial attibutes&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html&lt;/a&gt;  （ICCV2015)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Liu Z, Luo P, Wang X, et al. Deep learning face attributes in the wild[C]//Proceedings of the IEEE International Conference on Computer Vision. 2015: 3730-3738.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Traditional attribute recognition methods will requires pre-boxing images dataset, however, this paper propose a deep learning framework for attribute prediction in the wild. Therefore it can be more practical for the real world images. The author claims to cascade two CNNs, LNet and ANet to generate prediction from raw pixels instead of analysis the accurate locations of object or landmarks. It is reported that its accuracy outperforms the state-of-art with a large margin. Moreover, it will analysis the semantical attribute concept discovered by ANet automatically. It links the attribute to a sparse linear combination of these concepts, which is very interesting.&lt;/p&gt;
+
+&lt;h2 id=&#34;social-traits&#34;&gt;social traits&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html&lt;/a&gt; (ICCV2015)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Zhang Z, Luo P, Loy C C, et al. Learning Social Relation Traits from Face Images[C]//Proceedings of the IEEE International Conference on Computer Vision. 2015: 3631-3639.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;Try to analysis the social relation between two people via the analysis of photographics. The main method is using deep convolutional network to learns from raw pixels of two people&amp;rsquo;s face, and then category these faces into basic emotion or attributes, like &lt;code&gt;gender&lt;/code&gt;, &lt;code&gt;smiling&lt;/code&gt;, &lt;code&gt;angry&lt;/code&gt; and &lt;code&gt;young&lt;/code&gt;. Then with the attributes and additional spatial information to analysis the social relationship between them. The relation is descripted by a eight-pair- creiterion. And the framework uses posterior porbability to predict them.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Pros&lt;/code&gt;:
+This topic is interesting and it is claimed to be the first attempt to analysis the social relationship via images.
+It belongs to an interdisciplinary application, including psychological studies to reveal the social relation.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
+However, the preparation of the dataset is too expensive, since it is labelled by five performing arts students to identify the relation indepedently.&lt;/p&gt;
+
+&lt;h2 id=&#34;face-detection&#34;&gt;face detection&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Yang S, Luo P, Loy C C, et al. WIDER FACE: A Face Detection Benchmark[J]. arXiv preprint arXiv:1511.06523, 2015.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;This paper is not published yet. However, it mainly introduce the face dataset provided by their lab team. The dataset is more practical in real-world, which contains complex face variations, like &lt;code&gt;poses&lt;/code&gt;, &lt;code&gt;lightings&lt;/code&gt;, and &lt;code&gt;occlusions&lt;/code&gt;. The authors test existed facial categories methods on their dataset and find out that the accuracy is not as high as other dataset, since the background is moer complicated in their new dataset.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
+There is no explicit further work for this paper. Maybe we need to find out or develop a new topic based on their work.&lt;/p&gt;
+
+&lt;h2 id=&#34;fashion&#34;&gt;fashion&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hi.cs.waseda.ac.jp/~esimo/en/research/fashionability/&#34;&gt;http://hi.cs.waseda.ac.jp/~esimo/en/research/fashionability/&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Simo-Serra E, Fidler S, Moreno-Noguer F, et al. Neuroaesthetics in fashion: Modeling the perception of fashionability[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015: 869-877.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:
+This paper aims to learn and predict how fashionable a person looks on a photograph and suggest the subtle improvments how to imporve user&amp;rsquo;s appeal. Basically, this paper use current netural network techniques, like rekognition &amp;amp; Caffe pre-trained network, to extract features from images or their related descriptions. The features are evaluated in four aspects, i.e. User, Outfit, Setting, Fashion. Finally, these outputs from four different networks will used as features in maxSoft layer in the fashion judgement network. After traning by 144K dataset, the netural network will learn and recommend the best outfits for different people.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Pros&lt;/code&gt;:
+This topic issue has much relationship with society.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
+However, it is not so easy to continuelly find out the next target of this research topic. The dataset is provided by largest fashion website chictopia.com, which is not general enough. Author regards that each &lt;em&gt;like&lt;/em&gt; for a image as the fashionability of one outfits.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Domain-Transform-for-Edge-Aware-Image-and-Video-Processing</title>
+      <link>https://hexromas.github.io/2016-01-03-Domain_Transform/</link>
+      <pubDate>Sun, 03 Jan 2016 22:10:01 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2016-01-03-Domain_Transform/</guid>
+      <description>
+
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 id=&#34;abstract-in-my-own-words&#34;&gt;Abstract in my own words&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这篇文章提出的思想就是，将图像处理的公式降阶处理，能提高其运算效率。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;关键代码解析&lt;/code&gt;
+&lt;code&gt;NC.m&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;%  NC.m&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  NC  Domain transform normalized convolution edge-preserving filter.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;% &lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  F = NC(img, sigma_s, sigma_r, num_iterations, joint_image)&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  Parameters:&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    img             Input image to be filtered.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    sigma_s         Filter spatial standard deviation.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    sigma_r         Filter range standard deviation.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    num_iterations  Number of iterations to perform (default: 3).&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    joint_image     Optional image for joint filtering.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  This is the reference implementation of the domain transform NC filter&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  described in the paper:&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;% &lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    Domain Transform for Edge-Aware Image and Video Processing&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    Eduardo S. L. Gastal  and  Manuel M. Oliveira&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    ACM Transactions on Graphics. Volume 30 (2011), Number 4.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%    Proceedings of SIGGRAPH 2011, Article 69.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  Please refer to the publication above if you use this software. For an&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  up-to-date version go to:&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  &lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%             http://inf.ufrgs.br/~eslgastal/DomainTransform/&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  THIS SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot; WITHOUT ANY EXPRESSED OR IMPLIED WARRANTIES&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  OF ANY KIND, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  OUT OF OR IN CONNECTION WITH THIS SOFTWARE OR THE USE OR OTHER DEALINGS IN&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  THIS SOFTWARE.&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%  Version 1.0 - August 2011.&lt;/span&gt;
+
+&lt;span style=&#34;color: #815ba4&#34;&gt;function&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;F &lt;span style=&#34;color: #e7e9db&#34;&gt;= &lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;NC&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;img, sigma_s, sigma_r, num_iterations, joint_image&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color: #e7e9db&#34;&gt;    I&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;double(img);&lt;/span&gt;
+
+    &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;exist(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;num_iterations&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color: #e7e9db&#34;&gt;num_iterations&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+    
+    &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;exist(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;joint_image&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;isempty(joint_image)&lt;/span&gt;
+        &lt;span style=&#34;color: #e7e9db&#34;&gt;J&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;double(joint_image);&lt;/span&gt;
+    
+        &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(size(I,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(size(I,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;))&lt;/span&gt;
+            &lt;span style=&#34;color: #e7e9db&#34;&gt;error(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;Input and joint images must have equal width and height.&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+    &lt;span style=&#34;color: #815ba4&#34;&gt;else&lt;/span&gt;
+        &lt;span style=&#34;color: #e7e9db&#34;&gt;J&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;I;&lt;/span&gt;
+    &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
+    
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;[h&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;w&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;num_joint_channels]&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J);&lt;/span&gt;
+
+    &lt;span style=&#34;color: #776e71&#34;&gt;%% Compute the domain transform (Equation 11 of our paper).&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;%{&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;利用 finite数值差距 来估算倒数&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%}
+    % Estimate horizontal and vertical partial derivatives using finite
+    % differences.
+    dIcdx = diff(J, 1, 2);
+    dIcdy = diff(J, 1, 1);
+    
+    dIdx = zeros(h,w);
+    dIdy = zeros(h,w);
+    
+    % Compute the l1-norm distance of neighbor pixels.
+    for c = 1:num_joint_channels
+        dIdx(:,2:end) = dIdx(:,2:end) + abs( dIcdx(:,:,c) );
+        dIdy(2:end,:) = dIdy(2:end,:) + abs( dIcdy(:,:,c) );
+    end
+    
+    % Compute the derivatives of the horizontal and vertical domain transforms.
+    dHdx = (1 + sigma_s/sigma_r * dIdx);
+    dVdy = (1 + sigma_s/sigma_r * dIdy);
+    
+    % Integrate the domain transforms.
+    ct_H = cumsum(dHdx, 2);
+    ct_V = cumsum(dVdy, 1);
+    
+    % The vertical pass is performed using a transposed image.
+    ct_V = ct_V&#39;;
+    
+    %% Perform the filtering.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    N = num_iterations;
+    F = I;
+
+    sigma_H = sigma_s;
+    
+    for i = 0:num_iterations - 1
+        
+        % Compute the sigma value for this iteration (Equation 14 of our paper).
+        sigma_H_i = sigma_H * sqrt(3) * 2^(N - (i + 1)) / sqrt(4^N - 1);
+        
+        % Compute the radius of the box filter with the desired variance.
+        box_radius = sqrt(3) * sigma_H_i;
+        
+        F = TransformedDomainBoxFilter_Horizontal(F, ct_H, box_radius);
+        F = image_transpose(F);
+
+        F = TransformedDomainBoxFilter_Horizontal(F, ct_V, box_radius);
+        F = image_transpose(F);
+        
+    end
+    
+    F = cast(F, class(img));
+
+end
+
+%% Box filter normalized convolution in the transformed domain.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function F = TransformedDomainBoxFilter_Horizontal(I, xform_domain_position, box_radius)
+
+    [h w num_channels] = size(I);
+
+    % Compute the lower and upper limits of the box kernel in the transformed domain.
+    l_pos = xform_domain_position - box_radius;
+    u_pos = xform_domain_position + box_radius;
+
+    % Find the indices of the pixels associated with the lower and upper limits
+    % of the box kernel.
+    %
+    % This loop is much faster in a compiled language.  If you are using a
+    % MATLAB version which supports the &#39;parallel for&#39; construct, you can
+    % improve performance by replacing the following &#39;for&#39; by a &#39;parfor&#39;.
+
+    l_idx = zeros(size(xform_domain_position));
+    u_idx = zeros(size(xform_domain_position));
+
+    for row = 1:h
+        xform_domain_pos_row = [xform_domain_position(row,:) inf];
+
+        l_pos_row = l_pos(row,:);
+        u_pos_row = u_pos(row,:);
+
+        local_l_idx = zeros(1, w);
+        local_u_idx = zeros(1, w);
+
+        local_l_idx(1) = find(xform_domain_pos_row &amp;gt; l_pos_row(1), 1, &#39;first&#39;);
+        local_u_idx(1) = find(xform_domain_pos_row &amp;gt; u_pos_row(1), 1, &#39;first&#39;);
+
+        for col = 2:w
+            local_l_idx(col) = local_l_idx(col-1) + ...
+                find(xform_domain_pos_row(local_l_idx(col-1):end) &amp;gt; l_pos_row(col), 1, &#39;first&#39;) - 1;
+
+            local_u_idx(col) = local_u_idx(col-1) + ...
+                find(xform_domain_pos_row(local_u_idx(col-1):end) &amp;gt; u_pos_row(col), 1, &#39;first&#39;) - 1;
+        end
+
+        l_idx(row,:) = local_l_idx;
+        u_idx(row,:) = local_u_idx;
+    end
+    
+    l_pos
+    l_idx
+
+    % Compute the box filter using a summed area table.
+    SAT            = zeros([h w+1 num_channels]);
+    SAT(:,2:end,:) = cumsum(I, 2);
+    row_indices    = repmat((1:h)&#39;, 1, w);
+    F              = zeros(size(I));
+
+    for c = 1:num_channels
+        a = sub2ind(size(SAT), row_indices, l_idx, repmat(c, h, w));
+        b = sub2ind(size(SAT), row_indices, u_idx, repmat(c, h, w));
+        F(:,:,c) = (SAT(b) - SAT(a)) ./ (u_idx - l_idx);
+    end
+    
+end
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function T = image_transpose(I)
+
+    [h w num_channels] = size(I);
+    
+    T = zeros([w h num_channels], class(I));
+    
+    for c = 1:num_channels
+        T(:,:,c) = I(:,:,c)&#39;;
+    end
+    
+end
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

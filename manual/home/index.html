@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>House</title>
+		<link rel="stylesheet" type="text/css" href="http://www.ijquery.cn/css/css.css" media="all" />
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="css/iPicture.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ipicture.js"></script>
+		<script type="text/javascript" src="home.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<div class="" style="width:800px;height:400px;text-align:center;">
+
+				<script type="text/javascript">
+
+
+
+
+
+
+
+
+document.write('\
+<!-- start -->\
+<div id="iPicture" data-interaction="hover">\
+<div class="ip_slide">\
+<!-- 本身的图片 -->\
+<img class="ip_tooltipImg" src="'+bk+'" />\
+')
+
+for(var tk=0;tk<house.length;tk++)
+{
+rooms = house[tk]
+document.write('sd')
+for(var ti=0;ti<rooms.length;ti++)
+{
+	pin = rooms[ti]
+	document.write('<div class="ip_tooltip ip_img32" style="top: '+pin.split(';')[2]+'px; left: '+pin.split(';')[3]+'px;" data-button="moreblue" data-tooltipbg="bgblack" data-round="roundBgBInner" ')
+	if(pin.split(';')[1])
+	{
+		document.write('data-animationtype="'+pin.split(';')[1]+'-slide"><p>')
+	}
+	else
+	{
+		document.write('data-animationtype="ltr-slide"><p>')
+	}
+	if(pin.split(';')[5])
+	{
+		document.write(pin.split(';')[5])
+	}
+	if(pin.split(';')[4])
+	{
+		document.write('<img src="'+imgDir+pin.split(';')[4]+'" alt="" >')
+	}
+	document.write('</p></div>')
+}
+
+}
+
+document.write('\
+</div>\
+</div>\
+<script type="text/javascript">\
+$( "#iPicture" ).iPicture();\
+<\/script>\
+<!-- end -->\
+')
+
+					</script>
+
+		</div>	
+	</body>
+</html>

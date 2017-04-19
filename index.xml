@@ -898,7 +898,7 @@ Recognition, 2008.&lt;/p&gt;
 &lt;li&gt;We need a GPU machine. Because the first-ranked activityNet untrimmed video classification algorithm &lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;CUHK Li&amp;rsquo;s algorithm&lt;/a&gt; requires NVIDIA GPU with CUDA support.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;details-canal9-website-political-debates-dataset-videos&#34;&gt;Details - &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt; Political Debates Dataset (Videos)&lt;/h3&gt;
+&lt;h3 id=&#34;details-canal9-website-political-debates-dataset-videos&#34;&gt;Details - Canal9 Website Political Debates Dataset (Videos)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;We focus on a recently published video dataset &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;Canal9 Website&lt;/a&gt;, which is built for analysis of social interactions [&lt;a href=&#34;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&#34;&gt;Canal9&lt;/a&gt;].&lt;/li&gt;
@@ -957,7 +957,14 @@ Recognition, 2008.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+[&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;ActivityNet&lt;/a&gt;] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015&lt;br /&gt;
+[&lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;MFCC&lt;/a&gt;] D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008&lt;br /&gt;
+&lt;/dd&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-thanks&#34;&gt;Source &amp;amp; Thanks&lt;/h2&gt;
 
 &lt;p&gt;[Canal9 Website]: &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;http://canal9-db.sspnet.eu/&lt;/a&gt;&lt;br /&gt;
 [CUHK Li&amp;rsquo;s algorithm]: &lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;http://activity-net.org/challenges/2016/program.html#leaderboard&lt;/a&gt;&lt;br /&gt;
@@ -967,13 +974,6 @@ Recognition, 2008.&lt;/p&gt;
 [anet2016_cuhk_demo]: &lt;a href=&#34;http://action-demo.ie.cuhk.edu.hk/&#34;&gt;http://action-demo.ie.cuhk.edu.hk/&lt;/a&gt;&lt;br /&gt;
 [ActivityNet]: &lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&lt;/a&gt;&lt;br /&gt;
 [MFCC]: &lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;http://fulltext.study/preview/pdf/531553.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;reference-thanks&#34;&gt;Reference &amp;amp; Thanks&lt;/h2&gt;
-
-&lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
-&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;ActivityNet&lt;/a&gt;: B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015&lt;br /&gt;
-&lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;MFCC&lt;/a&gt;: D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008&lt;br /&gt;
-&lt;/dd&gt;&lt;/p&gt;
 </description>
     </item>
     

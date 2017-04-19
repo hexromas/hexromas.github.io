@@ -905,7 +905,7 @@ for(var key in row){
       
       <guid>https://hexromas.github.io/manual/pdf_annotation/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&#34;utf-8&#34;&gt;
-&lt;title&gt;pdf annotation definition&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;article class=&#34;markdown-body&#34;&gt;&lt;p&gt;相当于只阅读天蓝和黄色,大概就能明白文章脉络,章节内容&lt;/p&gt;
+&lt;title&gt;pdf annotation definition&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;article class=&#34;markdown-body&#34;&gt;&lt;p&gt;相当于只阅读天蓝和黄色,大概就能明白文章脉络,章节内容 v2&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;th textcolor=&#34;red&#34;&gt;笔记颜色 and 作用&lt;/th&gt;
@@ -954,9 +954,9 @@ for(var key in row){
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt; example &lt;/td&gt;
-&lt;td&gt; &lt;img src=&#39;foxit_color.png&#39; height=200px;/&gt; &lt;/td&gt;
-&lt;td&gt; &lt;img src=&#39;gistnote_color.png&#39; height=200px;/&gt; &lt;/td&gt;
-&lt;td&gt; &lt;img src=&#39;ios_color.png&#39; height=200px;/&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&#39;./foxit_color.png&#39; height=200px;/&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&#39;./gistnote_color.png&#39; height=200px;/&gt; &lt;/td&gt;
+&lt;td&gt; &lt;img src=&#39;./ios_color.png&#39; height=200px;/&gt; &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;&lt;/article&gt;

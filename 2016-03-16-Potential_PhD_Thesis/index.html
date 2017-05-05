@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,17 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">Potential PhD Thesis</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#facial-attibutes">facial attibutes</a></li>
+<li><a href="#social-traits">social traits</a></li>
+<li><a href="#face-detection">face detection</a></li>
+<li><a href="#fashion">fashion</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <p>Against the four potential PhD thesis provided by prof. Yorgos, I prefer <code>facial attributes</code> (first one) and <code>social traits</code> (second one) more. First three research topics come from the same CV group in cuhk led by TangXiaoOu, while the last one comes from <code>Robotical Institute (CSIC-UPC) &amp; University of Toronto</code>.
@@ -350,6 +399,7 @@ This topic issue has much relationship with society.</p>
 <p><code>Cons</code>:
 However, it is not so easy to continuelly find out the next target of this research topic. The dataset is provided by largest fashion website chictopia.com, which is not general enough. Author regards that each <em>like</em> for a image as the fashionability of one outfits.</p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

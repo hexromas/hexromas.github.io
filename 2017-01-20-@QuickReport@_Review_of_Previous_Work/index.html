@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,23 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">@QuickReport@ Review of Previous Work</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#review-last-destination">Review &amp; Last Destination</a>
+<ul>
+<li><a href="#state-of-art-on-canal9-database">State-of-art on Canal9 database</a></li>
+<li><a href="#canal9-dataset-format-and-labels">Canal9 Dataset Format and Labels</a></li>
+<li><a href="#review-on-lstm">Review on LSTM</a></li>
+<li><a href="#human-pose-estimation-on-canal9">Human pose estimation on Canal9</a></li>
+</ul></li>
+<li><a href="#conclusion-next-step">Conclusion &amp; Next Step</a></li>
+<li><a href="#source">Source</a></li>
+<li><a href="#reference-thanks">Reference &amp; Thanks</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <h2 id="review-last-destination">Review &amp; Last Destination</h2>
@@ -362,6 +417,7 @@ Use LSTM to train based on the <code>single-view</code> clips and ground truth.<
 <p><dd class='ref'>
 </dd></p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

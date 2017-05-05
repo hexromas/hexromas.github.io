@@ -56,6 +56,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -200,6 +211,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -251,6 +289,20 @@ function go2page(pagepath) {
 <main id="content">
 
 	<h1 class="post-title">Manuals</h1> 
+    
+        
+<section class="manual">
+	<h3 class="post-title">
+		<a href="https://hexromas.github.io/manual/reveal.js/test/test-markdown-slide-attributes/"></a>
+		<span class="separator"> &middot; </span>
+		<time datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+		<span class="taglist">
+		
+		</span>
+	</h3>
+</section>
     
         
 <section class="manual">

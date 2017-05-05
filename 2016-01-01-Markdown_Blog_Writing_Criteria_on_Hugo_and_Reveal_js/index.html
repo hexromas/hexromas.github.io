@@ -57,7 +57,7 @@
         },
         "datePublished": "2016-01-01",
         "description": "",
-        "wordCount":  902 
+        "wordCount":  944 
     }
     </script>
     
@@ -78,6 +78,17 @@
  
 
   
+
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
 
 h2 {
 	background-color: #32506d; 
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,19 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">Markdown-Blog-Writing-Criteria-on-Hugo-&amp;-Reveal-js</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#markdown-head-style">Markdown Head Style</a></li>
+<li><a href="#article-title">Article Title</a></li>
+<li><a href="#section-and-paragraph">Section and Paragraph</a></li>
+<li><a href="#url-links">Url Links</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#table">Table</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <blockquote>
@@ -355,6 +406,11 @@ title: &quot;WYCIWYD - What your code is what your document&quot;
 <span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">dd</span><span style="color: #e7e9db">&gt;</span>
 </pre></div>
 
+<p><dd class='ref'>
+[ActivityNet]: B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015<br />
+[MFCC]: D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008<br />
+</dd></p>
+
 <p><strong>Customized your own reference list.</strong> Reveal.js will treat the reference list as normal characters, which is hard to display more references in one page. Therefore, it would better to customize your own reference style. Moreover, the <code>hugo</code> markdown explain program (based on github markdown) will not translate the nick name to links when you quote the list with some html tags, like <code>&lt;p&gt; &lt;div&gt; &lt;q&gt; &lt;li&gt;</code> and so on. After testing, I found tag <code>&lt;dd&gt;</code> will translate the nick name to url link. Therefore, for both reveal.js &amp; hugo markdown explain program, I would quote the list as following codes. Moreover, I should customized the css file in reveal.js files.</p>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">reveal</span> <span style="color: #06b6ef">dd</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">ref</span> <span style="color: #e7e9db">{</span>
   <span style="color: #06b6ef">font</span><span style="color: #5bc4bf">-</span><span style="color: #06b6ef">family</span><span style="color: #5bc4bf">:</span> <span style="color: #48b685">&quot;Source Sans Pro&quot;</span><span style="color: #e7e9db">,</span> <span style="color: #06b6ef">Helvetica</span><span style="color: #e7e9db">,</span> <span style="color: #06b6ef">sans</span><span style="color: #5bc4bf">-</span><span style="color: #06b6ef">serif</span><span style="color: #e7e9db">;</span>
@@ -377,6 +433,7 @@ title: &quot;WYCIWYD - What your code is what your document&quot;
 <span style="color: #e7e9db">}</span>
 </pre></div>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

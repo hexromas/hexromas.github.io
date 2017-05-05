@@ -16,6 +16,8 @@
       <guid>https://hexromas.github.io/2017-04-07-Debate_videos_on_youtube/</guid>
       <description>
 
+&lt;h1 id=&#34;debate-videos-on-youtube&#34;&gt;Debate_videos_on_youtube&lt;/h1&gt;
+
 &lt;h2 id=&#34;review-for-progress&#34;&gt;Review for Progress&lt;/h2&gt;
 
 &lt;p&gt;We aim to provide a primary pipline to build up videos dataset from youtube for &lt;code&gt;(dis)agreement video classification&lt;/code&gt; issue.&lt;/p&gt;
@@ -51,9 +53,8 @@
 
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 
-&lt;p&gt;[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.&lt;/p&gt;
-
 &lt;p&gt;&lt;dd class=&#39;ref&#39;&gt;
+[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.
 &lt;/dd&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;source-thanks&#34;&gt;Source &amp;amp; Thanks&lt;/h2&gt;

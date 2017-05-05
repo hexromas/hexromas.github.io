@@ -57,7 +57,7 @@
         },
         "datePublished": "2017-04-07",
         "description": "",
-        "wordCount":  355 
+        "wordCount":  356 
     }
     </script>
     
@@ -78,6 +78,17 @@
  
 
   
+
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
 
 h2 {
 	background-color: #32506d; 
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,7 +320,26 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">Debate videos on youtube</h1>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#debate-videos-on-youtube">Debate_videos_on_youtube</a>
+<ul>
+<li><a href="#review-for-progress">Review for Progress</a>
+<ul>
+<li><a href="#progress-1-psychology-definition-about-direct-agreement">Progress{{1}} - Psychology definition about &lsquo;direct agreement&rsquo;.</a></li>
+<li><a href="#progress-2-youtube-8m">Progress{{2}} - Youtube-8M</a></li>
+<li><a href="#progress-3-suitable-videos-on-youtube">Progress{{3}} - Suitable Videos on Youtube</a></li>
+</ul></li>
+<li><a href="#conclusion-next-step">Conclusion &amp; Next Step</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#source-thanks">Source &amp; Thanks</a></li>
+<li><a href="#appendix-a-example-for-dis-agreement-video-analysis">Appendix-A: Example for (Dis)Agreement Video analysis.</a></li>
+</ul></li>
+</ul>
+</nav> 
     
+
+<h1 id="debate-videos-on-youtube">Debate_videos_on_youtube</h1>
 
 <h2 id="review-for-progress">Review for Progress</h2>
 
@@ -319,9 +376,8 @@ function go2page(pagepath) {
 
 <h2 id="reference">Reference</h2>
 
-<p>[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.</p>
-
 <p><dd class='ref'>
+[1]K. Bousmalis, M. Mehu, and M. Pantic, “Towards the automatic detection of spontaneous agreement and disagreement based on nonverbal behaviour: A survey of related cues, databases, and tools,” Image and Vision Computing, vol. 31, pp. 203–221, 2013.
 </dd></p>
 
 <h2 id="source-thanks">Source &amp; Thanks</h2>
@@ -334,6 +390,7 @@ function go2page(pagepath) {
 
 <p>In [01:44], <code>participant A</code> said he do not care about</p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">
@@ -367,7 +424,7 @@ function go2page(pagepath) {
           </a>
       </li>
 			<li class="linkedin">
-          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-04-07-Debate_videos_on_youtube/&amp;title=Debate_videos_on_youtube&amp;summary=Review%20for%20Progress%20We%20aim%20to%20provide%20a%20primary%20pipline%20to%20build%20up%20videos%20dataset%20from%20youtube%20for%20%28dis%29agreement%20video%20classification%20issue.%0a%20How%20to%20define%20agreement%20in%20psychology%3f%20What%20is%20%26lsquo%3bDirect%20agreement%26rsquo%3b%3f%20Search%20youtube-8M%20dataset%20for%20suitable%20video.%20Search%20youtube%20for%20suitable%20video%20for%20%28dis%29agreement%20classification%20issue.%20Investigate%20youtube%20standard%20permission.%20How%20to%20download%20youtube%20videos.%20Write%20a%20primary%20pipline%20about%20how%20to%20build%20up%20the%20suitable%20dataset%20from%20youtube%2c%20including%20labeling%20scheme...." class="popup">
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-04-07-Debate_videos_on_youtube/&amp;title=Debate_videos_on_youtube&amp;summary=Debate_videos_on_youtube%20Review%20for%20Progress%20We%20aim%20to%20provide%20a%20primary%20pipline%20to%20build%20up%20videos%20dataset%20from%20youtube%20for%20%28dis%29agreement%20video%20classification%20issue.%0a%20How%20to%20define%20agreement%20in%20psychology%3f%20What%20is%20%26lsquo%3bDirect%20agreement%26rsquo%3b%3f%20Search%20youtube-8M%20dataset%20for%20suitable%20video.%20Search%20youtube%20for%20suitable%20video%20for%20%28dis%29agreement%20classification%20issue.%20Investigate%20youtube%20standard%20permission.%20How%20to%20download%20youtube%20videos.%20Write%20a%20primary%20pipline%20about%20how%20to%20build%20up%20the%20suitable%20dataset%20from%20youtube%2c%20including%20labeling%20scheme...." class="popup">
               <span class="icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
                       <path d="M25.424,15.887v8.447h-4.896v-7.882c0-1.979-0.709-3.331-2.48-3.331c-1.354,0-2.158,0.911-2.514,1.803 c-0.129,0.315-0.162,0.753-0.162,1.194v8.216h-4.899c0,0,0.066-13.349,0-14.731h4.899v2.088c-0.01,0.016-0.023,0.032-0.033,0.048 h0.033V11.69c0.65-1.002,1.812-2.435,4.414-2.435C23.008,9.254,25.424,11.361,25.424,15.887z M5.348,2.501 c-1.676,0-2.772,1.092-2.772,2.539c0,1.421,1.066,2.538,2.717,2.546h0.032c1.709,0,2.771-1.132,2.771-2.546 C8.054,3.593,7.019,2.501,5.343,2.501H5.348z M2.867,24.334h4.897V9.603H2.867V24.334z"/>

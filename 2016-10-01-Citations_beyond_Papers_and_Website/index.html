@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,15 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">Citations beyond Papers and Websites</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#letex-citation">LeTex Citation</a></li>
+<li><a href="#citation-style">Citation Style</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <h2 id="letex-citation">LeTex Citation</h2>
@@ -305,6 +352,7 @@ function go2page(pagepath) {
 
 <p>For advanced usage, we are trying to output the bibtex which contains the customized citation-key format automatically from database. Here, we will discuss the workflow to output the citation from paper manager software to latex writing software. Actually, there is still not such a completed workflow. The alternative solution is 1) Generate bibtex via &lsquo;better-bibtex&rsquo; plugin in zotero, 2)Add citation in text via &lsquo;latexing&rsquo; plugin in sublimetext.</p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

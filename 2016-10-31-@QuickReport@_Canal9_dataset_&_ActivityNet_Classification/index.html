@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,22 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">@QuickReport@ Canal9 dataset &amp; ActivityNet Classification</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#purpose-destination">Purpose / Destination</a></li>
+<li><a href="#conclusion-problems">Conclusion / Problems</a>
+<ul>
+<li><a href="#details-canal9-website-political-debates-dataset-videos">Details - Canal9 Website Political Debates Dataset (Videos)</a></li>
+<li><a href="#details-activitynet-classification-algorithm">Details - ActivityNet Classification Algorithm</a></li>
+<li><a href="#cuhk-activitynet-classification">CUHK - ActivityNet Classification</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#source-thanks">Source &amp; Thanks</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <h2 id="purpose-destination">Purpose / Destination</h2>
@@ -374,6 +428,7 @@ function go2page(pagepath) {
 [ActivityNet]: <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf">http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf</a><br />
 [MFCC]: <a href="http://fulltext.study/preview/pdf/531553.pdf">http://fulltext.study/preview/pdf/531553.pdf</a></p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

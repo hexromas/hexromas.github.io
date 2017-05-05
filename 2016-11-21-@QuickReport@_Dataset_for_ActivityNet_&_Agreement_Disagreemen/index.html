@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,22 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">@QuickReport@ Dataset for ActivityNet &amp; Agreement Disagreement</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#purpose-destination">Purpose / Destination</a></li>
+<li><a href="#conclusion-problems">Conclusion / Problems</a>
+<ul>
+<li><a href="#details-download-the-activitynet-dataset">Details - Download the ActivityNet Dataset</a></li>
+<li><a href="#details-best-activitynet-classification-algorithm-on-torch">Details - Best ActivityNet Classification Algorithm on Torch</a></li>
+<li><a href="#cuhk-activitynet-classification">CUHK - ActivityNet Classification</a></li>
+</ul></li>
+<li><a href="#source">Source</a></li>
+<li><a href="#reference-thanks">Reference &amp; Thanks</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <h2 id="purpose-destination">Purpose / Destination</h2>
@@ -422,6 +476,7 @@ function go2page(pagepath) {
 <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/">ActivityNet</a>: B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015<br />
 </dd></p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

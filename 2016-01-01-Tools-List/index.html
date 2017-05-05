@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,37 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">Tools-list</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#the-quick-brown-fox-jumps-over-the-lazy-dog">the quick brown fox jumps over the lazy dog</a>
+<ul>
+<li><a href="#the-quick-brown-fox-jumps-over-the-lazy-dog-1">the quick brown fox jumps over the lazy dog</a>
+<ul>
+<li><a href="#the-quick-brown-fox-jumps-over-the-lazy-dog-2">the quick brown fox jumps over the lazy dog</a>
+<ul>
+<li><a href="#the-quick-brown-fox-jumps-over-the-lazy-dog-3">the quick brown fox jumps over the lazy dog</a>
+<ul>
+<li><a href="#the-quick-brown-fox-jumps-over-the-lazy-dog-4">the quick brown fox jumps over the lazy dog</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#信息搜集工具">信息搜集工具</a>
+<ul>
+<li><a href="#refme">Refme</a></li>
+<li><a href="#zotero">zotero</a></li>
+<li><a href="#feedly">feedly</a></li>
+<li><a href="#google-url-toby-package">google-url, toby, package</a></li>
+<li><a href="#pocket-instapaper">pocket &amp; instapaper</a></li>
+<li><a href="#gistnote-simplenote-evernote">gistnote, simplenote, evernote</a></li>
+<li><a href="#chrome-bookmark">chrome-bookmark</a></li>
+<li><a href="#goto">goto</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <blockquote>
@@ -372,6 +441,7 @@ feedly是在google reader之后最好的RSS订阅工具了.加上它本身配套
 3.[]内容分类,与浏览历史绑定,与浏览器链接交互
 4.[]作为reference,来进行写作.(这一项,是最为重要的一环)</p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

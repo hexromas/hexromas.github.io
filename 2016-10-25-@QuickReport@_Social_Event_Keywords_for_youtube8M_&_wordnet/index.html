@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,17 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title">@QuickReport@ Social Event Keywords for youtube8M &amp; wordnet</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#social-events-in-wordnet">&lsquo;Social Events&rsquo; in WordNet</a></li>
+<li><a href="#classes-in-youtube8m-dataset">Classes in Youtube8M Dataset</a></li>
+<li><a href="#the-common-word-between-youtube8m-wordnet">The common word between Youtube8M &amp; WordNet</a></li>
+</ul></li>
+<li><a href="#next-step">Next Step</a></li>
+</ul>
+</nav> 
     
 
 <h2 id="social-events-in-wordnet">&lsquo;Social Events&rsquo; in WordNet</h2>
@@ -467,6 +516,7 @@ function go2page(pagepath) {
 <p>Note:
 This will only display in the notes window.</p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

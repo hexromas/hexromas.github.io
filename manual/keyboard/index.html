@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="keyboard.css">
     <script type="text/javascript">
         five = ["as","cs","ac","a","c"];
+        six  = ["NUM","as","cs","ac","a","c"];
+        num ="1234567890-="
         row1="QWERTYUIOP";
         row2="ASDFGHJKL";
         row3="ZXCVBNM";
@@ -20,7 +22,9 @@
 
 
 
-
+<div align="center">
+<img src="./hhkb.jpg"/>
+</div>
 
 
 
@@ -44,19 +48,20 @@
     
         
     <div class="section-row">
+
       <div class="key num dual"> ~ `<br><as>Alt+Shift</as><br><cs>Ctrl+Shift</cs><br><ac><s>Alt+Ctrl</s></ac><br><a>Alt</a><br><c>Ctrl</c> </div>
-      <div class="key num dual"> 1 !<br><as>InputMethod</as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 2 @<br><as>Extension</as><br><cs></cs><br><ac></ac><br><a></a><br><c></c>  </div>
-      <div class="key num dual"> 3 #<br><as>ScreenShot</as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 4 $<br><as>Currency</as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 5 %<br><as>Refresh_Monkey</as><br><cs></cs><br><ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 6 ^<br><as>Grid_Rule</as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 7 &<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 8 *<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 9 (<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 0 )<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> _<br>-  </div>
-      <div class="key num dual"> +<br>=  </div>
+<script type="text/javascript">
+row = num;
+board = chrome;
+for(var key in row){
+  document.write('<div class="key num dual">');
+  for(var i in board[row[key]]){
+    document.write('<'+six[i]+'>'+board[row[key]][i]+'</'+six[i]+'><br>');
+  }
+  document.write('</div>');
+}
+</script>
+
       <div class="key backspace"> Backspace </div>
       
     </div>
@@ -65,6 +70,7 @@
 
     <div class="section-row">
       <div class="key tab"> Tab </div>
+
 <script type="text/javascript">
 row = row1;
 board = chrome;
@@ -77,6 +83,7 @@ for(var key in row){
   document.write('</div>');
 }
 </script>
+
        <div class="key dual"> {<Br>[</div>
       <div class="key dual"> }<br>] </div>
       <div class="key letter dual slash"> |<br>\ </div>
@@ -171,18 +178,19 @@ for(var key in row){
         
     <div class="section-row">
       <div class="key num dual"> ~ `<br><as>Alt+Shift</as><br><cs>Ctrl+Shift</cs><br><ac>Alt+Ctrl</ac><br><a>Alt</a><br><c>Ctrl</c> </div>
-      <div class="key num dual"> 1 !<br><as><d>1_Group</d></as><br><cs></cs><br><ac>group1_move</ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 2 @<br><as><d>2_Group</d></as><br><cs></cs><br><ac>group2_move</ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 3 #<br><as><d>3_Group</d></as><br><cs></cs><br><ac>group3_move</ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 4 $<br><as><d>4_Col_Group</d></as><br><cs></cs><br><ac>group4_move</ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 5 %<br><as><d>4_Grid_Group</d></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 6 ^<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 7 &<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 8 *<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 9 (<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 0 )<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> _<br>-  </div>
-      <div class="key num dual"> +<br>=  </div>
+
+<script type="text/javascript">
+row = num;
+board = sublimetext;
+for(var key in row){
+  document.write('<div class="key num dual">');
+  for(var i in board[row[key]]){
+    document.write('<'+six[i]+'>'+board[row[key]][i]+'</'+six[i]+'><br>');
+  }
+  document.write('</div>');
+}
+</script>
+
       <div class="key backspace"> Backspace </div>
       
     </div>
@@ -308,18 +316,20 @@ for(var key in row){
         
     <div class="section-row">
       <div class="key num dual"> ~ `<br><as>Alt+Shift</as><br><cs>Ctrl+Shift</cs><br><ac>Alt+Ctrl</ac><br><a>Alt</a><br><c>Ctrl</c> </div>
-      <div class="key num dual"> 1 !<br><as>Sublime_Text</as><br><cs></cs><br><ac></ac><br><a>Style1_Foxit</a><br><c></c> </div>
-      <div class="key num dual"> 2 @<br><as></as><br><cs></cs><br><ac></ac><br><a>Style2_Foxit</a><br><c></c> </div>
-      <div class="key num dual"> 3 #<br><as></as><br><cs></cs><br><ac></ac><br><a>Style3_Foxit</a><br><c>í</c> </div>
-      <div class="key num dual"> 4 $<br><as></as><br><cs></cs><br><ac></ac><br><a>Style4_Foxit</a><br><c></c> </div>
-      <div class="key num dual"> 5 %<br><as></as><br><cs></cs><br><ac></ac><br><a>Style5_Foxit</a><br><c></c> </div>
-      <div class="key num dual"> 6 ^<br><as></as><br><cs></cs><br><ac></ac><br><a>Style6_Foxit</a><br><c></c> </div>
-      <div class="key num dual"> 7 &<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 8 *<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 9 (<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> 0 )<br><as></as><br><cs></cs><br><ac></ac><br><a></a><br><c></c> </div>
-      <div class="key num dual"> _<br>-  </div>
-      <div class="key num dual"> +<br>=  </div>
+
+<script type="text/javascript">
+row = num;
+board = windows;
+for(var key in row){
+  document.write('<div class="key num dual">');
+  for(var i in board[row[key]]){
+    document.write('<'+six[i]+'>'+board[row[key]][i]+'</'+six[i]+'><br>');
+  }
+  document.write('</div>');
+}
+</script>
+
+
       <div class="key backspace"> Backspace </div>
       
     </div>

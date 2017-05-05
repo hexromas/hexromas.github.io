@@ -1,166 +1,536 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ngerman" xml:lang="ngerman" data-livestyle-extension="available" class="gr__cis_uni-muenchen_de hb-loaded">
+<!DOCTYPE html>
+<html lang="">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="generator" content="pandoc">
-  <title>Deep Bo</title>
+    <head>
 
-  
-  
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="./bootstrap.min.css" type="text/css">
-<script>var old = null;function asplay_top(c){var audio = document.createElement("audio");if(audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg")){if(old){old.pause();}audio.src = c;old = audio;audio.play();}}</script><style id="style-1-cropbar-clipper"> 
-.en-markup-crop-options {
-    top: 18px !important;
-    left: 50% !important;
-    margin-left: -100px !important;
-    width: 200px !important;
-    border: 2px rgba(255,255,255,.38) solid !important;
-    border-radius: 4px !important;
-}
+        <meta property="og:title" content="  &middot;  " />
+        <meta property="og:site_name" content="" />
+        <meta property="og:url" content="https://hexromas.github.io/manual/deeplearning/" />
 
-.en-markup-crop-options div div:first-of-type {
-    margin-left: 0px !important;
-}
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="0001-01-01T00:00:00Z" />
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://hexromas.github.io/manual/deeplearning/" />
+    
+
+        <title>  &middot;  </title>
+
+    
+        <meta name="description" content="" />
+    
+        
+        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+          
+
+    
+        <link href="https://hexromas.github.io/index.xml" rel="alternate" type="application/rss+xml" title="" />
+    
+
+    
+        <link rel="canonical" href="https://hexromas.github.io/manual/deeplearning/" />
+
+    
+    <script type="application/ld+json">
+    { 
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "",
+        "author": {
+            "@type": "Person",
+            "name": "http://profiles.google.com/?rel=author"
+        },
+        "datePublished": "0001-01-01",
+        "description": "",
+        "wordCount":  1796 
+    }
+    </script>
+    
+    
+    <style>
+*{padding:0;margin:0}body,html{font-size:1em;line-height:1.65em;font-family:"Open Sans",sans-serif;font-weight:300;color:#444}html{height:100%}body{padding:2em 2.5em 1em 20em}header{border-right:1px #eee solid;padding:2em;position:fixed;top:0;left:0;height:100%;width:13.5em}#content{display:block;width:100%}footer{padding:1em 0 2.5em;font-size:.8em;line-height:1.5em;color:#888}article{border-bottom:.1em #eee solid;padding-bottom:1.7em;max-width:56em}h4,h5,h6,hr,p{margin-top:.9em;margin-bottom:.9em}h1,h2,h3,h4,h5,h6{font-family:"Bree Serif",serif;font-weight:400!important}h1{font-size:2.5em;line-height:1.1em;margin-top:.6em;margin-bottom:.6em}h2{font-size:1.9em;line-height:1.2em;margin-top:.7em;margin-bottom:.7em}h3{font-size:1.4em;line-height:1.3em;margin-top:.8em;margin-bottom:.8em}h4{font-size:1.3em}h5{font-size:1.2em}h6{font-size:1.1em}iframe,img{max-width:100%}a{font-weight:700;text-decoration:none;color:#5cc265}a:hover{text-decoration:underline}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:400!important}strong{font-weight:700}blockquote{border-left:.4em solid #eee;padding-left:1.2em;font-size:1.3em}hr{border:0;height:1px;background:#eee}ol,ul{margin-left:3em}code{font-size:1.4em;background:#eee}pre{font-size:.8em;line-height:2em;background:#eee;padding:1em;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:-moz-pre-wrap;white-space:pre-wrap}input{font-size:1em;padding:.3em}header h1{font-size:1.9em;margin-top:.8em;margin-bottom:.6em}header h1 a{color:#444}header h1 a:hover{text-decoration:none}header #logo img{width:9em;height:9em;border-radius:4.5em;-moz-border-radius:4.5em;-webkit-border-radius:4.5em;border:none}#follow-icons{font-size:.7em;margin-top:-.7em;margin-bottom:1.5em}#follow-icons a{color:#ccc}#follow-icons span{vertical-align:top;margin-left:-.15em;margin-right:-.15em}#follow-icons span .fa-stack-1x{font-size:1.05em;line-height:1.9em}header h6{margin-top:.5em}article span.post-stamp{color:#888}h1.post-title{margin-top:.35em;margin-bottom:.6em}h3.post-title{margin-top:.4em;padding-bottom:.9em;border-bottom:1px solid #eee;font-size:1.2em;color:#444}.post-title .feature-star{font-size:.9em}.feature-star,.separator,.taglist{color:#ccc}.taglist a{background-color:#ccc;color:#fff;display:inline-block;line-height:1.5em;padding:.3em .6em;vertical-align:20%;font-size:.5em;font-family:"Open Sans",sans-serif;font-weight:700!important;text-transform:uppercase;letter-spacing:.05em;border-radius:.25em;-moz-border-radius:.25em;-webkit-border-radius:.25em}#social-bar{margin-top:1.5em;background-color:#eee;padding:.5em}#comments{margin-top:.15em;padding-bottom:.2em;border-bottom:1px solid #eee}.pagination{margin-bottom:1em}footer a{font-weight:300;color:#888;text-decoration:underline}footer a:hover{color:#444;text-decoration:none}@media only screen and (min-width:1281px){body,html{font-size:1.1em}}@media only screen and (max-width:800px){body{padding:0}header{border-right:none;border-bottom:1px #eee solid;position:relative;height:auto;width:auto;text-align:center;padding-bottom:1em}#content{margin-left:0;padding:2em 2em 1em;width:auto}footer{padding:0 2.5em 2em}}@media only screen and (max-width:320px){#content,header{padding:1.2em 1.2em .6em}footer{padding:0 1.5em 1.2em}ol,ul{margin-left:2em}}
 </style>
-</head>
 
-<body data-gr-c-s-loaded="true" huaban_collector_injected="true" data-feedly-extension-follow-feed="1.0.3" data-feedly-extension-exttag="3.0.1" data-feedly-mini="yes" class="vn-highlighter-context">
-<div class="container">
-<div id="header">
-<h1 class="title">Deep Bo</h1>
-</div>
+    
 
-<div>
-<link rel="stylesheet" href="./deep-bo_logo.css" type="text/css">
-<script  type="text/javascript"  src="deep-bo_logo.js" ></script>
-</div>
+<link href='//fonts.googleapis.com/css?family=Dancing%20Script' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Crete%20Round' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 
-<p>Deep Munich is a collaborative group of Deep Learning and Neural Network researchers in Munich. Our members represent:</p>
+<style>
+
+ 
+
+  
+
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
+h2 {
+	background-color: #32506d; 
+	color: white;}
+
+h3 {
+	background-color: #66afd3;
+	color: white;}
+
+h4 {
+	background-color: #00BFFF ;
+	margin-left: 20px;}
+
+h5 {
+	background-color: #67d6f5;
+	margin-left: 40px;}
+
+h6 {
+	background-color: #B0E0E6;
+	margin-left: 60px;}
+
+header h6 {
+	background-color: white;}
+
+section h3 {
+	background-color: white;}
+
+.moreless {
+	background-color: gold;}
+
+body {
+	font-family: 'Crete Round';}
+
+
+
+
+ 
+
+strong {
+	color: red;}
+
+code {
+	font-size:1.0em;
+	font-family: 'Crete Round';
+	background-color: rgb(217, 217, 217);}
+
+em {
+	font-family: 'Crete Round';
+	font-weight: bold;}
+
+a {
+	 }
+
+
+
+
+ 
+
+blockquote code {
+	font-family: 'Courgette';
+	font-size:1.0em;}
+
+pre {
+	font-family: 'Ubuntu';
+	 
+	font-size: 1.0em;
+	line-height: 1.0em;
+	 
+	padding: 1em;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: -moz-pre-wrap;
+	white-space: pre-wrap;
+	white-space: pre\9; 
+}
+
+blockquote{
+	width: 750px;
+	background: white;
+	opacity: 0.7;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 
+		inset 0 2px 0  rgba(188, 147, 200, 0.7), 
+		-5px -4px 25px rgba(0, 0, 0, 0.3);
+}
+blockquote p {
+	 
+	font-family: 'Courgette';
+	font-size: 24px;
+	 
+	 
+	color: black;
+	font-weight: 400;
+	line-height: 30px;
+	font-style: italic;
+	text-indent: 40px;
+	position: relative;
+}
+
+blockquote p:before{
+	content: '\201C';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	position: absolute;
+	font-size: 175px;
+	top: 0px;
+	left: -105px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote p:after{
+	content: '\201D';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	position: absolute;
+	font-size: 175px;
+	bottom: -50px;
+	right: -70px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote em {
+	position: absolute;
+	bottom: -30px;
+	right: 30px;
+}
+
+
+
+ 
+
+dd.ref {
+   
+   
+  line-height: 100%;
+  white-space: pre-line;
+  text-align: left;
+  color: #000000; }
+
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+
+    </head>
+    <body>
+        <header id="header">
+            <a id="logo" href="https://hexromas.github.io/"><img src="https://www.gravatar.com/avatar/ff5d38839459fb133112d5404390c0f7?s=1000" alt="" /></a>
+            <h1><a href="https://hexromas.github.io/"></a></h1>
+            <p></p>
+
+            <div id="follow-icons">
+	<a href="https://www.facebook.com/brandon.wangbo" rel="me"><i class="fa fa-facebook-square fa-2x"></i></a>
+	<a href="https://twitter.com/brandon_wangbo" rel="me"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="http://github.com/berandon" rel="me"><i class="fa fa-github-square fa-2x"></i></a>
+	<a href="https://hexromas.github.io/index.xml" rel="me"><i class="fa fa-rss-square fa-2x"></i></a> 
+	
+</div>  
+            <h6><a href="http://www.thinktouch.net">About</a></h6>
+<h6><a href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
+<h6><a href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
+<h6><a href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
+<h6><a href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
+
+<script type="text/javascript">
+function go2ppt() {
+		var link = document.URL;
+		var protocol = link.split('//')[0];
+		var baseurl  = link.split('//')[1].split('/')[0];
+		var resturl  = link.split(baseurl+'/')[1];
+		var ppturl   = protocol+'//'+baseurl+'/ppt?'+resturl;
+		return ppturl;
+}
+function go2page(pagepath) {
+		var link = document.URL;
+		var protocol = link.split('//')[0];
+		var baseurl  = link.split('//')[1].split('/')[0];
+		var pageurl   = protocol+'//'+baseurl+pagepath;
+		return pageurl;
+} 
+</script>
+
+            <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
+    <script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
+    <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
+    
+        </header>
+<main id="content">
+
+<article id="" class="manual">
+    <div class="post-stamp">
+        <time datetime="0001-01-01T00:00:00Z">
+            1 Jan 0001
+        </time>
+        <span class="taglist">
+        
+        </span>
+    </div>
+    <h1 class="post-title"></h1>
+    <nav id="TableOfContents">
 <ul>
-<li>Faculty for Informatics at TU (<a href="http://www.in.tum.de/" class="uri">http://www.in.tum.de</a>)</li>
-<li>Institute for Informatics at LMU (<a href="https://www.ifi.lmu.de/" class="uri">https://www.ifi.lmu.de</a>)</li>
-<li>Center for Information and Language Processing (CIS) at LMU (<a href="http://www.cis.lmu.de/" class="uri">http://www.cis.lmu.de</a>)</li>
+<li><a href="#deep-learning-manual">Deep Learning Manual</a>
+<ul>
+<li><a href="#members">Members</a></li>
+<li><a href="#meetups">Meetups</a>
+<ul>
+<li><a href="#seminar-in-neural-machine-translation">Seminar in Neural Machine Translation</a></li>
+</ul></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#reading-list">Reading list</a>
+<ul>
+<li><a href="#2015">2015</a></li>
+<li><a href="#2014">2014</a></li>
+<li><a href="#2013">2013</a></li>
+<li><a href="#2012">2012</a></li>
+<li><a href="#pre-2012">Pre-2012</a></li>
+</ul></li>
+<li><a href="#tools">Tools</a>
+<ul>
+<li><a href="#torch">Torch</a>
+<ul>
+<li><a href="#code-bases-for-torch">Code bases for Torch</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#general-nn-resources">General NN Resources</a>
+<ul>
+<li><a href="#online-textbooks">Online textbooks</a></li>
+<li><a href="#video-courses">Video courses</a></li>
+<li><a href="#blogs-articles">Blogs &amp; Articles</a></li>
+<li><a href="#presentations">Presentations</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul></li>
 </ul>
-<p>Ask questions and discuss ideas in our <em>forum</em>: <a href="https://groups.google.com/forum/#!forum/deep-munich" class="uri">https://groups.google.com/forum/#!forum/deep-munich</a></p>
-<p>Sign up for our <em>mailing list</em> and stay up-to-date: <a href="https://lists.lrz.de/mailman/listinfo/deep" class="uri">https://lists.lrz.de/mailman/listinfo/deep</a></p>
-<p>Join us in our <em>weekly meeting</em> (see below).</p>
-<h1 id="members">Members</h1>
+</nav> 
+    
+
+<h1 id="deep-learning-manual">Deep Learning Manual</h1>
+
+<div >
+    <link rel="stylesheet" href="./deepbo.css" type="text/css">
+<!-- <link rel="stylesheet" href="./deep-bo_logo.css" type="text/css"> -->
+<!-- <script  type="text/javascript"  src="deep-bo_logo.js" ></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../thinktouch_logo/thinktouch_logo.css" type="text/css">
+    <div >
+        <div class="blackbox" style='font-family:Dancing Script;'>D</div>
+        <div class="blackbox" >E</div>
+        <div class="blackbox" >E</div>
+        <div class="blackbox" >P</div>
+        <div class="whitebox" ></div>
+        <div class="blackbox" style='font-family:Dancing Script;'>B</div>
+        <div class="blackbox" >O</div>
+    </div>
+</div>
+
+<p>This Deep Munich is a collaborative group of Deep Learning and Neural Network researchers in Munich. Our members represent:</p>
+
+<ul>
+<li>Faculty for Informatics at TU (<a href="http://www.in.tum.de">http://www.in.tum.de</a>)</li>
+<li>Institute for Informatics at LMU (<a href="https://www.ifi.lmu.de">https://www.ifi.lmu.de</a>)</li>
+<li>Center for Information and Language Processing (CIS) at LMU (<a href="http://www.cis.lmu.de">http://www.cis.lmu.de</a>)
+Ask questions and discuss ideas in our forum: <a href="https://groups.google.com/forum/#!forum/deep-munich">https://groups.google.com/forum/#!forum/deep-munich</a></li>
+</ul>
+
+<p>Sign up for our mailing list and stay up-to-date: <a href="https://lists.lrz.de/mailman/listinfo/deep">https://lists.lrz.de/mailman/listinfo/deep</a></p>
+
+<p>Join us in our weekly meeting (see below).</p>
+
+<h2 id="members">Members</h2>
+
 <ul>
 <li><a href="http://www.cis.uni-muenchen.de/~davidk">David Kaumanns (CIS)</a> - group organizer</li>
 <li><a href="http://www.cis.uni-muenchen.de/~fraser">Alexander Fraser (CIS)</a></li>
 <li><a href="http://www.cis.uni-muenchen.de/~schmid">Helmut Schmid (CIS)</a></li>
 <li><a href="http://www.dbs.ifi.lmu.de/cms/Evgeniy_Faerman">Evgeniy Faerman (LMU)</a></li>
 <li><a href="http://www.cis.uni-muenchen.de/~yadollah">Yadollah Yaghoobzadeh</a></li>
-<li>TBA</li>
+<li>TBA
+For questions, suggestions etc., please contact the group admin.</li>
 </ul>
-<p>For questions, suggestions etc., please contact the <a href="mailto:david@cis.lmu.de" class="email">group admin</a>.</p>
-<hr>
-<h1 id="meetups">Meetups</h1>
-<h2 id="seminar-in-neural-machine-translation">Seminar in Neural Machine Translation</h2>
-<p><a href="http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/" class="uri">http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/</a></p>
+
+<h2 id="meetups">Meetups</h2>
+
+<h3 id="seminar-in-neural-machine-translation">Seminar in Neural Machine Translation</h3>
+
+<p><a href="http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/">http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/</a></p>
+
 <p>Thursdays 14:30 s.t., room C105 (<a href="http://www.cis.uni-muenchen.de/kontakt">directions</a>)</p>
-<p>Center for Information and Language Processing<br>
-University of Munich<br>
-Oettingenstraße 67<br>
+
+<p>Center for Information and Language Processing
+University of Munich
+Oettingenstraße 67
 80538 Munich</p>
-<hr>
-<h1 id="resources">Resources</h1>
+
+<h2 id="resources">Resources</h2>
+
 <ul>
-<li><a href="http://karpathy.github.io/">Andrej Karpathy’s blog</a>, notably:
+<li><a href="http://karpathy.github.io">Andrej Karpathy’s blog</a>, notably:
+
 <ul>
 <li><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness">The Unreasonable Effectiveness of Recurrent Neural Networks</a></li>
 </ul></li>
 </ul>
-<hr>
-<h1 id="reading-list">Reading list</h1>
-<h2 id="section">2015</h2>
+
+<h2 id="reading-list">Reading list</h2>
+
+<h3 id="2015">2015</h3>
+
 <ul>
-<li><span class="citation">Character-aware neural language models - Yoon Kim et al. - 2015 [1]</span></li>
-<li><span class="citation">LSTM: A search space odyssey - Klaus Greff et al. - 2015 [2]</span></li>
-<li><span class="citation">An empirical exploration of recurrent network architectures - Rafal Jozefowicz et al. - 2015 [3]</span></li>
-<li><span class="citation">Teaching machines to read and comprehend - Karl Moritz Hermann et al. - 2015 [4]</span></li>
-<li><span class="citation">Gated feedback recurrent neural networks - Junyoung Chung et al. - 2015 [5]</span></li>
+<li>Character-aware neural language models - Yoon Kim et al. - 2015 [1]</li>
+<li>LSTM: A search space odyssey - Klaus Greff et al. - 2015 [2]</li>
+<li>An empirical exploration of recurrent network architectures - Rafal Jozefowicz et al. - 2015 [3]</li>
+<li>Teaching machines to read and comprehend - Karl Moritz Hermann et al. - 2015 [4]</li>
+<li>Gated feedback recurrent neural networks - Junyoung Chung et al. - 2015 [5]</li>
 </ul>
-<h2 id="section-1">2014</h2>
+
+<h3 id="2014">2014</h3>
+
 <ul>
-<li><span class="citation">Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition - Haşim Sak et al. - 2014 [6]</span></li>
-<li><span class="citation">Show and tell: A neural image caption generator - Oriol Vinyals et al. - 2014 [7]</span></li>
-<li><span class="citation">Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]</span></li>
-<li><span class="citation">Modeling compositionality with multiplicative recurrent neural networks - Ozan İrsoy et al. - 2014 [9]</span></li>
-<li><span class="citation">Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch - Xie Chen et al. - 2014 [10]</span></li>
-<li><span class="citation">Learning phrase representations using rnn encoder-decoder for statistical machine translation - Kyunghyun Cho et al. - 2014 [11]</span></li>
-<li><span class="citation">Deep captioning with multimodal recurrent neural networks (m-rNN) - Junhua Mao et al. - 2014 [12]</span></li>
-<li><span class="citation">Learning longer memory in recurrent neural networks - Tomas Mikolov et al. - 2014 [13]</span></li>
-<li><span class="citation">Learning sparse recurrent neural networks in language modeling - Yuanlong Shao - 2014 [14]</span></li>
-<li><span class="citation">Recurrent deep neural networks for robust speech recognition - Chao Weng et al. - 2014 [15]</span></li>
-<li><span class="citation">Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]</span></li>
+<li>Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition - Haşim Sak et al. - 2014 [6]</li>
+<li>Show and tell: A neural image caption generator - Oriol Vinyals et al. - 2014 [7]</li>
+<li>Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]</li>
+<li>Modeling compositionality with multiplicative recurrent neural networks - Ozan İrsoy et al. - 2014 [9]</li>
+<li>Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch - Xie Chen et al. - 2014 [10]</li>
+<li>Learning phrase representations using rnn encoder-decoder for statistical machine translation - Kyunghyun Cho et al. - 2014 [11]</li>
+<li>Deep captioning with multimodal recurrent neural networks (m-rNN) - Junhua Mao et al. - 2014 [12]</li>
+<li>Learning longer memory in recurrent neural networks - Tomas Mikolov et al. - 2014 [13]</li>
+<li>Learning sparse recurrent neural networks in language modeling - Yuanlong Shao - 2014 [14]</li>
+<li>Recurrent deep neural networks for robust speech recognition - Chao Weng et al. - 2014 [15]</li>
+<li>Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]</li>
 </ul>
-<h2 id="section-2">2013</h2>
+
+<h3 id="2013">2013</h3>
+
 <ul>
-<li><span class="citation">On the difficulty of training recurrent neural networks. - Razvan Pascanu et al. - 2013 [16]</span></li>
-<li><span class="citation">Speech recognition with deep recurrent neural networks - Alex Graves et al. - 2013 [17]</span></li>
-<li><span class="citation">Hybrid speech recognition with deep bidirectional LSTM - Alex Graves et al. - 2013 [18]</span></li>
-<li><span class="citation">Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]</span></li>
-<li><span class="citation">High-performance OCR for printed english and fraktur using LSTM networks - Thomas M Breuel et al. - 2013 [20]</span></li>
-<li><span class="citation">Recurrent convolutional neural networks for discourse compositionality - Nal Kalchbrenner et al. - 2013 [21]</span></li>
-<li><span class="citation">Comparison of feedforward and recurrent neural network language models - Martin Sundermeyer et al. - 2013 [22]</span></li>
-<li><span class="citation">RNN language model with word clustering and class-based output layer - Yongzhe Shi et al. - 2013 [23]</span></li>
-<li><span class="citation">Context dependent recurrent neural network language model. - Tomas Mikolov et al. - 2012 [24]</span></li>
+<li>On the difficulty of training recurrent neural networks. - Razvan Pascanu et al. - 2013 [16]</li>
+<li>Speech recognition with deep recurrent neural networks - Alex Graves et al. - 2013 [17]</li>
+<li>Hybrid speech recognition with deep bidirectional LSTM - Alex Graves et al. - 2013 [18]</li>
+<li>Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]</li>
+<li>High-performance OCR for printed english and fraktur using LSTM networks - Thomas M Breuel et al. - 2013 [20]</li>
+<li>Recurrent convolutional neural networks for discourse compositionality - Nal Kalchbrenner et al. - 2013 [21]</li>
+<li>Comparison of feedforward and recurrent neural network language models - Martin Sundermeyer et al. - 2013 [22]</li>
+<li>RNN language model with word clustering and class-based output layer - Yongzhe Shi et al. - 2013 [23]</li>
+<li>Context dependent recurrent neural network language model. - Tomas Mikolov et al. - 2012 [24]</li>
 </ul>
-<h2 id="section-3">2012</h2>
+
+<h3 id="2012">2012</h3>
+
 <ul>
-<li><span class="citation">A generalized LSTM-like training algorithm for second-order recurrent neural networks - Derek Monner et al. - 2012 [25]</span></li>
-<li><span class="citation">Long-short term memory neural networks language modeling for handwriting recognition. - Volkmar Frinken et al. - 2012 [26]</span></li>
-<li><span class="citation">LSTM neural networks for language modeling. - Martin Sundermeyer et al. - 2012 [27]</span></li>
+<li>A generalized LSTM-like training algorithm for second-order recurrent neural networks - Derek Monner et al. - 2012 [25]</li>
+<li>Long-short term memory neural networks language modeling for handwriting recognition. - Volkmar Frinken et al. - 2012 [26]</li>
+<li>LSTM neural networks for language modeling. - Martin Sundermeyer et al. - 2012 [27]</li>
 </ul>
-<h2 id="pre-2012">Pre-2012</h2>
+
+<h3 id="pre-2012">Pre-2012</h3>
+
 <ul>
-<li><span class="citation">Generating text with recurrent neural networks - Ilya Sutskever et al. - 2011 [28]</span></li>
-<li><span class="citation">Named entity recognition with long short-term memory - James Hammerton - 2003 [29]</span></li>
-<li><span class="citation">Gradient flow in recurrent nets: The difficulty of learning long-term dependencies - Sepp Hochreiter et al. - 2001 [30]</span></li>
-<li><span class="citation">Long short-term memory - Sepp Hochreiter et al. - 1997 [31]</span></li>
-<li><span class="citation">Learning to forget: Continual prediction with LSTM - Felix A Gers et al. - 2000 [32]</span></li>
-<li><span class="citation">Learning precise timing with LSTM recurrent networks - Felix A Gers et al. - 2003 [33]</span></li>
-<li><span class="citation">Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]</span></li>
-<li><span class="citation">Long short-term memory in recurrent neural networks - Felix Gers - 2001 [34]</span></li>
+<li>Generating text with recurrent neural networks - Ilya Sutskever et al. - 2011 [28]</li>
+<li>Named entity recognition with long short-term memory - James Hammerton - 2003 [29]</li>
+<li>Gradient flow in recurrent nets: The difficulty of learning long-term dependencies - Sepp Hochreiter et al. - 2001 [30]</li>
+<li>Long short-term memory - Sepp Hochreiter et al. - 1997 [31]</li>
+<li>Learning to forget: Continual prediction with LSTM - Felix A Gers et al. - 2000 [32]</li>
+<li>Learning precise timing with LSTM recurrent networks - Felix A Gers et al. - 2003 [33]</li>
+<li>Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]</li>
+<li>Long short-term memory in recurrent neural networks - Felix Gers - 2001 [34]</li>
 </ul>
-<hr>
-<h1 id="tools">Tools</h1>
-<h2 id="torch">Torch</h2>
+
+<h2 id="tools">Tools</h2>
+
+<h3 id="torch">Torch</h3>
+
 <p>Torch is an open source machine learning library, a scientific computing framework, and a script language based on the Lua programming language. It provides a wide range of algorithms for deep machine learning, and uses an extremely fast scripting language LuaJIT, and an underlying C implementation. ~ Wikipedia</p>
+
 <ul>
 <li><a href="http://tylerneylon.com/a/learn-lua">Lua in 15 minutes</a></li>
 <li><a href="http://torch.ch/docs/getting-started.html">Getting started with Torch</a></li>
 <li><a href="https://groups.google.com/forum/#!forum/torch7">Torch 7 Google group</a></li>
 <li><a href="https://github.com/soumith/cvpr2015/blob/master/Deep%20Learning%20with%20Torch.ipynb">Deep Learning with Torch: the 60-minute blitz</a></li>
 </ul>
-<h3 id="code-bases-for-torch">Code bases for Torch</h3>
+
+<h4 id="code-bases-for-torch">Code bases for Torch</h4>
+
 <ul>
-<li>Multi-layer character-level Recurrent Neural Network: <a href="https://github.com/karpathy/char-rnn" class="uri">https://github.com/karpathy/char-rnn</a>
+<li>Multi-layer character-level Recurrent Neural Network: <a href="https://github.com/karpathy/char-rnn">https://github.com/karpathy/char-rnn</a>
+
 <ul>
-<li>Fork for word-level RNN (a little outdated): <a href="https://github.com/Graydyn/char-rnn" class="uri">https://github.com/Graydyn/char-rnn</a></li>
+<li>Fork for word-level RNN (a little outdated): <a href="https://github.com/Graydyn/char-rnn">https://github.com/Graydyn/char-rnn</a></li>
 </ul></li>
-<li>RNN module for Torch nn: <a href="https://github.com/Element-Research/rnn" class="uri">https://github.com/Element-Research/rnn</a></li>
-<li>Character-Aware Neural Language Models: <a href="https://github.com/yoonkim/lstm-char-cnn" class="uri">https://github.com/yoonkim/lstm-char-cnn</a></li>
+<li>RNN module for Torch nn: <a href="https://github.com/Element-Research/rnn">https://github.com/Element-Research/rnn</a></li>
+<li>Character-Aware Neural Language Models: <a href="https://github.com/yoonkim/lstm-char-cnn">https://github.com/yoonkim/lstm-char-cnn</a></li>
 </ul>
-<hr>
-<h1 id="general-nn-resources">General NN Resources</h1>
-<h2 id="online-textbooks">Online textbooks</h2>
+
+<h2 id="general-nn-resources">General NN Resources</h2>
+
+<h3 id="online-textbooks">Online textbooks</h3>
+
 <ul>
-<li><a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning (Michael Nielsen)</a></li>
+<li><a href="http://neuralnetworksanddeeplearning.com">Neural Networks and Deep Learning (Michael Nielsen)</a></li>
 <li><a href="http://goodfeli.github.io/dlbook">Deep Learning (Yoshua Bengio, Ian Goodfellow and Aaron Courville)</a></li>
 <li><a href="https://github.com/rasbt/python-machine-learning-book">Python Machine Learning Book</a></li>
 <li>A Tutorial on Deep Learning (Quoc V. Le)
+
 <ul>
 <li><a href="http://cs.stanford.edu/~quocle/tutorial1.pdf">Part 1: Nonlinear Classifiers and The Backpropagation Algorithm (PDF)</a></li>
 <li><a href="http://www-cs.stanford.edu/~quocle/tutorial2.pdf">Part 2: Autoencoders, Convolutional Neural Networks and Recurrent Neural Networks (PDF)</a></li>
 </ul></li>
 </ul>
-<h2 id="video-courses">Video courses</h2>
+
+<h3 id="video-courses">Video courses</h3>
+
 <ul>
 <li><a href="https://class.coursera.org/neuralnets-2012-001">Neural Networks for Machine Learning, Hinton (Coursera)</a></li>
 <li><a href="https://www.coursera.org/learn/machine-learning">Machine Learning, Andrew Ng (Coursera)</a></li>
@@ -169,137 +539,264 @@ Oettingenstraße 67<br>
 <li><a href="http://techtalks.tv/acl-ijcnlp-2015">TechTalks from ACL-IJCNLP 2015</a></li>
 <li><a href="http://cs224d.stanford.edu/syllabus.html">CS224d: Deep Learning for Natural Language Processing</a></li>
 </ul>
-<h2 id="blogs-articles">Blogs &amp; Articles</h2>
+
+<h3 id="blogs-articles">Blogs &amp; Articles</h3>
+
 <ul>
 <li><a href="http://gavagai.se/blog/2015/09/30/a-brief-history-of-word-embeddings">A brief history of word embeddings</a></li>
 <li><a href="http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">The AI Revolution: The Road to Superintelligence (Tim Urban)</a></li>
 <li><a href="http://blog.zabarauskas.com/backpropagation-tutorial/">Backpropagation Tutorial (Manfred Zabarauskas)</a></li>
 <li><a href="http://www.marekrei.com/blog">Thoughts on Machine Learning and Natural Language Processing (Marek Rei)</a>, e.g.:
+
 <ul>
 <li><a href="http://www.marekrei.com/blog/dont-count-predict/">Don’t Count, Predict</a></li>
 <li><a href="http://www.marekrei.com/blog/linguistic-regularities-word-representations/">Linguistic Regularities in Word Representations</a></li>
 <li>Neural Networks <a href="http://www.marekrei.com/blog/neural-networks-part-1-background/">Part 1</a> <a href="http://www.marekrei.com/blog/neural-networks-part-2-the-neuron/">Part 2</a> <a href="http://www.marekrei.com/blog/neural-networks-part-3-network/">Part 3</a></li>
 <li><a href="http://www.marekrei.com/blog/26-things-i-learned-in-the-deep-learning-summer-school/">26 Things I Learned in the Deep Learning Summer School</a></li>
 </ul></li>
-<li><a href="http://colah.github.io/">Colah’s blog</a>, notably:
+<li><a href="http://colah.github.io">Colah’s blog</a>, notably:
+
 <ul>
 <li><a href="http://colah.github.io/posts/2014-03-NN-Manifolds-Topology">Neural Networks, Manifolds, and Topology</a></li>
 <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a></li>
 </ul></li>
 <li><a href="http://apaszke.github.io/lstm-explained.html">LSTM implementation explained (Adam Paszke)</a></li>
-<li><a href="http://news.startup.ml/">Deep Learning News</a></li>
-<li><a href="http://www.wildml.com/">WildML (Denny Britz)</a></li>
+<li><a href="http://news.startup.ml">Deep Learning News</a></li>
+<li><a href="http://www.wildml.com">WildML (Denny Britz)</a></li>
 </ul>
-<h2 id="presentations">Presentations</h2>
+
+<h3 id="presentations">Presentations</h3>
+
 <ul>
 <li><a href="https://sites.google.com/site/deeplearningsummerschool/schedule">Deep Learning Summer School, Montreal 2015</a></li>
 </ul>
-<hr>
-<h1 id="references" class="unnumbered">References</h1>
-<div id="refs" class="references">
-<div id="ref-Kim15">
-<p>[1] Y. Kim, Y. Jernite, D. Sontag, and A. M. Rush, “Character-aware neural language models,” <em>arXiv preprint arXiv:1508.06615</em>, 2015.</p>
-</div>
-<div id="ref-Greff15">
-<p>[2] K. Greff, R. K. Srivastava, J. Koutník, B. R. Steunebrink, and J. Schmidhuber, “LSTM: A search space odyssey,” <em>arXiv preprint arXiv:1503.04069</em>, 2015.</p>
-</div>
-<div id="ref-Jozefowicz15">
-<p>[3] R. Jozefowicz, W. Zaremba, and I. Sutskever, “An empirical exploration of recurrent network architectures,” in <em>Proceedings of the 32<sup>nd</sup> international conference on machine learning</em>, 2015, pp. 2342–2350.</p>
-</div>
-<div id="ref-Hermann15">
-<p>[4] K. M. Hermann, T. Kočisky, E. Grefenstette, L. Espeholt, W. Kay, M. Suleyman, and P. Blunsom, “Teaching machines to read and comprehend,” <em>arXiv preprint arXiv:1506.03340</em>, 2015.</p>
-</div>
-<div id="ref-Chung15">
-<p>[5] J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural networks,” <em>arXiv preprint arXiv:1502.02367</em>, 2015.</p>
-</div>
-<div id="ref-Sak14a">
-<p>[6] H. Sak, A. Senior, and F. Beaufays, “Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition,” <em>arXiv preprint arXiv:1402.1128</em>, 2014.</p>
-</div>
-<div id="ref-Vinyals14">
-<p>[7] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan, “Show and tell: A neural image caption generator,” <em>arXiv preprint arXiv:1411.4555</em>, 2014.</p>
-</div>
-<div id="ref-Zaremba14">
-<p>[8] W. Zaremba, I. Sutskever, and O. Vinyals, “Recurrent neural network regularization,” <em>arXiv preprint arXiv:1409.2329</em>, 2014.</p>
-</div>
-<div id="ref-Irsoy14">
-<p>[9] O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative recurrent neural networks,” <em>arXiv preprint arXiv:1412.6577</em>, 2014.</p>
-</div>
-<div id="ref-Chen14">
-<p>[10] X. Chen, Y. Wang, X. Liu, M. J. Gales, and P. C. Woodland, “Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch,” <em>submitted to Proc. ISCA Interspeech</em>, 2014.</p>
-</div>
-<div id="ref-Cho14">
-<p>[11] K. Cho, B. van Merrienboer, C. Gulcehre, F. Bougares, H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn encoder-decoder for statistical machine translation,” <em>arXiv preprint arXiv:1406.1078</em>, 2014.</p>
-</div>
-<div id="ref-Mao14">
-<p>[12] J. Mao, W. Xu, Y. Yang, J. Wang, and A. Yuille, “Deep captioning with multimodal recurrent neural networks (m-rNN),” <em>arXiv preprint arXiv:1412.6632</em>, 2014.</p>
-</div>
-<div id="ref-Mikolov14">
-<p>[13] T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer memory in recurrent neural networks,” <em>arXiv preprint arXiv:1412.7753</em>, 2014.</p>
-</div>
-<div id="ref-Shao14">
+
+<h2 id="references">References</h2>
+
+<p>[1] Y. Kim, Y. Jernite, D. Sontag, and A. M. Rush, “Character-aware neural language models,” arXiv preprint arXiv:1508.06615, 2015.</p>
+
+<p>[2] K. Greff, R. K. Srivastava, J. Koutník, B. R. Steunebrink, and J. Schmidhuber, “LSTM: A search space odyssey,” arXiv preprint arXiv:1503.04069, 2015.</p>
+
+<p>[3] R. Jozefowicz, W. Zaremba, and I. Sutskever, “An empirical exploration of recurrent network architectures,” in Proceedings of the 32nd international conference on machine learning, 2015, pp. 2342–2350.</p>
+
+<p>[4] K. M. Hermann, T. Kočisky, E. Grefenstette, L. Espeholt, W. Kay, M. Suleyman, and P. Blunsom, “Teaching machines to read and comprehend,” arXiv preprint arXiv:1506.03340, 2015.</p>
+
+<p>[5] J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural networks,” arXiv preprint arXiv:1502.02367, 2015.</p>
+
+<p>[6] H. Sak, A. Senior, and F. Beaufays, “Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition,” arXiv preprint arXiv:1402.1128, 2014.</p>
+
+<p>[7] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan, “Show and tell: A neural image caption generator,” arXiv preprint arXiv:1411.4555, 2014.</p>
+
+<p>[8] W. Zaremba, I. Sutskever, and O. Vinyals, “Recurrent neural network regularization,” arXiv preprint arXiv:1409.2329, 2014.</p>
+
+<p>[9] O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative recurrent neural networks,” arXiv preprint arXiv:1412.6577, 2014.</p>
+
+<p>[10] X. Chen, Y. Wang, X. Liu, M. J. Gales, and P. C. Woodland, “Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch,” submitted to Proc. ISCA Interspeech, 2014.</p>
+
+<p>[11] K. Cho, B. van Merrienboer, C. Gulcehre, F. Bougares, H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn encoder-decoder for statistical machine translation,” arXiv preprint arXiv:1406.1078, 2014.</p>
+
+<p>[12] J. Mao, W. Xu, Y. Yang, J. Wang, and A. Yuille, “Deep captioning with multimodal recurrent neural networks (m-rNN),” arXiv preprint arXiv:1412.6632, 2014.</p>
+
+<p>[13] T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer memory in recurrent neural networks,” arXiv preprint arXiv:1412.7753, 2014.</p>
+
 <p>[14] Y. Shao, “Learning sparse recurrent neural networks in language modeling,” PhD thesis, The Ohio State University, 2014.</p>
-</div>
-<div id="ref-Weng14">
-<p>[15] C. Weng, D. Yu, S. Watanabe, and B.-H. F. Juang, “Recurrent deep neural networks for robust speech recognition,” in <em>Acoustics, speech and signal processing (iCASSP), 2014 iEEE international conference on</em>, 2014, pp. 5532–5536.</p>
-</div>
-<div id="ref-Pascanu13">
-<p>[16] R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training recurrent neural networks.” in <em>ICML (3)</em>, 2013, vol. 28, pp. 1310–1318.</p>
-</div>
-<div id="ref-Graves13">
-<p>[17] A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep recurrent neural networks,” <em>arXiv preprint arXiv:1303.5778</em>, 2013.</p>
-</div>
-<div id="ref-Graves13a">
-<p>[18] A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep bidirectional LSTM,” in <em>Automatic speech recognition and understanding (aSRU), 2013 iEEE workshop on</em>, 2013, pp. 273–278.</p>
-</div>
-<div id="ref-Graves13b">
-<p>[19] A. Graves, “Generating sequences with recurrent neural networks,” <em>arXiv preprint arXiv:1308.0850</em>, 2013.</p>
-</div>
-<div id="ref-Breuel13">
-<p>[20] T. M. Breuel, A. Ul-Hasan, M. A. Al-Azawi, and F. Shafait, “High-performance OCR for printed english and fraktur using LSTM networks,” in <em>Document analysis and recognition (iCDAR), 2013 12<sup>th</sup> international conference on</em>, 2013, pp. 683–687.</p>
-</div>
-<div id="ref-Kalchbrenner13">
-<p>[21] N. Kalchbrenner and P. Blunsom, “Recurrent convolutional neural networks for discourse compositionality,” <em>arXiv preprint arXiv:1306.3584</em>, 2013.</p>
-</div>
-<div id="ref-Sundermeyer13">
-<p>[22] M. Sundermeyer, I. Oparin, J.-L. Gauvain, B. Freiberg, R. Schluter, and H. Ney, “Comparison of feedforward and recurrent neural network language models,” in <em>Acoustics, speech and signal processing (iCASSP), 2013 iEEE international conference on</em>, 2013, pp. 8430–8434.</p>
-</div>
-<div id="ref-Shi13">
-<p>[23] Y. Shi, W.-Q. Zhang, J. Liu, and M. T. Johnson, “RNN language model with word clustering and class-based output layer,” <em>EURASIP Journal on Audio, Speech, and Music Processing</em>, vol. 2013, no. 1, pp. 1–7, 2013.</p>
-</div>
-<div id="ref-Mikolov13c">
-<p>[24] T. Mikolov and G. Zweig, “Context dependent recurrent neural network language model.” in <em>SLT</em>, 2012, pp. 234–239.</p>
-</div>
-<div id="ref-Monner12">
-<p>[25] D. Monner and J. A. Reggia, “A generalized LSTM-like training algorithm for second-order recurrent neural networks,” <em>Neural Networks</em>, vol. 25, pp. 70–83, 2012.</p>
-</div>
-<div id="ref-Frinken12">
-<p>[26] V. Frinken, F. Zamora-Martínez, S. E. Boquera, M. J. C. Bleda, A. Fischer, and H. Bunke, “Long-short term memory neural networks language modeling for handwriting recognition.” in <em>ICPR</em>, 2012, pp. 701–704.</p>
-</div>
-<div id="ref-Sundermeyer12">
-<p>[27] M. Sundermeyer, R. Schlüter, and H. Ney, “LSTM neural networks for language modeling.” in <em>INTERSPEECH</em>, 2012.</p>
-</div>
-<div id="ref-Sutskever11">
-<p>[28] I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent neural networks,” in <em>Proceedings of the 28th international conference on machine learning (iCML-11)</em>, 2011, pp. 1017–1024.</p>
-</div>
-<div id="ref-hammerton03">
-<p>[29] J. Hammerton, “Named entity recognition with long short-term memory,” in <em>Proceedings of coNLL-2003</em>, 2003, pp. 172–175.</p>
-</div>
-<div id="ref-Hochreiter01">
+
+<p>[15] C. Weng, D. Yu, S. Watanabe, and B.-H. F. Juang, “Recurrent deep neural networks for robust speech recognition,” in Acoustics, speech and signal processing (iCASSP), 2014 iEEE international conference on, 2014, pp. 5532–5536.</p>
+
+<p>[16] R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training recurrent neural networks.” in ICML (3), 2013, vol. 28, pp. 1310–1318.</p>
+
+<p>[17] A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep recurrent neural networks,” arXiv preprint arXiv:1303.5778, 2013.</p>
+
+<p>[18] A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep bidirectional LSTM,” in Automatic speech recognition and understanding (aSRU), 2013 iEEE workshop on, 2013, pp. 273–278.</p>
+
+<p>[19] A. Graves, “Generating sequences with recurrent neural networks,” arXiv preprint arXiv:1308.0850, 2013.</p>
+
+<p>[20] T. M. Breuel, A. Ul-Hasan, M. A. Al-Azawi, and F. Shafait, “High-performance OCR for printed english and fraktur using LSTM networks,” in Document analysis and recognition (iCDAR), 2013 12th international conference on, 2013, pp. 683–687.</p>
+
+<p>[21] N. Kalchbrenner and P. Blunsom, “Recurrent convolutional neural networks for discourse compositionality,” arXiv preprint arXiv:1306.3584, 2013.</p>
+
+<p>[22] M. Sundermeyer, I. Oparin, J.-L. Gauvain, B. Freiberg, R. Schluter, and H. Ney, “Comparison of feedforward and recurrent neural network language models,” in Acoustics, speech and signal processing (iCASSP), 2013 iEEE international conference on, 2013, pp. 8430–8434.</p>
+
+<p>[23] Y. Shi, W.-Q. Zhang, J. Liu, and M. T. Johnson, “RNN language model with word clustering and class-based output layer,” EURASIP Journal on Audio, Speech, and Music Processing, vol. 2013, no. 1, pp. 1–7, 2013.</p>
+
+<p>[24] T. Mikolov and G. Zweig, “Context dependent recurrent neural network language model.” in SLT, 2012, pp. 234–239.</p>
+
+<p>[25] D. Monner and J. A. Reggia, “A generalized LSTM-like training algorithm for second-order recurrent neural networks,” Neural Networks, vol. 25, pp. 70–83, 2012.</p>
+
+<p>[26] V. Frinken, F. Zamora-Martínez, S. E. Boquera, M. J. C. Bleda, A. Fischer, and H. Bunke, “Long-short term memory neural networks language modeling for handwriting recognition.” in ICPR, 2012, pp. 701–704.</p>
+
+<p>[27] M. Sundermeyer, R. Schlüter, and H. Ney, “LSTM neural networks for language modeling.” in INTERSPEECH, 2012.</p>
+
+<p>[28] I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent neural networks,” in Proceedings of the 28th international conference on machine learning (iCML-11), 2011, pp. 1017–1024.</p>
+
+<p>[29] J. Hammerton, “Named entity recognition with long short-term memory,” in Proceedings of coNLL-2003, 2003, pp. 172–175.</p>
+
 <p>[30] S. Hochreiter, Y. Bengio, P. Frasconi, and J. Schmidhuber, “Gradient flow in recurrent nets: The difficulty of learning long-term dependencies.” Citeseer, 2001.</p>
-</div>
-<div id="ref-Hochreiter97">
+
 <p>[31] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” vol. 9, no. 8, pp. 1735–1780, 1997.</p>
-</div>
-<div id="ref-Gers00">
-<p>[32] F. A. Gers, J. Schmidhuber, and F. Cummins, “Learning to forget: Continual prediction with LSTM,” <em>Neural computation</em>, vol. 12, no. 10, pp. 2451–2471, 2000.</p>
-</div>
-<div id="ref-Gers03">
-<p>[33] F. A. Gers, N. N. Schraudolph, and J. Schmidhuber, “Learning precise timing with LSTM recurrent networks,” <em>The Journal of Machine Learning Research</em>, vol. 3, pp. 115–143, 2003.</p>
-</div>
-<div id="ref-Gers01">
-<p>[34] F. Gers, “Long short-term memory in recurrent neural networks,” <em>Unpublished PhD dissertation, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland</em>, 2001.</p>
-</div>
-</div>
+
+<p>[32] F. A. Gers, J. Schmidhuber, and F. Cummins, “Learning to forget: Continual prediction with LSTM,” Neural computation, vol. 12, no. 10, pp. 2451–2471, 2000.</p>
+
+<p>[33] F. A. Gers, N. N. Schraudolph, and J. Schmidhuber, “Learning precise timing with LSTM recurrent networks,” The Journal of Machine Learning Research, vol. 3, pp. 115–143, 2003.</p>
+
+<p>[34] F. Gers, “Long short-term memory in recurrent neural networks,” Unpublished PhD dissertation, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland, 2001.</p>
+
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
+    <div id="social-bar">
+	<ul class="rrssb-buttons clearfix">
+      <li class="email">
+          <a href="mailto:?subject=&amp;body=https://hexromas.github.io/manual/deeplearning/">
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                      <path transform="scale(0.014,-0.014) translate(0,-1670)" d="M1792 826v-794q0 -66 -47 -113t-113 -47h-1472q-66 0 -113 47t-47 113v794q44 -49 101 -87q362 -246 497 -345q57 -42 92.5 -65.5t94.5 -48t110 -24.5h1h1q51 0 110 24.5t94.5 48t92.5 65.5q170 123 498 345q57 39 100 87zM1792 1120q0 -79 -49 -151t-122 -123 q-376 -261 -468 -325q-10 -7 -42.5 -30.5t-54 -38t-52 -32.5t-57.5 -27t-50 -9h-1h-1q-23 0 -50 9t-57.5 27t-52 32.5t-54 38t-42.5 30.5q-91 64 -262 182.5t-205 142.5q-62 42 -117 115.5t-55 136.5q0 78 41.5 130t118.5 52h1472q65 0 112.5 -47t47.5 -113z"/>
+                  </svg>
+              </span>
+              <span class="text">Email</span>
+          </a>
+      </li>
+      <li class="facebook">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://hexromas.github.io/manual/deeplearning/" class="popup">
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                      <path d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434 c0,2.427,2.181,4.608,4.608,4.608H14V17.379h-3.379v-4.608H14v-1.795c0-3.089,2.335-5.885,5.192-5.885h3.718v4.608h-3.726 c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
+                  </svg>
+              </span>
+              <span class="text">Facebook</span>
+          </a>
+      </li>
+			<li class="twitter">
+          <a href="http://twitter.com/home?status=%20https://hexromas.github.io/manual/deeplearning/" class="popup">
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+		                  <path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32 c2.703,0.179,5.376-0.648,7.508-2.321c-2.072-0.247-3.818-1.661-4.489-3.638c0.801,0.128,1.62,0.076,2.399-0.155 C4.045,15.72,2.215,13.6,2.115,11.077c0.688,0.275,1.426,0.407,2.168,0.386c-2.135-1.65-2.729-4.621-1.394-6.965 C5.575,7.816,9.54,9.84,13.803,10.071c-0.842-2.739,0.694-5.64,3.434-6.482c2.018-0.623,4.212,0.044,5.546,1.683 c1.186-0.213,2.318-0.662,3.329-1.317c-0.385,1.256-1.247,2.312-2.399,2.942c1.048-0.106,2.069-0.394,3.019-0.851 C26.275,7.229,25.39,8.196,24.253,8.756z"/>
+                  </svg>
+              </span>
+              <span class="text">Twitter</span>
+          </a>
+      </li>
+			<li class="linkedin">
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/manual/deeplearning/&amp;title=&amp;summary=Deep%20Learning%20Manual%20--%20%20--%20D%20E%20E%20P%20%20B%20O%20%20%20This%20Deep%20Munich%20is%20a%20collaborative%20group%20of%20Deep%20Learning%20and%20Neural%20Network%20researchers%20in%20Munich.%20Our%20members%20represent%3a%0a%20Faculty%20for%20Informatics%20at%20TU%20%28http%3a%2f%2fwww.in.tum.de%29%20Institute%20for%20Informatics%20at%20LMU%20%28https%3a%2f%2fwww.ifi.lmu.de%29%20Center%20for%20Information%20and%20Language%20Processing%20%28CIS%29%20at%20LMU%20%28http%3a%2f%2fwww.cis.lmu.de%29%20Ask%20questions%20and%20discuss%20ideas%20in%20our%20forum%3a%20https%3a%2f%2fgroups.google.com%2fforum%2f%23%21forum%2fdeep-munich%20%20Sign%20up%20for%20our%20mailing%20list%20and%20stay%20up-to-date%3a%20https%3a%2f%2flists...." class="popup">
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                      <path d="M25.424,15.887v8.447h-4.896v-7.882c0-1.979-0.709-3.331-2.48-3.331c-1.354,0-2.158,0.911-2.514,1.803 c-0.129,0.315-0.162,0.753-0.162,1.194v8.216h-4.899c0,0,0.066-13.349,0-14.731h4.899v2.088c-0.01,0.016-0.023,0.032-0.033,0.048 h0.033V11.69c0.65-1.002,1.812-2.435,4.414-2.435C23.008,9.254,25.424,11.361,25.424,15.887z M5.348,2.501 c-1.676,0-2.772,1.092-2.772,2.539c0,1.421,1.066,2.538,2.717,2.546h0.032c1.709,0,2.771-1.132,2.771-2.546 C8.054,3.593,7.019,2.501,5.343,2.501H5.348z M2.867,24.334h4.897V9.603H2.867V24.334z"/>
+                  </svg>
+              </span>
+              <span class="text">LinkedIn</span>
+          </a>
+      </li>
+      <li class="tumblr">
+					<script>
+						document.write('<a href="http://www.tumblr.com/share?v=3&amp;u=' + encodeURIComponent('https:\/\/hexromas.github.io\/manual\/deeplearning\/') + '&amp;t=" class="popup">');
+					</script>
+              <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+											<path d="M18.02 21.842c-2.029 0.052-2.422-1.396-2.439-2.446v-7.294h4.729V7.874h-4.71V1.592c0 0-3.653 0-3.714 0 s-0.167 0.053-0.182 0.186c-0.218 1.935-1.144 5.33-4.988 6.688v3.637h2.927v7.677c0 2.8 1.7 6.7 7.3 6.6 c1.863-0.03 3.934-0.795 4.392-1.453l-1.22-3.539C19.595 21.6 18.7 21.8 18 21.842z"/>
+									</svg>
+              </span>
+              <span class="text">Tumblr</span>
+          <script>document.write('</a>');</script>
+      </li>
+      <li class="reddit">
+          <a href="http://www.reddit.com/submit?url=https://hexromas.github.io/manual/deeplearning/">
+              <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+											<g>
+													<path d="M11.794 15.316c0-1.029-0.835-1.895-1.866-1.895c-1.03 0-1.893 0.865-1.893 1.895s0.863 1.9 1.9 1.9 C10.958 17.2 11.8 16.3 11.8 15.316z"/>
+													<path d="M18.1 13.422c-1.029 0-1.895 0.864-1.895 1.895c0 1 0.9 1.9 1.9 1.865c1.031 0 1.869-0.836 1.869-1.865 C19.969 14.3 19.1 13.4 18.1 13.422z"/>
+													<path d="M17.527 19.791c-0.678 0.678-1.826 1.006-3.514 1.006c-0.004 0-0.009 0-0.014 0c-0.004 0-0.01 0-0.015 0 c-1.686 0-2.834-0.328-3.51-1.005c-0.264-0.265-0.693-0.265-0.958 0c-0.264 0.265-0.264 0.7 0 1 c0.943 0.9 2.4 1.4 4.5 1.402c0.005 0 0 0 0 0c0.005 0 0 0 0 0c2.066 0 3.527-0.459 4.47-1.402 c0.265-0.264 0.265-0.693 0.002-0.958C18.221 19.5 17.8 19.5 17.5 19.791z"/>
+													<path d="M27.707 13.267c0-1.785-1.453-3.237-3.236-3.237c-0.793 0-1.518 0.287-2.082 0.761c-2.039-1.295-4.646-2.069-7.438-2.219 l1.483-4.691l4.062 0.956c0.071 1.4 1.3 2.6 2.7 2.555c1.488 0 2.695-1.208 2.695-2.695C25.881 3.2 24.7 2 23.2 2 c-1.059 0-1.979 0.616-2.42 1.508l-4.633-1.091c-0.344-0.081-0.693 0.118-0.803 0.455l-1.793 5.7 C10.548 8.6 7.7 9.4 5.6 10.75C5.006 10.3 4.3 10 3.5 10.029c-1.785 0-3.237 1.452-3.237 3.2 c0 1.1 0.6 2.1 1.4 2.69c-0.04 0.272-0.061 0.551-0.061 0.831c0 2.3 1.3 4.4 3.7 5.9 c2.299 1.5 5.3 2.3 8.6 2.325c3.228 0 6.271-0.825 8.571-2.325c2.387-1.56 3.7-3.66 3.7-5.917 c0-0.26-0.016-0.514-0.051-0.768C27.088 15.5 27.7 14.4 27.7 13.267z M23.186 3.355c0.74 0 1.3 0.6 1.3 1.3 c0 0.738-0.6 1.34-1.34 1.34s-1.342-0.602-1.342-1.34C21.844 4 22.4 3.4 23.2 3.355z M1.648 13.3 c0-1.038 0.844-1.882 1.882-1.882c0.31 0 0.6 0.1 0.9 0.209c-1.049 0.868-1.813 1.861-2.26 2.9 C1.832 14.2 1.6 13.8 1.6 13.267z M21.773 21.57c-2.082 1.357-4.863 2.105-7.831 2.105c-2.967 0-5.747-0.748-7.828-2.105 c-1.991-1.301-3.088-3-3.088-4.782c0-1.784 1.097-3.484 3.088-4.784c2.081-1.358 4.861-2.106 7.828-2.106 c2.967 0 5.7 0.7 7.8 2.106c1.99 1.3 3.1 3 3.1 4.784C24.859 18.6 23.8 20.3 21.8 21.57z M25.787 14.6 c-0.432-1.084-1.191-2.095-2.244-2.977c0.273-0.156 0.59-0.245 0.928-0.245c1.035 0 1.9 0.8 1.9 1.9 C26.354 13.8 26.1 14.3 25.8 14.605z"/>
+											</g>
+									</svg>
+              </span>
+              <span class="text">Reddit</span>
+          </a>
+      </li>
+      <li class="googleplus">
+          <a href="https://plus.google.com/share?url=https://hexromas.github.io/manual/deeplearning/" class="popup">
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                      <g>
+                          <path d="M14.703,15.854l-1.219-0.948c-0.372-0.308-0.88-0.715-0.88-1.459c0-0.748,0.508-1.223,0.95-1.663 c1.42-1.119,2.839-2.309,2.839-4.817c0-2.58-1.621-3.937-2.399-4.581h2.097l2.202-1.383h-6.67c-1.83,0-4.467,0.433-6.398,2.027 C3.768,4.287,3.059,6.018,3.059,7.576c0,2.634,2.022,5.328,5.604,5.328c0.339,0,0.71-0.033,1.083-0.068 c-0.167,0.408-0.336,0.748-0.336,1.324c0,1.04,0.551,1.685,1.011,2.297c-1.524,0.104-4.37,0.273-6.467,1.562 c-1.998,1.188-2.605,2.916-2.605,4.137c0,2.512,2.358,4.84,7.289,4.84c5.822,0,8.904-3.223,8.904-6.41 c0.008-2.327-1.359-3.489-2.829-4.731H14.703z M10.269,11.951c-2.912,0-4.231-3.765-4.231-6.037c0-0.884,0.168-1.797,0.744-2.511 c0.543-0.679,1.489-1.12,2.372-1.12c2.807,0,4.256,3.798,4.256,6.242c0,0.612-0.067,1.694-0.845,2.478 c-0.537,0.55-1.438,0.948-2.295,0.951V11.951z M10.302,25.609c-3.621,0-5.957-1.732-5.957-4.142c0-2.408,2.165-3.223,2.911-3.492 c1.421-0.479,3.25-0.545,3.555-0.545c0.338,0,0.52,0,0.766,0.034c2.574,1.838,3.706,2.757,3.706,4.479 c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z"/>
+                          <polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004 23.254,17.004 23.254,13.604 26.653,13.604 26.653,11.89"/>
+                      </g>
+                  </svg>
+              </span>
+              <span class="text">Google+</span>
+          </a>
+      </li>
+      <li class="pinterest">
+          <script>
+						var imgurl = "https:\/\/hexromas.github.io\/logo.png";
+						var firstimg = document.getElementsByClassName("manual")[0].getElementsByTagName("img")[0];
+						if (firstimg !== undefined) {
+							imgurl = firstimg.src;
+						}
+						document.write('<a href="http://pinterest.com/pin/create/button/?url=https:\/\/hexromas.github.io\/manual\/deeplearning\/&amp;media=' + imgurl + '&amp;description=" class="popup">');
+					</script>
+              <span class="icon">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+		                  <path d="M14.021,1.57C6.96,1.57,1.236,7.293,1.236,14.355c0,7.062,5.724,12.785,12.785,12.785c7.061,0,12.785-5.725,12.785-12.785 C26.807,7.294,21.082,1.57,14.021,1.57z M15.261,18.655c-1.161-0.09-1.649-0.666-2.559-1.219c-0.501,2.626-1.113,5.145-2.925,6.458 c-0.559-3.971,0.822-6.951,1.462-10.116c-1.093-1.84,0.132-5.545,2.438-4.632c2.837,1.123-2.458,6.842,1.099,7.557 c3.711,0.744,5.227-6.439,2.925-8.775c-3.325-3.374-9.678-0.077-8.897,4.754c0.19,1.178,1.408,1.538,0.489,3.168 C7.165,15.378,6.53,13.7,6.611,11.462c0.131-3.662,3.291-6.227,6.46-6.582c4.007-0.448,7.771,1.474,8.29,5.239 c0.579,4.255-1.816,8.865-6.102,8.533L15.261,18.655z"/>
+                  </svg>
+              </span>
+              <span class="text">Pinterest</span>
+          <script>document.write('</a>');</script>
+      </li>
+      <li class="pocket">
+          <a href="https://getpocket.com/save?url=https://hexromas.github.io/manual/deeplearning/"  class="popup">
+              <span class="icon">
+                  <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                      <path d="M28.7817528,0.00172488695 C30.8117487,0.00431221738 31.9749312,1.12074529 31.9644402,3.10781507 C31.942147,6.67703739 32.1336065,10.2669583 31.8057648,13.8090137 C30.7147076,25.5813672 17.2181194,31.8996281 7.20714461,25.3808491 C2.71833574,22.4571656 0.196577202,18.3122624 0.0549495772,12.9357897 C-0.0342233715,9.5774348 0.00642900214,6.21519891 0.0300336062,2.85555035 C0.0405245414,1.1129833 1.21157517,0.0146615391 3.01995012,0.00819321302 C7.34746087,-0.00603710433 11.6775944,0.00431221738 16.0064164,0.00172488695 C20.2644248,0.00172488695 24.5237444,-0.00215610869 28.7817528,0.00172488695 L28.7817528,0.00172488695 Z M8.64885184,7.85611511 C7.38773662,7.99113854 6.66148108,8.42606978 6.29310958,9.33228474 C5.90114134,10.2969233 6.17774769,11.1421181 6.89875951,11.8276216 C9.35282156,14.161969 11.8108164,16.4924215 14.2976518,18.7943114 C15.3844131,19.7966007 16.5354102,19.7836177 17.6116843,18.7813283 C20.0185529,16.5495467 22.4070683,14.2982907 24.7824746,12.0327533 C25.9845979,10.8850542 26.1012707,9.56468083 25.1469132,8.60653379 C24.1361858,7.59255976 22.8449191,7.6743528 21.5890476,8.85191291 C19.9936451,10.3488554 18.3680912,11.8172352 16.8395462,13.3777945 C16.1342655,14.093159 15.7200114,14.0048744 15.0566806,13.3440386 C13.4599671,11.7484252 11.8081945,10.2060421 10.1262706,8.70001155 C9.65564653,8.27936164 9.00411403,8.05345704 8.64885184,7.85611511 L8.64885184,7.85611511 L8.64885184,7.85611511 Z"></path>
+                  </svg>
+              </span>
+              <span class="text">Pocket</span>
+          </a>
+      </li>
+  </ul>
 </div>
 
-</body><div></div></html>
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <h6 class="moreless">LESS IS MORE</h6>
+  <section>
+    <p>Writing will help you thinking more, quicker, better.</a>
+    </p>
+  </section>
+</div>
+    <div id="comments">
+    
+    
+    
+    
+</div>
+
+</article>
+
+</main>
+		<footer id="footer">
+			<section id="footer-message">&copy; . All rights reserved. Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>. <a href="https://github.com/kathyqian/crisp-ghost-theme" target="_blank">Crisp</a> theme by <a href="http://kathyqian.com" target="_blank">Kathy Qian</a>.</section>
+		</footer>
+
+    <script>
+      (function(c,f){asyncLoader=function(i,h){i.foreach(function(k,j){e(j,d(j),h)});if(typeof h.callback=="function"){var g=setInterval(function(){if(f.readyState==="complete"){clearInterval(g);h.callback()}},10)}};var d=function(g){var h=g.split(".");return h[h.length-1]},e=function(h,i,g){switch(i){case"js":a(h,g);break;case"css":b(h);break;default:break}},a=function(i,h){var g=document.createElement("script");g.type="text/javascript";g.async=true;g.src=i;document.getElementsByTagName("head")[0].appendChild(g)},b=function(g){var h=document.createElement("link");h.type="text/css";h.rel="stylesheet";h.href=g;document.getElementsByTagName("head")[0].appendChild(h)};Array.prototype.foreach=function(h){for(var g=0;g<this.length;g++){h(g,this[g])}}})(this,document);
+
+      var WebFontConfig={google:{families:["Open Sans:300italic,700italic,300,700","Bree+Serif"]}};
+      asyncLoader([
+        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css",
+        "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+        "//cdnjs.cloudflare.com/ajax/libs/webfont/1.5.16/webfontloader.js",
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"
+      ],{
+        callback:function(){
+          asyncLoader([
+            "https:\/\/hexromas.github.io\/css/rrssb.css",
+            "https:\/\/hexromas.github.io\/js/gist.min.js", 
+            "https:\/\/hexromas.github.io\/js/rrssb.min.js",
+            "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"
+          ], { callback:function() {
+              hljs.initHighlighting();
+          }});
+        }
+      });
+    </script>
+	
+	</body>
+</html>

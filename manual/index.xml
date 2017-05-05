@@ -13,139 +13,1217 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hexromas.github.io/manual/deeplearning/</guid>
-      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;
-&lt;!-- saved from url=(0051)http://www.cis.uni-muenchen.de/~davidk/deep-munich/ --&gt;
-&lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; lang=&#34;ngerman&#34; xml:lang=&#34;ngerman&#34; data-livestyle-extension=&#34;available&#34; class=&#34;gr__cis_uni-muenchen_de hb-loaded&#34;&gt;
-
-&lt;head&gt;&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
-  &lt;meta http-equiv=&#34;Content-Style-Type&#34; content=&#34;text/css&#34;&gt;
-  &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34;&gt;
-  &lt;title&gt;Deep Bo&lt;/title&gt;
-
-  
-  
-
-  &lt;style type=&#34;text/css&#34;&gt;code{white-space: pre;}&lt;/style&gt;
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;./bootstrap.min.css&#34; type=&#34;text/css&#34;&gt;
-&lt;script&gt;var old = null;function asplay_top(c){var audio = document.createElement(&#34;audio&#34;);if(audio != null &amp;&amp; audio.canPlayType &amp;&amp; audio.canPlayType(&#34;audio/mpeg&#34;)){if(old){old.pause();}audio.src = c;old = audio;audio.play();}}&lt;/script&gt;&lt;style id=&#34;style-1-cropbar-clipper&#34;&gt;/* Copyright 2014 Evernote Corporation. All rights reserved. */
-.en-markup-crop-options {
-    top: 18px !important;
-    left: 50% !important;
-    margin-left: -100px !important;
-    width: 200px !important;
-    border: 2px rgba(255,255,255,.38) solid !important;
-    border-radius: 4px !important;
+      <description>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&#34;utf-8&#34;&gt;&lt;style&gt;body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
 }
 
-.en-markup-crop-options div div:first-of-type {
-    margin-left: 0px !important;
+body .markdown-body
+{
+  padding: 30px;
 }
-&lt;/style&gt;
-&lt;/head&gt;
 
-&lt;body data-gr-c-s-loaded=&#34;true&#34; huaban_collector_injected=&#34;true&#34; data-feedly-extension-follow-feed=&#34;1.0.3&#34; data-feedly-extension-exttag=&#34;3.0.1&#34; data-feedly-mini=&#34;yes&#34; class=&#34;vn-highlighter-context&#34;&gt;
-&lt;div class=&#34;container&#34;&gt;
-&lt;div id=&#34;header&#34;&gt;
-&lt;h1 class=&#34;title&#34;&gt;Deep Bo&lt;/h1&gt;
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format(&#39;woff&#39;);
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format(&#39;woff&#39;);
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: &#34;Helvetica Neue&#34;, Helvetica, &#34;Segoe UI&#34;, Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type=&#34;checkbox&#34;] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;;
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: &#34; &#34;;
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, &#34;Liberation Mono&#34;, Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, &#34;Liberation Mono&#34;, Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body&gt;*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body&gt;*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li&gt;p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote&gt;:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote&gt;:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: &#34;\00a0&#34;;
+}
+
+.markdown-body pre&gt;code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition&gt;.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention&gt;.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution&gt;.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint&gt;.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger&gt;.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question&gt;.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note&gt;.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: &#34;\f056\00a0&#34;;
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: &#34;\f058\00a0&#34;;
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: &#34;\f06a\00a0&#34;;
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: &#34;\f05a\00a0&#34;;
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: &#34;\f057\00a0&#34;;
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: &#34;\f059\00a0&#34;;
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: &#34;\f040\00a0&#34;;
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition&gt;*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition&gt;*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: &#39;\f05c&#39;;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: &#34; (&#34; attr(href) &#34;)&#34;;
+  }
+
+  .markdown-body abbr[title]:after {
+    content: &#34; (&#34; attr(title) &#34;)&#34;;
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^=&#34;javascript:&#34;]:after,
+  .markdown-body a[href^=&#34;#&#34;]:after {
+    content: &#34;&#34;;
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+&lt;/style&gt;&lt;style&gt;/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+&lt;/style&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+MathJax.Hub.Config({
+  config: [&#34;MMLorHTML.js&#34;],
+  extensions: [&#34;tex2jax.js&#34;],
+  jax: [&#34;input/TeX&#34;],
+  tex2jax: {
+    inlineMath: [ [&#39;$&#39;,&#39;$&#39;], [&#34;\\(&#34;,&#34;\\)&#34;] ],
+    displayMath: [ [&#39;$$&#39;,&#39;$$&#39;], [&#34;\\[&#34;,&#34;\\]&#34;] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: [&#34;AMSmath.js&#34;, &#34;AMSsymbols.js&#34;],
+    TagSide: &#34;right&#34;,
+    TagIndent: &#34;.8em&#34;,
+    MultLineWidth: &#34;85%&#34;,
+    equationNumbers: {
+      autoNumber: &#34;AMS&#34;,
+    },
+    unicode: {
+      fonts: &#34;STIXGeneral,&#39;Arial Unicode MS&#39;&#34;
+    }
+  },
+  showProcessingMessages: false
+});
+&lt;/script&gt;
+&lt;title&gt;index&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;article class=&#34;markdown-body&#34;&gt;&lt;h1 id=&#34;deep-learning-manual&#34;&gt;&lt;a name=&#34;user-content-deep-learning-manual&#34; href=&#34;#deep-learning-manual&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Deep Learning Manual&lt;/h1&gt;
+&lt;div &gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;///Z://portable/PortableApps/GitPortable/Data/home/bohugo/content/manual/deeplearning/deepbo.css&#34; type=&#34;text/css&#34;&gt;
+&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;./deep-bo_logo.css&#34; type=&#34;text/css&#34;&gt; --&gt;
+&lt;!-- &lt;script  type=&#34;text/javascript&#34;  src=&#34;deep-bo_logo.js&#34; &gt;&lt;/script&gt; --&gt;
+    &lt;link href=&#39;https://fonts.googleapis.com/css?family=Dancing+Script&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;///Z://portable/PortableApps/GitPortable/Data/home/bohugo/content/manual/thinktouch_logo/thinktouch_logo.css&#34; type=&#34;text/css&#34;&gt;
+    &lt;div &gt;
+        &lt;div class=&#34;blackbox&#34; style=&#39;font-family:Dancing Script;&#39;&gt;D&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;E&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;E&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;P&lt;/div&gt;
+        &lt;div class=&#34;whitebox&#34; &gt;&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; style=&#39;font-family:Dancing Script;&#39;&gt;B&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;O&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;./deep-bo_logo.css&#34; type=&#34;text/css&#34;&gt;
-&lt;script  type=&#34;text/javascript&#34;  src=&#34;deep-bo_logo.js&#34; &gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Deep Munich is a collaborative group of Deep Learning and Neural Network researchers in Munich. Our members represent:&lt;/p&gt;
+&lt;p&gt;This Deep Munich is a collaborative group of Deep Learning and Neural Network researchers in Munich. Our members represent:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Faculty for Informatics at TU (&lt;a href=&#34;http://www.in.tum.de/&#34; class=&#34;uri&#34;&gt;http://www.in.tum.de&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Institute for Informatics at LMU (&lt;a href=&#34;https://www.ifi.lmu.de/&#34; class=&#34;uri&#34;&gt;https://www.ifi.lmu.de&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Center for Information and Language Processing (CIS) at LMU (&lt;a href=&#34;http://www.cis.lmu.de/&#34; class=&#34;uri&#34;&gt;http://www.cis.lmu.de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Faculty for Informatics at TU (&lt;a href=&#34;http://www.in.tum.de&#34;&gt;http://www.in.tum.de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Institute for Informatics at LMU (&lt;a href=&#34;https://www.ifi.lmu.de&#34;&gt;https://www.ifi.lmu.de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Center for Information and Language Processing (CIS) at LMU (&lt;a href=&#34;http://www.cis.lmu.de&#34;&gt;http://www.cis.lmu.de&lt;/a&gt;)&lt;br /&gt;
+Ask questions and discuss ideas in our forum: &lt;a href=&#34;https://groups.google.com/forum/#!forum/deep-munich&#34;&gt;https://groups.google.com/forum/#!forum/deep-munich&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ask questions and discuss ideas in our &lt;em&gt;forum&lt;/em&gt;: &lt;a href=&#34;https://groups.google.com/forum/#!forum/deep-munich&#34; class=&#34;uri&#34;&gt;https://groups.google.com/forum/#!forum/deep-munich&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sign up for our &lt;em&gt;mailing list&lt;/em&gt; and stay up-to-date: &lt;a href=&#34;https://lists.lrz.de/mailman/listinfo/deep&#34; class=&#34;uri&#34;&gt;https://lists.lrz.de/mailman/listinfo/deep&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Join us in our &lt;em&gt;weekly meeting&lt;/em&gt; (see below).&lt;/p&gt;
-&lt;h1 id=&#34;members&#34;&gt;Members&lt;/h1&gt;
+&lt;p&gt;Sign up for our mailing list and stay up-to-date: &lt;a href=&#34;https://lists.lrz.de/mailman/listinfo/deep&#34;&gt;https://lists.lrz.de/mailman/listinfo/deep&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Join us in our weekly meeting (see below).&lt;/p&gt;
+&lt;h2 id=&#34;members&#34;&gt;&lt;a name=&#34;user-content-members&#34; href=&#34;#members&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Members&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~davidk&#34;&gt;David Kaumanns (CIS)&lt;/a&gt; - group organizer&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~fraser&#34;&gt;Alexander Fraser (CIS)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~schmid&#34;&gt;Helmut Schmid (CIS)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.dbs.ifi.lmu.de/cms/Evgeniy_Faerman&#34;&gt;Evgeniy Faerman (LMU)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~yadollah&#34;&gt;Yadollah Yaghoobzadeh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TBA&lt;/li&gt;
+&lt;li&gt;TBA&lt;br /&gt;
+For questions, suggestions etc., please contact the group admin.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For questions, suggestions etc., please contact the &lt;a href=&#34;mailto:david@cis.lmu.de&#34; class=&#34;email&#34;&gt;group admin&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;meetups&#34;&gt;Meetups&lt;/h1&gt;
-&lt;h2 id=&#34;seminar-in-neural-machine-translation&#34;&gt;Seminar in Neural Machine Translation&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&#34; class=&#34;uri&#34;&gt;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;meetups&#34;&gt;&lt;a name=&#34;user-content-meetups&#34; href=&#34;#meetups&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Meetups&lt;/h2&gt;
+&lt;h3 id=&#34;seminar-in-neural-machine-translation&#34;&gt;&lt;a name=&#34;user-content-seminar-in-neural-machine-translation&#34; href=&#34;#seminar-in-neural-machine-translation&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Seminar in Neural Machine Translation&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&#34;&gt;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Thursdays 14:30 s.t., room C105 (&lt;a href=&#34;http://www.cis.uni-muenchen.de/kontakt&#34;&gt;directions&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Center for Information and Language Processing&lt;br&gt;
-University of Munich&lt;br&gt;
-Oettingenstraße 67&lt;br&gt;
+&lt;p&gt;Center for Information and Language Processing&lt;br /&gt;
+University of Munich&lt;br /&gt;
+Oettingenstraße 67&lt;br /&gt;
 80538 Munich&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+&lt;h2 id=&#34;resources&#34;&gt;&lt;a name=&#34;user-content-resources&#34; href=&#34;#resources&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/&#34;&gt;Andrej Karpathy’s blog&lt;/a&gt;, notably:
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io&#34;&gt;Andrej Karpathy’s blog&lt;/a&gt;, notably:&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/2015/05/21/rnn-effectiveness&#34;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;reading-list&#34;&gt;Reading list&lt;/h1&gt;
-&lt;h2 id=&#34;section&#34;&gt;2015&lt;/h2&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reading-list&#34;&gt;&lt;a name=&#34;user-content-reading-list&#34; href=&#34;#reading-list&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Reading list&lt;/h2&gt;
+&lt;h3 id=&#34;2015&#34;&gt;&lt;a name=&#34;user-content-2015&#34; href=&#34;#2015&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;2015&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Character-aware neural language models - Yoon Kim et al. - 2015 [1]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;LSTM: A search space odyssey - Klaus Greff et al. - 2015 [2]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;An empirical exploration of recurrent network architectures - Rafal Jozefowicz et al. - 2015 [3]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Teaching machines to read and comprehend - Karl Moritz Hermann et al. - 2015 [4]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Gated feedback recurrent neural networks - Junyoung Chung et al. - 2015 [5]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Character-aware neural language models - Yoon Kim et al. - 2015 [1]&lt;/li&gt;
+&lt;li&gt;LSTM: A search space odyssey - Klaus Greff et al. - 2015 [2]&lt;/li&gt;
+&lt;li&gt;An empirical exploration of recurrent network architectures - Rafal Jozefowicz et al. - 2015 [3]&lt;/li&gt;
+&lt;li&gt;Teaching machines to read and comprehend - Karl Moritz Hermann et al. - 2015 [4]&lt;/li&gt;
+&lt;li&gt;Gated feedback recurrent neural networks - Junyoung Chung et al. - 2015 [5]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;section-1&#34;&gt;2014&lt;/h2&gt;
+&lt;h3 id=&#34;2014&#34;&gt;&lt;a name=&#34;user-content-2014&#34; href=&#34;#2014&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;2014&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition - Haşim Sak et al. - 2014 [6]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Show and tell: A neural image caption generator - Oriol Vinyals et al. - 2014 [7]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Modeling compositionality with multiplicative recurrent neural networks - Ozan İrsoy et al. - 2014 [9]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch - Xie Chen et al. - 2014 [10]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Learning phrase representations using rnn encoder-decoder for statistical machine translation - Kyunghyun Cho et al. - 2014 [11]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Deep captioning with multimodal recurrent neural networks (m-rNN) - Junhua Mao et al. - 2014 [12]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Learning longer memory in recurrent neural networks - Tomas Mikolov et al. - 2014 [13]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Learning sparse recurrent neural networks in language modeling - Yuanlong Shao - 2014 [14]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Recurrent deep neural networks for robust speech recognition - Chao Weng et al. - 2014 [15]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition - Haşim Sak et al. - 2014 [6]&lt;/li&gt;
+&lt;li&gt;Show and tell: A neural image caption generator - Oriol Vinyals et al. - 2014 [7]&lt;/li&gt;
+&lt;li&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/li&gt;
+&lt;li&gt;Modeling compositionality with multiplicative recurrent neural networks - Ozan İrsoy et al. - 2014 [9]&lt;/li&gt;
+&lt;li&gt;Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch - Xie Chen et al. - 2014 [10]&lt;/li&gt;
+&lt;li&gt;Learning phrase representations using rnn encoder-decoder for statistical machine translation - Kyunghyun Cho et al. - 2014 [11]&lt;/li&gt;
+&lt;li&gt;Deep captioning with multimodal recurrent neural networks (m-rNN) - Junhua Mao et al. - 2014 [12]&lt;/li&gt;
+&lt;li&gt;Learning longer memory in recurrent neural networks - Tomas Mikolov et al. - 2014 [13]&lt;/li&gt;
+&lt;li&gt;Learning sparse recurrent neural networks in language modeling - Yuanlong Shao - 2014 [14]&lt;/li&gt;
+&lt;li&gt;Recurrent deep neural networks for robust speech recognition - Chao Weng et al. - 2014 [15]&lt;/li&gt;
+&lt;li&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;section-2&#34;&gt;2013&lt;/h2&gt;
+&lt;h3 id=&#34;2013&#34;&gt;&lt;a name=&#34;user-content-2013&#34; href=&#34;#2013&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;2013&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;On the difficulty of training recurrent neural networks. - Razvan Pascanu et al. - 2013 [16]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Speech recognition with deep recurrent neural networks - Alex Graves et al. - 2013 [17]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Hybrid speech recognition with deep bidirectional LSTM - Alex Graves et al. - 2013 [18]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;High-performance OCR for printed english and fraktur using LSTM networks - Thomas M Breuel et al. - 2013 [20]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Recurrent convolutional neural networks for discourse compositionality - Nal Kalchbrenner et al. - 2013 [21]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Comparison of feedforward and recurrent neural network language models - Martin Sundermeyer et al. - 2013 [22]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;RNN language model with word clustering and class-based output layer - Yongzhe Shi et al. - 2013 [23]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Context dependent recurrent neural network language model. - Tomas Mikolov et al. - 2012 [24]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;On the difficulty of training recurrent neural networks. - Razvan Pascanu et al. - 2013 [16]&lt;/li&gt;
+&lt;li&gt;Speech recognition with deep recurrent neural networks - Alex Graves et al. - 2013 [17]&lt;/li&gt;
+&lt;li&gt;Hybrid speech recognition with deep bidirectional LSTM - Alex Graves et al. - 2013 [18]&lt;/li&gt;
+&lt;li&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/li&gt;
+&lt;li&gt;High-performance OCR for printed english and fraktur using LSTM networks - Thomas M Breuel et al. - 2013 [20]&lt;/li&gt;
+&lt;li&gt;Recurrent convolutional neural networks for discourse compositionality - Nal Kalchbrenner et al. - 2013 [21]&lt;/li&gt;
+&lt;li&gt;Comparison of feedforward and recurrent neural network language models - Martin Sundermeyer et al. - 2013 [22]&lt;/li&gt;
+&lt;li&gt;RNN language model with word clustering and class-based output layer - Yongzhe Shi et al. - 2013 [23]&lt;/li&gt;
+&lt;li&gt;Context dependent recurrent neural network language model. - Tomas Mikolov et al. - 2012 [24]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;section-3&#34;&gt;2012&lt;/h2&gt;
+&lt;h3 id=&#34;2012&#34;&gt;&lt;a name=&#34;user-content-2012&#34; href=&#34;#2012&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;2012&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;A generalized LSTM-like training algorithm for second-order recurrent neural networks - Derek Monner et al. - 2012 [25]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Long-short term memory neural networks language modeling for handwriting recognition. - Volkmar Frinken et al. - 2012 [26]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;LSTM neural networks for language modeling. - Martin Sundermeyer et al. - 2012 [27]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;A generalized LSTM-like training algorithm for second-order recurrent neural networks - Derek Monner et al. - 2012 [25]&lt;/li&gt;
+&lt;li&gt;Long-short term memory neural networks language modeling for handwriting recognition. - Volkmar Frinken et al. - 2012 [26]&lt;/li&gt;
+&lt;li&gt;LSTM neural networks for language modeling. - Martin Sundermeyer et al. - 2012 [27]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;pre-2012&#34;&gt;Pre-2012&lt;/h2&gt;
+&lt;h3 id=&#34;pre-2012&#34;&gt;&lt;a name=&#34;user-content-pre-2012&#34; href=&#34;#pre-2012&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Pre-2012&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Generating text with recurrent neural networks - Ilya Sutskever et al. - 2011 [28]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Named entity recognition with long short-term memory - James Hammerton - 2003 [29]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Gradient flow in recurrent nets: The difficulty of learning long-term dependencies - Sepp Hochreiter et al. - 2001 [30]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Long short-term memory - Sepp Hochreiter et al. - 1997 [31]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Learning to forget: Continual prediction with LSTM - Felix A Gers et al. - 2000 [32]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Learning precise timing with LSTM recurrent networks - Felix A Gers et al. - 2003 [33]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;citation&#34;&gt;Long short-term memory in recurrent neural networks - Felix Gers - 2001 [34]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Generating text with recurrent neural networks - Ilya Sutskever et al. - 2011 [28]&lt;/li&gt;
+&lt;li&gt;Named entity recognition with long short-term memory - James Hammerton - 2003 [29]&lt;/li&gt;
+&lt;li&gt;Gradient flow in recurrent nets: The difficulty of learning long-term dependencies - Sepp Hochreiter et al. - 2001 [30]&lt;/li&gt;
+&lt;li&gt;Long short-term memory - Sepp Hochreiter et al. - 1997 [31]&lt;/li&gt;
+&lt;li&gt;Learning to forget: Continual prediction with LSTM - Felix A Gers et al. - 2000 [32]&lt;/li&gt;
+&lt;li&gt;Learning precise timing with LSTM recurrent networks - Felix A Gers et al. - 2003 [33]&lt;/li&gt;
+&lt;li&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/li&gt;
+&lt;li&gt;Long short-term memory in recurrent neural networks - Felix Gers - 2001 [34]&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
-&lt;h2 id=&#34;torch&#34;&gt;Torch&lt;/h2&gt;
+&lt;h2 id=&#34;tools&#34;&gt;&lt;a name=&#34;user-content-tools&#34; href=&#34;#tools&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Tools&lt;/h2&gt;
+&lt;h3 id=&#34;torch&#34;&gt;&lt;a name=&#34;user-content-torch&#34; href=&#34;#torch&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Torch&lt;/h3&gt;
 &lt;p&gt;Torch is an open source machine learning library, a scientific computing framework, and a script language based on the Lua programming language. It provides a wide range of algorithms for deep machine learning, and uses an extremely fast scripting language LuaJIT, and an underlying C implementation. ~ Wikipedia&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://tylerneylon.com/a/learn-lua&#34;&gt;Lua in 15 minutes&lt;/a&gt;&lt;/li&gt;
@@ -153,29 +1231,28 @@ Oettingenstraße 67&lt;br&gt;
 &lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/torch7&#34;&gt;Torch 7 Google group&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/soumith/cvpr2015/blob/master/Deep%20Learning%20with%20Torch.ipynb&#34;&gt;Deep Learning with Torch: the 60-minute blitz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;code-bases-for-torch&#34;&gt;Code bases for Torch&lt;/h3&gt;
+&lt;h4 id=&#34;code-bases-for-torch&#34;&gt;&lt;a name=&#34;user-content-code-bases-for-torch&#34; href=&#34;#code-bases-for-torch&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Code bases for Torch&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Multi-layer character-level Recurrent Neural Network: &lt;a href=&#34;https://github.com/karpathy/char-rnn&#34; class=&#34;uri&#34;&gt;https://github.com/karpathy/char-rnn&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Fork for word-level RNN (a little outdated): &lt;a href=&#34;https://github.com/Graydyn/char-rnn&#34; class=&#34;uri&#34;&gt;https://github.com/Graydyn/char-rnn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;RNN module for Torch nn: &lt;a href=&#34;https://github.com/Element-Research/rnn&#34; class=&#34;uri&#34;&gt;https://github.com/Element-Research/rnn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Character-Aware Neural Language Models: &lt;a href=&#34;https://github.com/yoonkim/lstm-char-cnn&#34; class=&#34;uri&#34;&gt;https://github.com/yoonkim/lstm-char-cnn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Multi-layer character-level Recurrent Neural Network: &lt;a href=&#34;https://github.com/karpathy/char-rnn&#34;&gt;&lt;a href=&#34;https://github.com/karpathy/char-rnn&#34;&gt;&lt;a href=&#34;https://github.com/karpathy/char-rnn&#34;&gt;https://github.com/karpathy/char-rnn&lt;/a&gt;&lt;/a&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Fork for word-level RNN (a little outdated): &lt;a href=&#34;https://github.com/Graydyn/char-rnn&#34;&gt;https://github.com/Graydyn/char-rnn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;general-nn-resources&#34;&gt;General NN Resources&lt;/h1&gt;
-&lt;h2 id=&#34;online-textbooks&#34;&gt;Online textbooks&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;RNN module for Torch nn: &lt;a href=&#34;https://github.com/Element-Research/rnn&#34;&gt;https://github.com/Element-Research/rnn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Character-Aware Neural Language Models: &lt;a href=&#34;https://github.com/yoonkim/lstm-char-cnn&#34;&gt;https://github.com/yoonkim/lstm-char-cnn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;general-nn-resources&#34;&gt;&lt;a name=&#34;user-content-general-nn-resources&#34; href=&#34;#general-nn-resources&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;General NN Resources&lt;/h2&gt;
+&lt;h3 id=&#34;online-textbooks&#34;&gt;&lt;a name=&#34;user-content-online-textbooks&#34; href=&#34;#online-textbooks&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Online textbooks&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://neuralnetworksanddeeplearning.com/&#34;&gt;Neural Networks and Deep Learning (Michael Nielsen)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://neuralnetworksanddeeplearning.com&#34;&gt;Neural Networks and Deep Learning (Michael Nielsen)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://goodfeli.github.io/dlbook&#34;&gt;Deep Learning (Yoshua Bengio, Ian Goodfellow and Aaron Courville)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/rasbt/python-machine-learning-book&#34;&gt;Python Machine Learning Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Tutorial on Deep Learning (Quoc V. Le)
-&lt;ul&gt;
+&lt;li&gt;A Tutorial on Deep Learning (Quoc V. Le)&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Part 1: Nonlinear Classifiers and The Backpropagation Algorithm (PDF)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www-cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Part 2: Autoencoders, Convolutional Neural Networks and Recurrent Neural Networks (PDF)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;video-courses&#34;&gt;Video courses&lt;/h2&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;video-courses&#34;&gt;&lt;a name=&#34;user-content-video-courses&#34; href=&#34;#video-courses&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Video courses&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://class.coursera.org/neuralnets-2012-001&#34;&gt;Neural Networks for Machine Learning, Hinton (Coursera)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.coursera.org/learn/machine-learning&#34;&gt;Machine Learning, Andrew Ng (Coursera)&lt;/a&gt;&lt;/li&gt;
@@ -184,140 +1261,359 @@ Oettingenstraße 67&lt;br&gt;
 &lt;li&gt;&lt;a href=&#34;http://techtalks.tv/acl-ijcnlp-2015&#34;&gt;TechTalks from ACL-IJCNLP 2015&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cs224d.stanford.edu/syllabus.html&#34;&gt;CS224d: Deep Learning for Natural Language Processing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;blogs-articles&#34;&gt;Blogs &amp;amp; Articles&lt;/h2&gt;
+&lt;h3 id=&#34;blogs-articles&#34;&gt;&lt;a name=&#34;user-content-blogs-articles&#34; href=&#34;#blogs-articles&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Blogs &amp;amp; Articles&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gavagai.se/blog/2015/09/30/a-brief-history-of-word-embeddings&#34;&gt;A brief history of word embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html&#34;&gt;The AI Revolution: The Road to Superintelligence (Tim Urban)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.zabarauskas.com/backpropagation-tutorial/&#34;&gt;Backpropagation Tutorial (Manfred Zabarauskas)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog&#34;&gt;Thoughts on Machine Learning and Natural Language Processing (Marek Rei)&lt;/a&gt;, e.g.:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/dont-count-predict/&#34;&gt;Don’t Count, Predict&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/linguistic-regularities-word-representations/&#34;&gt;Linguistic Regularities in Word Representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Neural Networks &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-1-background/&#34;&gt;Part 1&lt;/a&gt; &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-2-the-neuron/&#34;&gt;Part 2&lt;/a&gt; &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-3-network/&#34;&gt;Part 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/26-things-i-learned-in-the-deep-learning-summer-school/&#34;&gt;26 Things I Learned in the Deep Learning Summer School&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://colah.github.io&#34;&gt;Colah’s blog&lt;/a&gt;, notably:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://colah.github.io/posts/2014-03-NN-Manifolds-Topology&#34;&gt;Neural Networks, Manifolds, and Topology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&#34;&gt;Understanding LSTM Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://apaszke.github.io/lstm-explained.html&#34;&gt;LSTM implementation explained (Adam Paszke)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://news.startup.ml&#34;&gt;Deep Learning News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wildml.com&#34;&gt;WildML (Denny Britz)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;presentations&#34;&gt;&lt;a name=&#34;user-content-presentations&#34; href=&#34;#presentations&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;Presentations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/deeplearningsummerschool/schedule&#34;&gt;Deep Learning Summer School, Montreal 2015&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;&lt;a name=&#34;user-content-references&#34; href=&#34;#references&#34; class=&#34;headeranchor-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;headeranchor&#34;&gt;&lt;/span&gt;&lt;/a&gt;References&lt;/h2&gt;
+&lt;p&gt;[1] Y. Kim, Y. Jernite, D. Sontag, and A. M. Rush, “Character-aware neural language models,” arXiv preprint arXiv:1508.06615, 2015.&lt;/p&gt;
+&lt;p&gt;[2] K. Greff, R. K. Srivastava, J. Koutník, B. R. Steunebrink, and J. Schmidhuber, “LSTM: A search space odyssey,” arXiv preprint arXiv:1503.04069, 2015.&lt;/p&gt;
+&lt;p&gt;[3] R. Jozefowicz, W. Zaremba, and I. Sutskever, “An empirical exploration of recurrent network architectures,” in Proceedings of the 32nd international conference on machine learning, 2015, pp. 2342–2350.&lt;/p&gt;
+&lt;p&gt;[4] K. M. Hermann, T. Kočisky, E. Grefenstette, L. Espeholt, W. Kay, M. Suleyman, and P. Blunsom, “Teaching machines to read and comprehend,” arXiv preprint arXiv:1506.03340, 2015.&lt;/p&gt;
+&lt;p&gt;[5] J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural networks,” arXiv preprint arXiv:1502.02367, 2015.&lt;/p&gt;
+&lt;p&gt;[6] H. Sak, A. Senior, and F. Beaufays, “Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition,” arXiv preprint arXiv:1402.1128, 2014.&lt;/p&gt;
+&lt;p&gt;[7] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan, “Show and tell: A neural image caption generator,” arXiv preprint arXiv:1411.4555, 2014.&lt;/p&gt;
+&lt;p&gt;[8] W. Zaremba, I. Sutskever, and O. Vinyals, “Recurrent neural network regularization,” arXiv preprint arXiv:1409.2329, 2014.&lt;/p&gt;
+&lt;p&gt;[9] O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative recurrent neural networks,” arXiv preprint arXiv:1412.6577, 2014.&lt;/p&gt;
+&lt;p&gt;[10] X. Chen, Y. Wang, X. Liu, M. J. Gales, and P. C. Woodland, “Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch,” submitted to Proc. ISCA Interspeech, 2014.&lt;/p&gt;
+&lt;p&gt;[11] K. Cho, B. van Merrienboer, C. Gulcehre, F. Bougares, H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn encoder-decoder for statistical machine translation,” arXiv preprint arXiv:1406.1078, 2014.&lt;/p&gt;
+&lt;p&gt;[12] J. Mao, W. Xu, Y. Yang, J. Wang, and A. Yuille, “Deep captioning with multimodal recurrent neural networks (m-rNN),” arXiv preprint arXiv:1412.6632, 2014.&lt;/p&gt;
+&lt;p&gt;[13] T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer memory in recurrent neural networks,” arXiv preprint arXiv:1412.7753, 2014.&lt;/p&gt;
+&lt;p&gt;[14] Y. Shao, “Learning sparse recurrent neural networks in language modeling,” PhD thesis, The Ohio State University, 2014.&lt;/p&gt;
+&lt;p&gt;[15] C. Weng, D. Yu, S. Watanabe, and B.-H. F. Juang, “Recurrent deep neural networks for robust speech recognition,” in Acoustics, speech and signal processing (iCASSP), 2014 iEEE international conference on, 2014, pp. 5532–5536.&lt;/p&gt;
+&lt;p&gt;[16] R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training recurrent neural networks.” in ICML (3), 2013, vol. 28, pp. 1310–1318.&lt;/p&gt;
+&lt;p&gt;[17] A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep recurrent neural networks,” arXiv preprint arXiv:1303.5778, 2013.&lt;/p&gt;
+&lt;p&gt;[18] A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep bidirectional LSTM,” in Automatic speech recognition and understanding (aSRU), 2013 iEEE workshop on, 2013, pp. 273–278.&lt;/p&gt;
+&lt;p&gt;[19] A. Graves, “Generating sequences with recurrent neural networks,” arXiv preprint arXiv:1308.0850, 2013.&lt;/p&gt;
+&lt;p&gt;[20] T. M. Breuel, A. Ul-Hasan, M. A. Al-Azawi, and F. Shafait, “High-performance OCR for printed english and fraktur using LSTM networks,” in Document analysis and recognition (iCDAR), 2013 12th international conference on, 2013, pp. 683–687.&lt;/p&gt;
+&lt;p&gt;[21] N. Kalchbrenner and P. Blunsom, “Recurrent convolutional neural networks for discourse compositionality,” arXiv preprint arXiv:1306.3584, 2013.&lt;/p&gt;
+&lt;p&gt;[22] M. Sundermeyer, I. Oparin, J.-L. Gauvain, B. Freiberg, R. Schluter, and H. Ney, “Comparison of feedforward and recurrent neural network language models,” in Acoustics, speech and signal processing (iCASSP), 2013 iEEE international conference on, 2013, pp. 8430–8434.&lt;/p&gt;
+&lt;p&gt;[23] Y. Shi, W.-Q. Zhang, J. Liu, and M. T. Johnson, “RNN language model with word clustering and class-based output layer,” EURASIP Journal on Audio, Speech, and Music Processing, vol. 2013, no. 1, pp. 1–7, 2013.&lt;/p&gt;
+&lt;p&gt;[24] T. Mikolov and G. Zweig, “Context dependent recurrent neural network language model.” in SLT, 2012, pp. 234–239.&lt;/p&gt;
+&lt;p&gt;[25] D. Monner and J. A. Reggia, “A generalized LSTM-like training algorithm for second-order recurrent neural networks,” Neural Networks, vol. 25, pp. 70–83, 2012.&lt;/p&gt;
+&lt;p&gt;[26] V. Frinken, F. Zamora-Martínez, S. E. Boquera, M. J. C. Bleda, A. Fischer, and H. Bunke, “Long-short term memory neural networks language modeling for handwriting recognition.” in ICPR, 2012, pp. 701–704.&lt;/p&gt;
+&lt;p&gt;[27] M. Sundermeyer, R. Schlüter, and H. Ney, “LSTM neural networks for language modeling.” in INTERSPEECH, 2012.&lt;/p&gt;
+&lt;p&gt;[28] I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent neural networks,” in Proceedings of the 28th international conference on machine learning (iCML-11), 2011, pp. 1017–1024.&lt;/p&gt;
+&lt;p&gt;[29] J. Hammerton, “Named entity recognition with long short-term memory,” in Proceedings of coNLL-2003, 2003, pp. 172–175.&lt;/p&gt;
+&lt;p&gt;[30] S. Hochreiter, Y. Bengio, P. Frasconi, and J. Schmidhuber, “Gradient flow in recurrent nets: The difficulty of learning long-term dependencies.” Citeseer, 2001.&lt;/p&gt;
+&lt;p&gt;[31] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” vol. 9, no. 8, pp. 1735–1780, 1997.&lt;/p&gt;
+&lt;p&gt;[32] F. A. Gers, J. Schmidhuber, and F. Cummins, “Learning to forget: Continual prediction with LSTM,” Neural computation, vol. 12, no. 10, pp. 2451–2471, 2000.&lt;/p&gt;
+&lt;p&gt;[33] F. A. Gers, N. N. Schraudolph, and J. Schmidhuber, “Learning precise timing with LSTM recurrent networks,” The Journal of Machine Learning Research, vol. 3, pp. 115–143, 2003.&lt;/p&gt;
+&lt;p&gt;[34] F. Gers, “Long short-term memory in recurrent neural networks,” Unpublished PhD dissertation, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland, 2001.&lt;/p&gt;&lt;/article&gt;&lt;/body&gt;&lt;/html&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hexromas.github.io/manual/deeplearning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/manual/deeplearning/</guid>
+      <description>
+
+&lt;h1 id=&#34;deep-learning-manual&#34;&gt;Deep Learning Manual&lt;/h1&gt;
+
+&lt;div &gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;./deepbo.css&#34; type=&#34;text/css&#34;&gt;
+&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;./deep-bo_logo.css&#34; type=&#34;text/css&#34;&gt; --&gt;
+&lt;!-- &lt;script  type=&#34;text/javascript&#34;  src=&#34;deep-bo_logo.js&#34; &gt;&lt;/script&gt; --&gt;
+    &lt;link href=&#39;https://fonts.googleapis.com/css?family=Dancing+Script&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;../thinktouch_logo/thinktouch_logo.css&#34; type=&#34;text/css&#34;&gt;
+    &lt;div &gt;
+        &lt;div class=&#34;blackbox&#34; style=&#39;font-family:Dancing Script;&#39;&gt;D&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;E&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;E&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;P&lt;/div&gt;
+        &lt;div class=&#34;whitebox&#34; &gt;&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; style=&#39;font-family:Dancing Script;&#39;&gt;B&lt;/div&gt;
+        &lt;div class=&#34;blackbox&#34; &gt;O&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This Deep Munich is a collaborative group of Deep Learning and Neural Network researchers in Munich. Our members represent:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Faculty for Informatics at TU (&lt;a href=&#34;http://www.in.tum.de&#34;&gt;http://www.in.tum.de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Institute for Informatics at LMU (&lt;a href=&#34;https://www.ifi.lmu.de&#34;&gt;https://www.ifi.lmu.de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Center for Information and Language Processing (CIS) at LMU (&lt;a href=&#34;http://www.cis.lmu.de&#34;&gt;http://www.cis.lmu.de&lt;/a&gt;)
+Ask questions and discuss ideas in our forum: &lt;a href=&#34;https://groups.google.com/forum/#!forum/deep-munich&#34;&gt;https://groups.google.com/forum/#!forum/deep-munich&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sign up for our mailing list and stay up-to-date: &lt;a href=&#34;https://lists.lrz.de/mailman/listinfo/deep&#34;&gt;https://lists.lrz.de/mailman/listinfo/deep&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Join us in our weekly meeting (see below).&lt;/p&gt;
+
+&lt;h2 id=&#34;members&#34;&gt;Members&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~davidk&#34;&gt;David Kaumanns (CIS)&lt;/a&gt; - group organizer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~fraser&#34;&gt;Alexander Fraser (CIS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~schmid&#34;&gt;Helmut Schmid (CIS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dbs.ifi.lmu.de/cms/Evgeniy_Faerman&#34;&gt;Evgeniy Faerman (LMU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~yadollah&#34;&gt;Yadollah Yaghoobzadeh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TBA
+For questions, suggestions etc., please contact the group admin.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;meetups&#34;&gt;Meetups&lt;/h2&gt;
+
+&lt;h3 id=&#34;seminar-in-neural-machine-translation&#34;&gt;Seminar in Neural Machine Translation&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&#34;&gt;http://www.cis.uni-muenchen.de/~fraser/nmt_seminar_2015_WS/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thursdays 14:30 s.t., room C105 (&lt;a href=&#34;http://www.cis.uni-muenchen.de/kontakt&#34;&gt;directions&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Center for Information and Language Processing
+University of Munich
+Oettingenstraße 67
+80538 Munich&lt;/p&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io&#34;&gt;Andrej Karpathy’s blog&lt;/a&gt;, notably:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/2015/05/21/rnn-effectiveness&#34;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reading-list&#34;&gt;Reading list&lt;/h2&gt;
+
+&lt;h3 id=&#34;2015&#34;&gt;2015&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Character-aware neural language models - Yoon Kim et al. - 2015 [1]&lt;/li&gt;
+&lt;li&gt;LSTM: A search space odyssey - Klaus Greff et al. - 2015 [2]&lt;/li&gt;
+&lt;li&gt;An empirical exploration of recurrent network architectures - Rafal Jozefowicz et al. - 2015 [3]&lt;/li&gt;
+&lt;li&gt;Teaching machines to read and comprehend - Karl Moritz Hermann et al. - 2015 [4]&lt;/li&gt;
+&lt;li&gt;Gated feedback recurrent neural networks - Junyoung Chung et al. - 2015 [5]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2014&#34;&gt;2014&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition - Haşim Sak et al. - 2014 [6]&lt;/li&gt;
+&lt;li&gt;Show and tell: A neural image caption generator - Oriol Vinyals et al. - 2014 [7]&lt;/li&gt;
+&lt;li&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/li&gt;
+&lt;li&gt;Modeling compositionality with multiplicative recurrent neural networks - Ozan İrsoy et al. - 2014 [9]&lt;/li&gt;
+&lt;li&gt;Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch - Xie Chen et al. - 2014 [10]&lt;/li&gt;
+&lt;li&gt;Learning phrase representations using rnn encoder-decoder for statistical machine translation - Kyunghyun Cho et al. - 2014 [11]&lt;/li&gt;
+&lt;li&gt;Deep captioning with multimodal recurrent neural networks (m-rNN) - Junhua Mao et al. - 2014 [12]&lt;/li&gt;
+&lt;li&gt;Learning longer memory in recurrent neural networks - Tomas Mikolov et al. - 2014 [13]&lt;/li&gt;
+&lt;li&gt;Learning sparse recurrent neural networks in language modeling - Yuanlong Shao - 2014 [14]&lt;/li&gt;
+&lt;li&gt;Recurrent deep neural networks for robust speech recognition - Chao Weng et al. - 2014 [15]&lt;/li&gt;
+&lt;li&gt;Recurrent neural network regularization - Wojciech Zaremba et al. - 2014 [8]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2013&#34;&gt;2013&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On the difficulty of training recurrent neural networks. - Razvan Pascanu et al. - 2013 [16]&lt;/li&gt;
+&lt;li&gt;Speech recognition with deep recurrent neural networks - Alex Graves et al. - 2013 [17]&lt;/li&gt;
+&lt;li&gt;Hybrid speech recognition with deep bidirectional LSTM - Alex Graves et al. - 2013 [18]&lt;/li&gt;
+&lt;li&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/li&gt;
+&lt;li&gt;High-performance OCR for printed english and fraktur using LSTM networks - Thomas M Breuel et al. - 2013 [20]&lt;/li&gt;
+&lt;li&gt;Recurrent convolutional neural networks for discourse compositionality - Nal Kalchbrenner et al. - 2013 [21]&lt;/li&gt;
+&lt;li&gt;Comparison of feedforward and recurrent neural network language models - Martin Sundermeyer et al. - 2013 [22]&lt;/li&gt;
+&lt;li&gt;RNN language model with word clustering and class-based output layer - Yongzhe Shi et al. - 2013 [23]&lt;/li&gt;
+&lt;li&gt;Context dependent recurrent neural network language model. - Tomas Mikolov et al. - 2012 [24]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2012&#34;&gt;2012&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A generalized LSTM-like training algorithm for second-order recurrent neural networks - Derek Monner et al. - 2012 [25]&lt;/li&gt;
+&lt;li&gt;Long-short term memory neural networks language modeling for handwriting recognition. - Volkmar Frinken et al. - 2012 [26]&lt;/li&gt;
+&lt;li&gt;LSTM neural networks for language modeling. - Martin Sundermeyer et al. - 2012 [27]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;pre-2012&#34;&gt;Pre-2012&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Generating text with recurrent neural networks - Ilya Sutskever et al. - 2011 [28]&lt;/li&gt;
+&lt;li&gt;Named entity recognition with long short-term memory - James Hammerton - 2003 [29]&lt;/li&gt;
+&lt;li&gt;Gradient flow in recurrent nets: The difficulty of learning long-term dependencies - Sepp Hochreiter et al. - 2001 [30]&lt;/li&gt;
+&lt;li&gt;Long short-term memory - Sepp Hochreiter et al. - 1997 [31]&lt;/li&gt;
+&lt;li&gt;Learning to forget: Continual prediction with LSTM - Felix A Gers et al. - 2000 [32]&lt;/li&gt;
+&lt;li&gt;Learning precise timing with LSTM recurrent networks - Felix A Gers et al. - 2003 [33]&lt;/li&gt;
+&lt;li&gt;Generating sequences with recurrent neural networks - Alex Graves - 2013 [19]&lt;/li&gt;
+&lt;li&gt;Long short-term memory in recurrent neural networks - Felix Gers - 2001 [34]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+
+&lt;h3 id=&#34;torch&#34;&gt;Torch&lt;/h3&gt;
+
+&lt;p&gt;Torch is an open source machine learning library, a scientific computing framework, and a script language based on the Lua programming language. It provides a wide range of algorithms for deep machine learning, and uses an extremely fast scripting language LuaJIT, and an underlying C implementation. ~ Wikipedia&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tylerneylon.com/a/learn-lua&#34;&gt;Lua in 15 minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://torch.ch/docs/getting-started.html&#34;&gt;Getting started with Torch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/torch7&#34;&gt;Torch 7 Google group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/soumith/cvpr2015/blob/master/Deep%20Learning%20with%20Torch.ipynb&#34;&gt;Deep Learning with Torch: the 60-minute blitz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;code-bases-for-torch&#34;&gt;Code bases for Torch&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Multi-layer character-level Recurrent Neural Network: &lt;a href=&#34;https://github.com/karpathy/char-rnn&#34;&gt;https://github.com/karpathy/char-rnn&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fork for word-level RNN (a little outdated): &lt;a href=&#34;https://github.com/Graydyn/char-rnn&#34;&gt;https://github.com/Graydyn/char-rnn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;RNN module for Torch nn: &lt;a href=&#34;https://github.com/Element-Research/rnn&#34;&gt;https://github.com/Element-Research/rnn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Character-Aware Neural Language Models: &lt;a href=&#34;https://github.com/yoonkim/lstm-char-cnn&#34;&gt;https://github.com/yoonkim/lstm-char-cnn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;general-nn-resources&#34;&gt;General NN Resources&lt;/h2&gt;
+
+&lt;h3 id=&#34;online-textbooks&#34;&gt;Online textbooks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://neuralnetworksanddeeplearning.com&#34;&gt;Neural Networks and Deep Learning (Michael Nielsen)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://goodfeli.github.io/dlbook&#34;&gt;Deep Learning (Yoshua Bengio, Ian Goodfellow and Aaron Courville)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rasbt/python-machine-learning-book&#34;&gt;Python Machine Learning Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A Tutorial on Deep Learning (Quoc V. Le)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Part 1: Nonlinear Classifiers and The Backpropagation Algorithm (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www-cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Part 2: Autoencoders, Convolutional Neural Networks and Recurrent Neural Networks (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;video-courses&#34;&gt;Video courses&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://class.coursera.org/neuralnets-2012-001&#34;&gt;Neural Networks for Machine Learning, Hinton (Coursera)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/learn/machine-learning&#34;&gt;Machine Learning, Andrew Ng (Coursera)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/course/machlearning&#34;&gt;Machine Learning, Pedro Domingos (Coursera)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mlss2014.com/materials.html&#34;&gt;Machine Learning Summer School 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://techtalks.tv/acl-ijcnlp-2015&#34;&gt;TechTalks from ACL-IJCNLP 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs224d.stanford.edu/syllabus.html&#34;&gt;CS224d: Deep Learning for Natural Language Processing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;blogs-articles&#34;&gt;Blogs &amp;amp; Articles&lt;/h3&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://gavagai.se/blog/2015/09/30/a-brief-history-of-word-embeddings&#34;&gt;A brief history of word embeddings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html&#34;&gt;The AI Revolution: The Road to Superintelligence (Tim Urban)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://blog.zabarauskas.com/backpropagation-tutorial/&#34;&gt;Backpropagation Tutorial (Manfred Zabarauskas)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog&#34;&gt;Thoughts on Machine Learning and Natural Language Processing (Marek Rei)&lt;/a&gt;, e.g.:
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/dont-count-predict/&#34;&gt;Don’t Count, Predict&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/linguistic-regularities-word-representations/&#34;&gt;Linguistic Regularities in Word Representations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Neural Networks &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-1-background/&#34;&gt;Part 1&lt;/a&gt; &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-2-the-neuron/&#34;&gt;Part 2&lt;/a&gt; &lt;a href=&#34;http://www.marekrei.com/blog/neural-networks-part-3-network/&#34;&gt;Part 3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.marekrei.com/blog/26-things-i-learned-in-the-deep-learning-summer-school/&#34;&gt;26 Things I Learned in the Deep Learning Summer School&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://colah.github.io/&#34;&gt;Colah’s blog&lt;/a&gt;, notably:
+&lt;li&gt;&lt;a href=&#34;http://colah.github.io&#34;&gt;Colah’s blog&lt;/a&gt;, notably:
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://colah.github.io/posts/2014-03-NN-Manifolds-Topology&#34;&gt;Neural Networks, Manifolds, and Topology&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&#34;&gt;Understanding LSTM Networks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://apaszke.github.io/lstm-explained.html&#34;&gt;LSTM implementation explained (Adam Paszke)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://news.startup.ml/&#34;&gt;Deep Learning News&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.wildml.com/&#34;&gt;WildML (Denny Britz)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://news.startup.ml&#34;&gt;Deep Learning News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wildml.com&#34;&gt;WildML (Denny Britz)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;presentations&#34;&gt;Presentations&lt;/h2&gt;
+
+&lt;h3 id=&#34;presentations&#34;&gt;Presentations&lt;/h3&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/deeplearningsummerschool/schedule&#34;&gt;Deep Learning Summer School, Montreal 2015&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;references&#34; class=&#34;unnumbered&#34;&gt;References&lt;/h1&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-Kim15&#34;&gt;
-&lt;p&gt;[1] Y. Kim, Y. Jernite, D. Sontag, and A. M. Rush, “Character-aware neural language models,” &lt;em&gt;arXiv preprint arXiv:1508.06615&lt;/em&gt;, 2015.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Greff15&#34;&gt;
-&lt;p&gt;[2] K. Greff, R. K. Srivastava, J. Koutník, B. R. Steunebrink, and J. Schmidhuber, “LSTM: A search space odyssey,” &lt;em&gt;arXiv preprint arXiv:1503.04069&lt;/em&gt;, 2015.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Jozefowicz15&#34;&gt;
-&lt;p&gt;[3] R. Jozefowicz, W. Zaremba, and I. Sutskever, “An empirical exploration of recurrent network architectures,” in &lt;em&gt;Proceedings of the 32&lt;sup&gt;nd&lt;/sup&gt; international conference on machine learning&lt;/em&gt;, 2015, pp. 2342–2350.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Hermann15&#34;&gt;
-&lt;p&gt;[4] K. M. Hermann, T. Kočisky, E. Grefenstette, L. Espeholt, W. Kay, M. Suleyman, and P. Blunsom, “Teaching machines to read and comprehend,” &lt;em&gt;arXiv preprint arXiv:1506.03340&lt;/em&gt;, 2015.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Chung15&#34;&gt;
-&lt;p&gt;[5] J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural networks,” &lt;em&gt;arXiv preprint arXiv:1502.02367&lt;/em&gt;, 2015.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Sak14a&#34;&gt;
-&lt;p&gt;[6] H. Sak, A. Senior, and F. Beaufays, “Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition,” &lt;em&gt;arXiv preprint arXiv:1402.1128&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Vinyals14&#34;&gt;
-&lt;p&gt;[7] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan, “Show and tell: A neural image caption generator,” &lt;em&gt;arXiv preprint arXiv:1411.4555&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Zaremba14&#34;&gt;
-&lt;p&gt;[8] W. Zaremba, I. Sutskever, and O. Vinyals, “Recurrent neural network regularization,” &lt;em&gt;arXiv preprint arXiv:1409.2329&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Irsoy14&#34;&gt;
-&lt;p&gt;[9] O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative recurrent neural networks,” &lt;em&gt;arXiv preprint arXiv:1412.6577&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Chen14&#34;&gt;
-&lt;p&gt;[10] X. Chen, Y. Wang, X. Liu, M. J. Gales, and P. C. Woodland, “Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch,” &lt;em&gt;submitted to Proc. ISCA Interspeech&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Cho14&#34;&gt;
-&lt;p&gt;[11] K. Cho, B. van Merrienboer, C. Gulcehre, F. Bougares, H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn encoder-decoder for statistical machine translation,” &lt;em&gt;arXiv preprint arXiv:1406.1078&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Mao14&#34;&gt;
-&lt;p&gt;[12] J. Mao, W. Xu, Y. Yang, J. Wang, and A. Yuille, “Deep captioning with multimodal recurrent neural networks (m-rNN),” &lt;em&gt;arXiv preprint arXiv:1412.6632&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Mikolov14&#34;&gt;
-&lt;p&gt;[13] T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer memory in recurrent neural networks,” &lt;em&gt;arXiv preprint arXiv:1412.7753&lt;/em&gt;, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Shao14&#34;&gt;
-&lt;p&gt;[14] Y. Shao, “Learning sparse recurrent neural networks in language modeling,” PhD thesis, The Ohio State University, 2014.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Weng14&#34;&gt;
-&lt;p&gt;[15] C. Weng, D. Yu, S. Watanabe, and B.-H. F. Juang, “Recurrent deep neural networks for robust speech recognition,” in &lt;em&gt;Acoustics, speech and signal processing (iCASSP), 2014 iEEE international conference on&lt;/em&gt;, 2014, pp. 5532–5536.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Pascanu13&#34;&gt;
-&lt;p&gt;[16] R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training recurrent neural networks.” in &lt;em&gt;ICML (3)&lt;/em&gt;, 2013, vol. 28, pp. 1310–1318.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Graves13&#34;&gt;
-&lt;p&gt;[17] A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep recurrent neural networks,” &lt;em&gt;arXiv preprint arXiv:1303.5778&lt;/em&gt;, 2013.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Graves13a&#34;&gt;
-&lt;p&gt;[18] A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep bidirectional LSTM,” in &lt;em&gt;Automatic speech recognition and understanding (aSRU), 2013 iEEE workshop on&lt;/em&gt;, 2013, pp. 273–278.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Graves13b&#34;&gt;
-&lt;p&gt;[19] A. Graves, “Generating sequences with recurrent neural networks,” &lt;em&gt;arXiv preprint arXiv:1308.0850&lt;/em&gt;, 2013.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Breuel13&#34;&gt;
-&lt;p&gt;[20] T. M. Breuel, A. Ul-Hasan, M. A. Al-Azawi, and F. Shafait, “High-performance OCR for printed english and fraktur using LSTM networks,” in &lt;em&gt;Document analysis and recognition (iCDAR), 2013 12&lt;sup&gt;th&lt;/sup&gt; international conference on&lt;/em&gt;, 2013, pp. 683–687.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Kalchbrenner13&#34;&gt;
-&lt;p&gt;[21] N. Kalchbrenner and P. Blunsom, “Recurrent convolutional neural networks for discourse compositionality,” &lt;em&gt;arXiv preprint arXiv:1306.3584&lt;/em&gt;, 2013.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Sundermeyer13&#34;&gt;
-&lt;p&gt;[22] M. Sundermeyer, I. Oparin, J.-L. Gauvain, B. Freiberg, R. Schluter, and H. Ney, “Comparison of feedforward and recurrent neural network language models,” in &lt;em&gt;Acoustics, speech and signal processing (iCASSP), 2013 iEEE international conference on&lt;/em&gt;, 2013, pp. 8430–8434.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Shi13&#34;&gt;
-&lt;p&gt;[23] Y. Shi, W.-Q. Zhang, J. Liu, and M. T. Johnson, “RNN language model with word clustering and class-based output layer,” &lt;em&gt;EURASIP Journal on Audio, Speech, and Music Processing&lt;/em&gt;, vol. 2013, no. 1, pp. 1–7, 2013.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Mikolov13c&#34;&gt;
-&lt;p&gt;[24] T. Mikolov and G. Zweig, “Context dependent recurrent neural network language model.” in &lt;em&gt;SLT&lt;/em&gt;, 2012, pp. 234–239.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Monner12&#34;&gt;
-&lt;p&gt;[25] D. Monner and J. A. Reggia, “A generalized LSTM-like training algorithm for second-order recurrent neural networks,” &lt;em&gt;Neural Networks&lt;/em&gt;, vol. 25, pp. 70–83, 2012.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Frinken12&#34;&gt;
-&lt;p&gt;[26] V. Frinken, F. Zamora-Martínez, S. E. Boquera, M. J. C. Bleda, A. Fischer, and H. Bunke, “Long-short term memory neural networks language modeling for handwriting recognition.” in &lt;em&gt;ICPR&lt;/em&gt;, 2012, pp. 701–704.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Sundermeyer12&#34;&gt;
-&lt;p&gt;[27] M. Sundermeyer, R. Schlüter, and H. Ney, “LSTM neural networks for language modeling.” in &lt;em&gt;INTERSPEECH&lt;/em&gt;, 2012.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Sutskever11&#34;&gt;
-&lt;p&gt;[28] I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent neural networks,” in &lt;em&gt;Proceedings of the 28th international conference on machine learning (iCML-11)&lt;/em&gt;, 2011, pp. 1017–1024.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-hammerton03&#34;&gt;
-&lt;p&gt;[29] J. Hammerton, “Named entity recognition with long short-term memory,” in &lt;em&gt;Proceedings of coNLL-2003&lt;/em&gt;, 2003, pp. 172–175.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Hochreiter01&#34;&gt;
-&lt;p&gt;[30] S. Hochreiter, Y. Bengio, P. Frasconi, and J. Schmidhuber, “Gradient flow in recurrent nets: The difficulty of learning long-term dependencies.” Citeseer, 2001.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Hochreiter97&#34;&gt;
-&lt;p&gt;[31] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” vol. 9, no. 8, pp. 1735–1780, 1997.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Gers00&#34;&gt;
-&lt;p&gt;[32] F. A. Gers, J. Schmidhuber, and F. Cummins, “Learning to forget: Continual prediction with LSTM,” &lt;em&gt;Neural computation&lt;/em&gt;, vol. 12, no. 10, pp. 2451–2471, 2000.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Gers03&#34;&gt;
-&lt;p&gt;[33] F. A. Gers, N. N. Schraudolph, and J. Schmidhuber, “Learning precise timing with LSTM recurrent networks,” &lt;em&gt;The Journal of Machine Learning Research&lt;/em&gt;, vol. 3, pp. 115–143, 2003.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-Gers01&#34;&gt;
-&lt;p&gt;[34] F. Gers, “Long short-term memory in recurrent neural networks,” &lt;em&gt;Unpublished PhD dissertation, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland&lt;/em&gt;, 2001.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
-&lt;/body&gt;&lt;div&gt;&lt;/div&gt;&lt;/html&gt;</description>
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;[1] Y. Kim, Y. Jernite, D. Sontag, and A. M. Rush, “Character-aware neural language models,” arXiv preprint arXiv:1508.06615, 2015.&lt;/p&gt;
+
+&lt;p&gt;[2] K. Greff, R. K. Srivastava, J. Koutník, B. R. Steunebrink, and J. Schmidhuber, “LSTM: A search space odyssey,” arXiv preprint arXiv:1503.04069, 2015.&lt;/p&gt;
+
+&lt;p&gt;[3] R. Jozefowicz, W. Zaremba, and I. Sutskever, “An empirical exploration of recurrent network architectures,” in Proceedings of the 32nd international conference on machine learning, 2015, pp. 2342–2350.&lt;/p&gt;
+
+&lt;p&gt;[4] K. M. Hermann, T. Kočisky, E. Grefenstette, L. Espeholt, W. Kay, M. Suleyman, and P. Blunsom, “Teaching machines to read and comprehend,” arXiv preprint arXiv:1506.03340, 2015.&lt;/p&gt;
+
+&lt;p&gt;[5] J. Chung, C. Gulcehre, K. Cho, and Y. Bengio, “Gated feedback recurrent neural networks,” arXiv preprint arXiv:1502.02367, 2015.&lt;/p&gt;
+
+&lt;p&gt;[6] H. Sak, A. Senior, and F. Beaufays, “Long short-term memory based recurrent neural network architectures for large vocabulary speech recognition,” arXiv preprint arXiv:1402.1128, 2014.&lt;/p&gt;
+
+&lt;p&gt;[7] O. Vinyals, A. Toshev, S. Bengio, and D. Erhan, “Show and tell: A neural image caption generator,” arXiv preprint arXiv:1411.4555, 2014.&lt;/p&gt;
+
+&lt;p&gt;[8] W. Zaremba, I. Sutskever, and O. Vinyals, “Recurrent neural network regularization,” arXiv preprint arXiv:1409.2329, 2014.&lt;/p&gt;
+
+&lt;p&gt;[9] O. İrsoy and C. Cardie, “Modeling compositionality with multiplicative recurrent neural networks,” arXiv preprint arXiv:1412.6577, 2014.&lt;/p&gt;
+
+&lt;p&gt;[10] X. Chen, Y. Wang, X. Liu, M. J. Gales, and P. C. Woodland, “Efficient GPU-based training of recurrent neural network language models using spliced sentence bunch,” submitted to Proc. ISCA Interspeech, 2014.&lt;/p&gt;
+
+&lt;p&gt;[11] K. Cho, B. van Merrienboer, C. Gulcehre, F. Bougares, H. Schwenk, and Y. Bengio, “Learning phrase representations using rnn encoder-decoder for statistical machine translation,” arXiv preprint arXiv:1406.1078, 2014.&lt;/p&gt;
+
+&lt;p&gt;[12] J. Mao, W. Xu, Y. Yang, J. Wang, and A. Yuille, “Deep captioning with multimodal recurrent neural networks (m-rNN),” arXiv preprint arXiv:1412.6632, 2014.&lt;/p&gt;
+
+&lt;p&gt;[13] T. Mikolov, A. Joulin, S. Chopra, M. Mathieu, and M. Ranzato, “Learning longer memory in recurrent neural networks,” arXiv preprint arXiv:1412.7753, 2014.&lt;/p&gt;
+
+&lt;p&gt;[14] Y. Shao, “Learning sparse recurrent neural networks in language modeling,” PhD thesis, The Ohio State University, 2014.&lt;/p&gt;
+
+&lt;p&gt;[15] C. Weng, D. Yu, S. Watanabe, and B.-H. F. Juang, “Recurrent deep neural networks for robust speech recognition,” in Acoustics, speech and signal processing (iCASSP), 2014 iEEE international conference on, 2014, pp. 5532–5536.&lt;/p&gt;
+
+&lt;p&gt;[16] R. Pascanu, T. Mikolov, and Y. Bengio, “On the difficulty of training recurrent neural networks.” in ICML (3), 2013, vol. 28, pp. 1310–1318.&lt;/p&gt;
+
+&lt;p&gt;[17] A. Graves, A.-r. Mohamed, and G. Hinton, “Speech recognition with deep recurrent neural networks,” arXiv preprint arXiv:1303.5778, 2013.&lt;/p&gt;
+
+&lt;p&gt;[18] A. Graves, N. Jaitly, and A.-r. Mohamed, “Hybrid speech recognition with deep bidirectional LSTM,” in Automatic speech recognition and understanding (aSRU), 2013 iEEE workshop on, 2013, pp. 273–278.&lt;/p&gt;
+
+&lt;p&gt;[19] A. Graves, “Generating sequences with recurrent neural networks,” arXiv preprint arXiv:1308.0850, 2013.&lt;/p&gt;
+
+&lt;p&gt;[20] T. M. Breuel, A. Ul-Hasan, M. A. Al-Azawi, and F. Shafait, “High-performance OCR for printed english and fraktur using LSTM networks,” in Document analysis and recognition (iCDAR), 2013 12th international conference on, 2013, pp. 683–687.&lt;/p&gt;
+
+&lt;p&gt;[21] N. Kalchbrenner and P. Blunsom, “Recurrent convolutional neural networks for discourse compositionality,” arXiv preprint arXiv:1306.3584, 2013.&lt;/p&gt;
+
+&lt;p&gt;[22] M. Sundermeyer, I. Oparin, J.-L. Gauvain, B. Freiberg, R. Schluter, and H. Ney, “Comparison of feedforward and recurrent neural network language models,” in Acoustics, speech and signal processing (iCASSP), 2013 iEEE international conference on, 2013, pp. 8430–8434.&lt;/p&gt;
+
+&lt;p&gt;[23] Y. Shi, W.-Q. Zhang, J. Liu, and M. T. Johnson, “RNN language model with word clustering and class-based output layer,” EURASIP Journal on Audio, Speech, and Music Processing, vol. 2013, no. 1, pp. 1–7, 2013.&lt;/p&gt;
+
+&lt;p&gt;[24] T. Mikolov and G. Zweig, “Context dependent recurrent neural network language model.” in SLT, 2012, pp. 234–239.&lt;/p&gt;
+
+&lt;p&gt;[25] D. Monner and J. A. Reggia, “A generalized LSTM-like training algorithm for second-order recurrent neural networks,” Neural Networks, vol. 25, pp. 70–83, 2012.&lt;/p&gt;
+
+&lt;p&gt;[26] V. Frinken, F. Zamora-Martínez, S. E. Boquera, M. J. C. Bleda, A. Fischer, and H. Bunke, “Long-short term memory neural networks language modeling for handwriting recognition.” in ICPR, 2012, pp. 701–704.&lt;/p&gt;
+
+&lt;p&gt;[27] M. Sundermeyer, R. Schlüter, and H. Ney, “LSTM neural networks for language modeling.” in INTERSPEECH, 2012.&lt;/p&gt;
+
+&lt;p&gt;[28] I. Sutskever, J. Martens, and G. E. Hinton, “Generating text with recurrent neural networks,” in Proceedings of the 28th international conference on machine learning (iCML-11), 2011, pp. 1017–1024.&lt;/p&gt;
+
+&lt;p&gt;[29] J. Hammerton, “Named entity recognition with long short-term memory,” in Proceedings of coNLL-2003, 2003, pp. 172–175.&lt;/p&gt;
+
+&lt;p&gt;[30] S. Hochreiter, Y. Bengio, P. Frasconi, and J. Schmidhuber, “Gradient flow in recurrent nets: The difficulty of learning long-term dependencies.” Citeseer, 2001.&lt;/p&gt;
+
+&lt;p&gt;[31] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” vol. 9, no. 8, pp. 1735–1780, 1997.&lt;/p&gt;
+
+&lt;p&gt;[32] F. A. Gers, J. Schmidhuber, and F. Cummins, “Learning to forget: Continual prediction with LSTM,” Neural computation, vol. 12, no. 10, pp. 2451–2471, 2000.&lt;/p&gt;
+
+&lt;p&gt;[33] F. A. Gers, N. N. Schraudolph, and J. Schmidhuber, “Learning precise timing with LSTM recurrent networks,” The Journal of Machine Learning Research, vol. 3, pp. 115–143, 2003.&lt;/p&gt;
+
+&lt;p&gt;[34] F. Gers, “Long short-term memory in recurrent neural networks,” Unpublished PhD dissertation, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland, 2001.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -455,6 +1751,8 @@ $( &#34;#iPicture&#34; ).iPicture();\
     &lt;link rel=&#34;stylesheet&#34; href=&#34;keyboard.css&#34;&gt;
     &lt;script type=&#34;text/javascript&#34;&gt;
         five = [&#34;as&#34;,&#34;cs&#34;,&#34;ac&#34;,&#34;a&#34;,&#34;c&#34;];
+        six  = [&#34;NUM&#34;,&#34;as&#34;,&#34;cs&#34;,&#34;ac&#34;,&#34;a&#34;,&#34;c&#34;];
+        num =&#34;1234567890-=&#34;
         row1=&#34;QWERTYUIOP&#34;;
         row2=&#34;ASDFGHJKL&#34;;
         row3=&#34;ZXCVBNM&#34;;
@@ -470,7 +1768,9 @@ $( &#34;#iPicture&#34; ).iPicture();\
 
 
 
-
+&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;./hhkb.jpg&#34;/&gt;
+&lt;/div&gt;
 
 
 
@@ -508,19 +1808,20 @@ $( &#34;#iPicture&#34; ).iPicture();\
     &lt;/div&gt; --&gt;
         
     &lt;div class=&#34;section-row&#34;&gt;
+
       &lt;div class=&#34;key num dual&#34;&gt; ~ `&lt;br&gt;&lt;as&gt;Alt+Shift&lt;/as&gt;&lt;br&gt;&lt;cs&gt;Ctrl+Shift&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;s&gt;Alt+Ctrl&lt;/s&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Alt&lt;/a&gt;&lt;br&gt;&lt;c&gt;Ctrl&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 1 !&lt;br&gt;&lt;as&gt;InputMethod&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 2 @&lt;br&gt;&lt;as&gt;Extension&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt;  &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 3 #&lt;br&gt;&lt;as&gt;ScreenShot&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 4 $&lt;br&gt;&lt;as&gt;Currency&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 5 %&lt;br&gt;&lt;as&gt;Refresh_Monkey&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 6 ^&lt;br&gt;&lt;as&gt;Grid_Rule&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 7 &amp;&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 8 *&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 9 (&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 0 )&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; _&lt;br&gt;-  &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; +&lt;br&gt;=  &lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+row = num;
+board = chrome;
+for(var key in row){
+  document.write(&#39;&lt;div class=&#34;key num dual&#34;&gt;&#39;);
+  for(var i in board[row[key]]){
+    document.write(&#39;&lt;&#39;+six[i]+&#39;&gt;&#39;+board[row[key]][i]+&#39;&lt;/&#39;+six[i]+&#39;&gt;&lt;br&gt;&#39;);
+  }
+  document.write(&#39;&lt;/div&gt;&#39;);
+}
+&lt;/script&gt;
+
       &lt;div class=&#34;key backspace&#34;&gt; Backspace &lt;/div&gt;
       &lt;!--END NUMBER KEYS --&gt;
     &lt;/div&gt;
@@ -529,6 +1830,7 @@ $( &#34;#iPicture&#34; ).iPicture();\
 
     &lt;div class=&#34;section-row&#34;&gt;
       &lt;div class=&#34;key tab&#34;&gt; Tab &lt;/div&gt;
+
 &lt;script type=&#34;text/javascript&#34;&gt;
 row = row1;
 board = chrome;
@@ -541,6 +1843,7 @@ for(var key in row){
   document.write(&#39;&lt;/div&gt;&#39;);
 }
 &lt;/script&gt;
+
        &lt;div class=&#34;key dual&#34;&gt; {&lt;Br&gt;[&lt;/div&gt;
       &lt;div class=&#34;key dual&#34;&gt; }&lt;br&gt;] &lt;/div&gt;
       &lt;div class=&#34;key letter dual slash&#34;&gt; |&lt;br&gt;\ &lt;/div&gt;
@@ -655,18 +1958,19 @@ for(var key in row){
         
     &lt;div class=&#34;section-row&#34;&gt;
       &lt;div class=&#34;key num dual&#34;&gt; ~ `&lt;br&gt;&lt;as&gt;Alt+Shift&lt;/as&gt;&lt;br&gt;&lt;cs&gt;Ctrl+Shift&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;Alt+Ctrl&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Alt&lt;/a&gt;&lt;br&gt;&lt;c&gt;Ctrl&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 1 !&lt;br&gt;&lt;as&gt;&lt;d&gt;1_Group&lt;/d&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;group1_move&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 2 @&lt;br&gt;&lt;as&gt;&lt;d&gt;2_Group&lt;/d&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;group2_move&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 3 #&lt;br&gt;&lt;as&gt;&lt;d&gt;3_Group&lt;/d&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;group3_move&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 4 $&lt;br&gt;&lt;as&gt;&lt;d&gt;4_Col_Group&lt;/d&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;group4_move&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 5 %&lt;br&gt;&lt;as&gt;&lt;d&gt;4_Grid_Group&lt;/d&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 6 ^&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 7 &amp;&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 8 *&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 9 (&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 0 )&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; _&lt;br&gt;-  &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; +&lt;br&gt;=  &lt;/div&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+row = num;
+board = sublimetext;
+for(var key in row){
+  document.write(&#39;&lt;div class=&#34;key num dual&#34;&gt;&#39;);
+  for(var i in board[row[key]]){
+    document.write(&#39;&lt;&#39;+six[i]+&#39;&gt;&#39;+board[row[key]][i]+&#39;&lt;/&#39;+six[i]+&#39;&gt;&lt;br&gt;&#39;);
+  }
+  document.write(&#39;&lt;/div&gt;&#39;);
+}
+&lt;/script&gt;
+
       &lt;div class=&#34;key backspace&#34;&gt; Backspace &lt;/div&gt;
       &lt;!--END NUMBER KEYS --&gt;
     &lt;/div&gt;
@@ -792,18 +2096,20 @@ for(var key in row){
         
     &lt;div class=&#34;section-row&#34;&gt;
       &lt;div class=&#34;key num dual&#34;&gt; ~ `&lt;br&gt;&lt;as&gt;Alt+Shift&lt;/as&gt;&lt;br&gt;&lt;cs&gt;Ctrl+Shift&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;Alt+Ctrl&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Alt&lt;/a&gt;&lt;br&gt;&lt;c&gt;Ctrl&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 1 !&lt;br&gt;&lt;as&gt;Sublime_Text&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style1_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 2 @&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style2_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 3 #&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style3_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;í&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 4 $&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style4_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 5 %&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style5_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 6 ^&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;Style6_Foxit&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 7 &amp;&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 8 *&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 9 (&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; 0 )&lt;br&gt;&lt;as&gt;&lt;/as&gt;&lt;br&gt;&lt;cs&gt;&lt;/cs&gt;&lt;br&gt;&lt;ac&gt;&lt;/ac&gt;&lt;br&gt;&lt;a&gt;&lt;/a&gt;&lt;br&gt;&lt;c&gt;&lt;/c&gt; &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; _&lt;br&gt;-  &lt;/div&gt;
-      &lt;div class=&#34;key num dual&#34;&gt; +&lt;br&gt;=  &lt;/div&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+row = num;
+board = windows;
+for(var key in row){
+  document.write(&#39;&lt;div class=&#34;key num dual&#34;&gt;&#39;);
+  for(var i in board[row[key]]){
+    document.write(&#39;&lt;&#39;+six[i]+&#39;&gt;&#39;+board[row[key]][i]+&#39;&lt;/&#39;+six[i]+&#39;&gt;&lt;br&gt;&#39;);
+  }
+  document.write(&#39;&lt;/div&gt;&#39;);
+}
+&lt;/script&gt;
+
+
       &lt;div class=&#34;key backspace&#34;&gt; Backspace &lt;/div&gt;
       &lt;!--END NUMBER KEYS --&gt;
     &lt;/div&gt;
@@ -2942,64 +4248,6 @@ Reveal.addEventListener( &#39;customevent&#39;, function() {
 		&lt;script&gt;
 
 			Reveal.initialize();
-
-		&lt;/script&gt;
-
-	&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hexromas.github.io/manual/reveal.js/test/examples/embedded-media/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hexromas.github.io/manual/reveal.js/test/examples/embedded-media/</guid>
-      <description>&lt;!doctype html&gt;
-&lt;html lang=&#34;en&#34;&gt;
-
-	&lt;head&gt;
-		&lt;meta charset=&#34;utf-8&#34;&gt;
-
-		&lt;title&gt;reveal.js - Embedded Media&lt;/title&gt;
-
-		&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;&gt;
-
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;../../css/reveal.css&#34;&gt;
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;../../css/theme/default.css&#34; id=&#34;theme&#34;&gt;
-	&lt;/head&gt;
-
-	&lt;body&gt;
-
-		&lt;div class=&#34;reveal&#34;&gt;
-
-			&lt;div class=&#34;slides&#34;&gt;
-
-				&lt;section&gt;
-					&lt;h2&gt;Embedded Media Test&lt;/h2&gt;
-				&lt;/section&gt;
-
-				&lt;section&gt;
-					&lt;iframe data-autoplay width=&#34;420&#34; height=&#34;345&#34; src=&#34;http://www.youtube.com/embed/l3RQZ4mcr1c&#34;&gt;&lt;/iframe&gt;
-				&lt;/section&gt;
-
-				&lt;section&gt;
-					&lt;h2&gt;Empty Slide&lt;/h2&gt;
-				&lt;/section&gt;
-
-			&lt;/div&gt;
-
-		&lt;/div&gt;
-
-		&lt;script src=&#34;../../lib/js/head.min.js&#34;&gt;&lt;/script&gt;
-		&lt;script src=&#34;../../js/reveal.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-
-			Reveal.initialize({
-				transition: &#39;linear&#39;
-			});
 
 		&lt;/script&gt;
 

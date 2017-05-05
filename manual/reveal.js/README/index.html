@@ -79,6 +79,17 @@
 
   
 
+h1 {
+	visibility: hidden;
+	position: absolute;
+}
+
+h1.post-title {
+	visibility: visible;
+	position: initial;
+
+}
+
 h2 {
 	background-color: #32506d; 
 	color: white;}
@@ -223,6 +234,33 @@ dd.ref {
   text-align: left;
   color: #000000; }
 
+nav {
+	background-color: rgba(217, 217, 217, 1);
+	display: inline-block;
+	border-width: 10px;
+	padding: 20px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	 
+
+}
+
+nav a  {
+	color: #32506d;
+}
+
+nav:before {
+	content: 'Table of content';
+	font-family: serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;		
+	top: 0px;
+	left: 0px;
+	color: rgba(188, 147, 200, 1);
+	text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 </style>
@@ -282,6 +320,96 @@ function go2page(pagepath) {
         </span>
     </div>
     <h1 class="post-title"></h1>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#reveal-js-build-status-https-travis-ci-org-hakimel-reveal-js-svg-branch-master-https-travis-ci-org-hakimel-reveal-js-a-href-https-slides-com-ref-github-img-src-https-s3-amazonaws-com-static-slid-es-images-slides-github-banner-320x40-png-1-alt-slides-width-160-height-20-a">reveal.js <a href="https://travis-ci.org/hakimel/reveal.js"><img src="https://travis-ci.org/hakimel/reveal.js.svg?branch=master" alt="Build Status" /></a> <a href="https://slides.com?ref=github"><img src="https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1" alt="Slides" width="160" height="20"></a></a>
+<ul>
+<li><a href="#table-of-contents">Table of contents</a>
+<ul>
+<li>
+<ul>
+<li><a href="#more-reading">More reading</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#online-editor">Online Editor</a></li>
+<li><a href="#instructions">Instructions</a>
+<ul>
+<li><a href="#markup">Markup</a></li>
+<li><a href="#markdown">Markdown</a>
+<ul>
+<li><a href="#external-markdown">External Markdown</a></li>
+<li><a href="#element-attributes">Element Attributes</a></li>
+<li><a href="#slide-attributes">Slide Attributes</a></li>
+</ul></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#presentation-size">Presentation Size</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#ready-event">Ready Event</a></li>
+<li><a href="#auto-sliding">Auto-sliding</a></li>
+<li><a href="#keyboard-bindings">Keyboard Bindings</a></li>
+<li><a href="#touch-navigation">Touch Navigation</a></li>
+<li><a href="#lazy-loading">Lazy Loading</a></li>
+<li><a href="#api">API</a></li>
+<li><a href="#slide-changed-event">Slide Changed Event</a></li>
+<li><a href="#presentation-state">Presentation State</a></li>
+<li><a href="#slide-states">Slide States</a></li>
+<li><a href="#slide-backgrounds">Slide Backgrounds</a>
+<ul>
+<li>
+<ul>
+<li><a href="#color-backgrounds">Color Backgrounds</a></li>
+<li><a href="#image-backgrounds">Image Backgrounds</a></li>
+<li><a href="#video-backgrounds">Video Backgrounds</a></li>
+<li><a href="#iframe-backgrounds">Iframe Backgrounds</a></li>
+<li><a href="#background-transitions">Background Transitions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#parallax-background">Parallax Background</a></li>
+<li><a href="#slide-transitions">Slide Transitions</a></li>
+<li><a href="#internal-links">Internal links</a></li>
+<li><a href="#fragments">Fragments</a></li>
+<li><a href="#fragment-events">Fragment events</a></li>
+<li><a href="#code-syntax-highlighting">Code syntax highlighting</a></li>
+<li><a href="#slide-number">Slide number</a></li>
+<li><a href="#overview-mode">Overview mode</a></li>
+<li><a href="#fullscreen-mode">Fullscreen mode</a></li>
+<li><a href="#embedded-media">Embedded media</a></li>
+<li><a href="#stretching-elements">Stretching elements</a></li>
+<li><a href="#postmessage-api">postMessage API</a></li>
+</ul></li>
+<li><a href="#pdf-export">PDF Export</a></li>
+<li><a href="#theming">Theming</a></li>
+<li><a href="#speaker-notes">Speaker Notes</a>
+<ul>
+<li>
+<ul>
+<li><a href="#share-and-print-speaker-notes">Share and Print Speaker Notes</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#server-side-speaker-notes">Server Side Speaker Notes</a></li>
+<li><a href="#multiplexing">Multiplexing</a>
+<ul>
+<li>
+<ul>
+<li><a href="#master-presentation">Master presentation</a></li>
+<li><a href="#client-presentation">Client presentation</a></li>
+<li><a href="#socket-io-server">Socket.io server</a>
+<ul>
+<li><a href="#socket-io-server-as-file-static-server">socket.io server as file static server</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#mathjax">MathJax</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#basic-setup">Basic setup</a></li>
+<li><a href="#full-setup">Full setup</a></li>
+<li><a href="#folder-structure">Folder Structure</a></li>
+</ul></li>
+<li><a href="#license">License</a></li>
+</ul></li>
+</ul>
+</nav> 
     
 
 <h1 id="reveal-js-build-status-https-travis-ci-org-hakimel-reveal-js-svg-branch-master-https-travis-ci-org-hakimel-reveal-js-a-href-https-slides-com-ref-github-img-src-https-s3-amazonaws-com-static-slid-es-images-slides-github-banner-320x40-png-1-alt-slides-width-160-height-20-a">reveal.js <a href="https://travis-ci.org/hakimel/reveal.js"><img src="https://travis-ci.org/hakimel/reveal.js.svg?branch=master" alt="Build Status" /></a> <a href="https://slides.com?ref=github"><img src="https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1" alt="Slides" width="160" height="20"></a></h1>
@@ -1420,6 +1548,7 @@ This will only display in the notes window.
 
 <p>Copyright &copy; 2016 Hakim El Hattab, <a href="http://hakim.se">http://hakim.se</a></p>
 
+    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
       <li class="email">

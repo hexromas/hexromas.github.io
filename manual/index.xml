@@ -2312,72 +2312,6 @@ for(var key in row){
     
     <item>
       <title></title>
-      <link>https://hexromas.github.io/manual/reveal.js/LocalTest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hexromas.github.io/manual/reveal.js/LocalTest/</guid>
-      <description>&lt;!doctype html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta charset=&#34;utf-8&#34;&gt;
-		&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;&gt;
-
-		&lt;title&gt;reveal.js&lt;/title&gt;
-
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/reveal.css&#34;&gt;
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/theme/black.css&#34;&gt;
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/theme/boRevealStyle.css&#34;&gt;
-
-		&lt;!-- Theme used for syntax highlighting of code --&gt;
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/zenburn.css&#34;&gt;
-
-		&lt;!-- Printing and PDF exports --&gt;
-		&lt;script&gt;
-			var link = document.createElement( &#39;link&#39; );
-			link.rel = &#39;stylesheet&#39;;
-			link.type = &#39;text/css&#39;;
-			link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;;
-			document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );
-		&lt;/script&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;div class=&#34;reveal&#34;&gt;
-			&lt;div class=&#34;slides&#34;&gt;
-				&lt;section data-markdown=&#34;https://rawgit.com/BeRANDON/ResearchReport/master/2017-04-07-Debate_videos_on_youtube.md&#34;
-						 data-separator=&#34;^\n\n\n&#34;  
-						 data-separator-vertical=&#34;^\n\n&#34;  
-						 data-separator-notes=&#34;^Note:&#34;  
-						 data-charset=&#34;utf-8&#34;&gt;
-
-
-				&lt;/section&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-
-		&lt;script src=&#34;lib/js/head.min.js&#34;&gt;&lt;/script&gt;
-		&lt;script src=&#34;js/reveal.js&#34;&gt;&lt;/script&gt;
-
-		&lt;script&gt;
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: &#39;plugin/markdown/marked.js&#39; },
-					{ src: &#39;plugin/markdown/markdown.js&#39; },
-					// { src: &#39;plugin/notes/notes.js&#39;, async: true },
-					{ src: &#39;plugin/highlight/highlight.js&#39;, async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://hexromas.github.io/manual/reveal.js/README/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -4025,6 +3959,72 @@ Reveal.addEventListener( &#39;customevent&#39;, function() {
 					{ src: &#39;plugin/markdown/marked.js&#39; },
 					{ src: &#39;plugin/markdown/markdown.js&#39; },
 					{ src: &#39;plugin/notes/notes.js&#39;, async: true },
+					{ src: &#39;plugin/highlight/highlight.js&#39;, async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hexromas.github.io/manual/reveal.js/index_RemoteBlog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/manual/reveal.js/index_RemoteBlog/</guid>
+      <description>&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&#34;utf-8&#34;&gt;
+		&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;&gt;
+
+		&lt;title&gt;reveal.js&lt;/title&gt;
+
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/reveal.css&#34;&gt;
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/theme/black.css&#34;&gt;
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/theme/boRevealStyle.css&#34;&gt;
+
+		&lt;!-- Theme used for syntax highlighting of code --&gt;
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;css/zenburn.css&#34;&gt;
+
+		&lt;!-- Printing and PDF exports --&gt;
+		&lt;script&gt;
+			var link = document.createElement( &#39;link&#39; );
+			link.rel = &#39;stylesheet&#39;;
+			link.type = &#39;text/css&#39;;
+			link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;;
+			document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class=&#34;reveal&#34;&gt;
+			&lt;div class=&#34;slides&#34;&gt;
+				&lt;section data-markdown=&#34;https://rawgit.com/BeRANDON/ResearchReport/master/2016-01-01-Tools-List.md&#34;
+						 data-separator=&#34;^\n\n\n&#34;  
+						 data-separator-vertical=&#34;^\n\n&#34;  
+						 data-separator-notes=&#34;^Note:&#34;  
+						 data-charset=&#34;utf-8&#34;&gt;
+
+
+				&lt;/section&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;script src=&#34;lib/js/head.min.js&#34;&gt;&lt;/script&gt;
+		&lt;script src=&#34;js/reveal.js&#34;&gt;&lt;/script&gt;
+
+		&lt;script&gt;
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: &#39;plugin/markdown/marked.js&#39; },
+					{ src: &#39;plugin/markdown/markdown.js&#39; },
+					// { src: &#39;plugin/notes/notes.js&#39;, async: true },
 					{ src: &#39;plugin/highlight/highlight.js&#39;, async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});

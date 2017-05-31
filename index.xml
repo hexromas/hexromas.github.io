@@ -5,8 +5,368 @@
     <link>https://hexromas.github.io/index.xml</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 07 Apr 2017 11:38:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 May 2017 17:14:05 +0000</lastBuildDate>
     <atom:link href="https://hexromas.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Representation_Style</title>
+      <link>https://hexromas.github.io/2017-05-19-Representation_Style/</link>
+      <pubDate>Fri, 19 May 2017 17:14:05 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-05-19-Representation_Style/</guid>
+      <description>
+
+&lt;h1 id=&#34;representation-style&#34;&gt;Representation Style&lt;/h1&gt;
+
+&lt;p&gt;Plan:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Combine two all necessary presentation element in one file.&lt;/li&gt;
+&lt;li&gt;Clearly intitle the two type, &lt;code&gt;black&lt;/code&gt; &amp;amp; &lt;code&gt;white&lt;/code&gt; styles with version.&lt;/li&gt;
+&lt;li&gt;Create the new black version of &lt;code&gt;Atom&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hexromas.github.io/codesnippet/get_youtube_video_info.py&#34;&gt;codes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;common-part&#34;&gt;Common Part&lt;/h2&gt;
+
+&lt;h3 id=&#34;font-import&#34;&gt;Font Import&lt;/h3&gt;
+
+&lt;p&gt;Some online fonts, like &lt;a href=&#34;https://fonts.google.com/&#34;&gt;google font&lt;/a&gt;, one can easily use following codes in html or css files.&lt;/p&gt;
+
+&lt;p&gt;In html:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;//fonts.googleapis.com/css?family=Ubuntu&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;stylesheet&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;text/css&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In css:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;@import&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;url(https://fonts&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;.googleapis.com&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;/css?family=Ubuntu)&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;affacted-elements-in-css&#34;&gt;Affacted Elements in CSS&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In CSS file, the defined attribute will affect different range of elements, one can specify for elements with specific markup(tag), class, id or even in hierarchy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;specific class&lt;/strong&gt;: To affect elements with specific class, such as &lt;code&gt;&amp;lt;a class=&#39;apple&#39;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;, you need to specify the class first as &lt;code&gt;.apple a { color: red;}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;specific id&lt;/strong&gt;: To affect elements with specific id, such as &lt;code&gt;&amp;lt;a id=&#39;zon&#39;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;, you need to specify the id first as &lt;code&gt;#zon {color:green;}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;hierarchy elements&lt;/strong&gt;: To affect elements in hierarchy, you need to implicity specify the whole path, such as hierarchy list:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;list-style-type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;disc;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;list-style-type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;square;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;list-style-type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;circle;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;quote-style&#34;&gt;Quote style&lt;/h3&gt;
+
+&lt;p&gt;In markdown file, the quote section will be translated into html element with &lt;code&gt;&amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt;&lt;/code&gt; tag. Refer to several online examples, I prefer following styles.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;github quote style&lt;/strong&gt;: It shows a light verticle line in left side and lighter the quote fonts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;quote-mark style&lt;/strong&gt;: It shows quote-mark before each quote section (codes are shown below).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;blockquote&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;650px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*background: white;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*opacity: 0.7;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;padding&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*border-radius: 5px;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*box-shadow:&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;        inset 0 2px 0  rgba(188, 147, 200, 0.7),&lt;/span&gt;
+&lt;span style=&#34;color: #776e71&#34;&gt;        -5px -4px 25px rgba(0, 0, 0, 0.3);*/&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #5bc4bf&#34;&gt;blockquote&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;p&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*font-family: &amp;#39;Alegreya&amp;#39;, serif;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-family&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;{{ replace .Site.Params.fontquote &amp;quot;+&amp;quot; &amp;quot; &amp;quot;}}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-size&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;30px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*color: #b4b4b4;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*background-color: #fff7cc;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;color&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;black;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-weight&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;400&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;line-height&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;30px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;/*font-style: italic;*/&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;text-indent&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;40px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;relative;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #5bc4bf&#34;&gt;blockquote&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;p:before&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;\201C&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-family&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;serif;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-style&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;normal;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-weight&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;700&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;absolute;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-size&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;60px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;top&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;left&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;-50px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;color&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;#3d9400&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;text-shadow&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;7px&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;14px&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10px&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;rgba(&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #5bc4bf&#34;&gt;blockquote&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;p:after&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;\201D&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-family&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;serif;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-style&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;normal;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-weight&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;700&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;absolute;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;font-size&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;60px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;bottom&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;-50px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;right&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;-10px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;color&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;#3d9400&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;text-shadow&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;7px&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;14px&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10px&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;rgba(&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #5bc4bf&#34;&gt;blockquote&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;em&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;position&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;absolute;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;bottom&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;-30px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;right&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;30px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;dynamic-links&#34;&gt;Dynamic Links&lt;/h3&gt;
+
+&lt;p&gt;For some reason, the domain of my blog website may change, therefore, I need to define a solution to make my inner links avaliable despite I change the blog website domain. To do so, for each link, I replace javascript action in &amp;lsquo;href&amp;rsquo; attribute, shown as following.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;h6&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;javascript:window.open(go2page(&amp;#39;/manual/deeplearning/&amp;#39;),&amp;#39;_blank&amp;#39;)&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;Deep Learning&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;h6&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #815ba4&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;go2page&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;pagepath&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;document.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;URL&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;protocol&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;link&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;//&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;];&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;baseurl&lt;/span&gt;  &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;link&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;//&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;].&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;split&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)[&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;];&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;pageurl&lt;/span&gt;   &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;protocol&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;//&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;baseurl&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;pagepath&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color: #815ba4&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;pageurl&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;codes-highlight&#34;&gt;Codes Highlight&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;application/javascript&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;hljs&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;initHighlightingOnLoad&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;();&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;css-variable&#34;&gt;CSS Variable&lt;/h3&gt;
+
+&lt;p&gt;One can use LESS, SASS and even CSS itself to define the variables.&lt;br /&gt;
+Here are some english links, &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables&#34;&gt;Using CSS variables&lt;/a&gt;.
+Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017/05/css-variables.html&#34;&gt;阮一峰 CSS 变量教程&lt;/a&gt;, &lt;a href=&#34;http://www.cnblogs.com/coco1s/p/6068522.html&#34;&gt;引人瞩目的 CSS 变量&lt;/a&gt;, &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables&#34;&gt;MDN 使用 CSS 变量&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;fontawesome-icon&#34;&gt;fontawesome Icon&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;fontawesome website&lt;/a&gt; provides online icon source, which you can embed in your html like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;path/to/font-awesome/css/font-awesome.min.css&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;xxx.com&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;me&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;fa fa-twitter-square fa-2x&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;First line refers to the fontawesome css file, the second one define the icon you need. Find more in &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;fontawesome website&lt;/a&gt; and &lt;a href=&#34;http://fontawesome.io/get-started/&#34;&gt;fontawesome usage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;reference-source-list-style&#34;&gt;Reference &amp;amp; Source List style&lt;/h3&gt;
+
+&lt;p&gt;I write the lists between &lt;code&gt;&amp;lt;dd class=&#39;ref&#39;&amp;gt;&amp;lt;/dd&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;dd class=&#39;source&#39;&amp;gt;&amp;lt;/dd&amp;gt;&lt;/code&gt;. Then I render the list as following codes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;dd&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;margin-left&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;10px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;dd&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;.ref&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;font-family&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Source Sans Pro&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;Helvetica&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;sans-serif;&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;font-size&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;var(&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;reveal_ref_size);&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;line-height&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;100%&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;text-align&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;left;&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;color&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;var(&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;color_ref);&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;background-color&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;var(&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;--&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;color_ref_background);&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color: #fec418&#34;&gt;.reveal&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;dd&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;br&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;line-height&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;20px&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bascially, I myself prefer to use the markdown writing style shown below. Markdown render tool will treat &lt;code&gt;\[MFCC]&lt;/code&gt; as normal text since the begining &lt;code&gt;\&lt;/code&gt;. Moreover, we need to cliam the links &lt;code&gt;[MFCC]&lt;/code&gt; (without &lt;code&gt;\&lt;/code&gt;) at somewhere else to make &lt;code&gt;[[MFCC]]&lt;/code&gt; clickable.&lt;/p&gt;
+## Reference  
+
+&lt;dd class=&#39;ref&#39;&gt;
+[[ActivityNet]] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015  
+[[MFCC]] D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008  
+&lt;/dd&gt;
+
+## Source &amp; Thanks  
+
+&lt;dd class=&#39;source&#39;&gt;
+\[ActivityNet]: http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf  
+\[MFCC]: http://fulltext.study/preview/pdf/531553.pdf  
+&lt;/dd&gt;
+
+&lt;h3 id=&#34;unknown-issue&#34;&gt;Unknown Issue&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I don&amp;rsquo;t know how to &lt;strong&gt;add a static image&lt;/strong&gt; at the end of the article. Therefore, I add a div in html file as &lt;code&gt;&amp;lt;div align=&amp;quot;center&amp;quot;&amp;gt;&amp;lt;img src=&#39;https://hexromas.github.io/images/fin.jpg&#39; height=&amp;quot;50px&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ppt-style&#34;&gt;PPT style&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Render Tool&lt;/strong&gt;: It would be better for us to use js-based tool to render blog as ppt presentation. Among these tools, like &lt;a href=&#34;https://github.com/hakimel/reveal.js&#34;&gt;reveal.js&lt;/a&gt;, &lt;a href=&#34;http://flowtime-js.marcolago.com/&#34;&gt;flowtime.js&lt;/a&gt;, &lt;a href=&#34;https://github.com/impress/impress.js/wiki/Examples-and-demos&#34;&gt;impress.js&lt;/a&gt;, &lt;a href=&#34;https://github.com/shower/shower&#34;&gt;shower&lt;/a&gt;, we select &lt;a href=&#34;https://github.com/hakimel/reveal.js&#34;&gt;reveal.js&lt;/a&gt; since it can read markdown style blog easily.&lt;/p&gt;
+
+&lt;h3 id=&#34;reveal-js&#34;&gt;Reveal.js&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;markdown data feeder&lt;/strong&gt;: This js tool can render remote markdown file dependent on markdown plugin as shown in following codes, or you can manually translate the markdown file into html tag content and paste between &lt;code&gt;&amp;lt;div class=&amp;quot;slides&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data separator&lt;/strong&gt;: During specify the markdown file, you can specify the data separator to split the markdown blog into several PPT pages. In my mind, I prefer to use triple blank lines &amp;ldquo;^\n\n\n&amp;rdquo; to split sections, use doulbe blank lines &amp;ldquo;^\n\n&amp;rdquo; to further split each section into verticle parts, use &amp;ldquo;^Note:&amp;rdquo; to denote the note.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reveal.initialize&lt;/strong&gt;: Following code is my current preference configuration, more can refer to &lt;a href=&#34;https://github.com/hakimel/reveal.js#configuration&#34;&gt;reveal.js configuration&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stylesheet&lt;/strong&gt;: You need to include at least three stylesheet for present the markdown based page, i.e. &lt;code&gt;reveal.css&lt;/code&gt;, &lt;code&gt;zenburn.css&lt;/code&gt; and &lt;code&gt;yourown_style.css&lt;/code&gt;. First one can split pages, second one syntax highlighting of code, third one is your customized style.
+&lt;!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note:&lt;br /&gt;
+Is this will be hide.&lt;/p&gt;
+
+&lt;p&gt;sdfwe&lt;/p&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;p&gt;How many will be hide.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;reveal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;slides&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;data-markdown&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://example.com/your_blog.md&amp;quot;&lt;/span&gt;
+      &lt;span style=&#34;color: #06b6ef&#34;&gt;data-separator&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;^\n\n\n&amp;quot;&lt;/span&gt;  
+      &lt;span style=&#34;color: #06b6ef&#34;&gt;data-separator-vertical&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;^\n\n&amp;quot;&lt;/span&gt;  
+      &lt;span style=&#34;color: #06b6ef&#34;&gt;data-separator-notes&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;^Note:&amp;quot;&lt;/span&gt;  
+      &lt;span style=&#34;color: #06b6ef&#34;&gt;data-charset&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;lib/js/head.min.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;js/reveal.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #776e71&#34;&gt;// More info https://github.com/hakimel/reveal.js#configuration&lt;/span&gt;
+  &lt;span style=&#34;color: #06b6ef&#34;&gt;Reveal&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;initialize&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;({&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;controls&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;progress&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;slideNumber&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;history&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;center&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;margin&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;minScale&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0.618&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;maxScale&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #776e71&#34;&gt;// More info https://github.com/hakimel/reveal.js#dependencies&lt;/span&gt;
+    &lt;span style=&#34;color: #06b6ef&#34;&gt;dependencies&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;[&lt;/span&gt;
+      &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;plugin/markdown/marked.js&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;},&lt;/span&gt;
+      &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;plugin/markdown/markdown.js&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;},&lt;/span&gt;
+      &lt;span style=&#34;color: #776e71&#34;&gt;// { src: &amp;#39;plugin/notes/notes.js&amp;#39;, async: true },&lt;/span&gt;
+      &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;plugin/highlight/highlight.js&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;async&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;callback&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;function&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;hljs&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;initHighlightingOnLoad&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;();&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;});&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;report-style&#34;&gt;Report style&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Render Tool&lt;/strong&gt;: I prefer to render markdown via [hugo] than github official tool &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;jekyll&lt;/a&gt;. By &lt;em&gt;hugo&lt;/em&gt;, one need to download the hugo render software, and manually generate the html pages.&lt;/p&gt;
+
+&lt;h3 id=&#34;hugo&#34;&gt;hugo&lt;/h3&gt;
+
+&lt;p&gt;Refer to &lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;hugo website&lt;/a&gt; to know the basic command to generate html from markdown files. To customize your own css style for blog, you can either download existed &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;hugo themes&lt;/a&gt; &amp;amp; specify in &lt;em&gt;config.toml&lt;/em&gt; file, or customize under category &lt;em&gt;hugoDir/layouts/&lt;/em&gt; (&lt;em&gt;hugoDir&lt;/em&gt; is the root category). Hugo will load from bot &lt;em&gt;hugoDir/layouts/&lt;/em&gt; and &lt;em&gt;hugoDir/themes/yourtheme/layouts/&lt;/em&gt;. Following is my preference.&lt;/p&gt;
+
+&lt;h4 id=&#34;default-single-html&#34;&gt;&lt;strong&gt;_default/single.html&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Basically, file &lt;em&gt;/layout/_default/single.html&lt;/em&gt; define the presentation for each blog page.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Table Content&lt;/strong&gt;: Add &lt;code&gt;{{.TableOfContents}}&lt;/code&gt; after title part to show the table content.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ending&lt;/strong&gt;:  Add &lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;image&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt; after blog content.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Build_(dis)agreement_dataset_from_youtube</title>
+      <link>https://hexromas.github.io/2017-05-19-Build_%28dis%29agreement_dataset_from_youtube/</link>
+      <pubDate>Fri, 19 May 2017 17:10:11 +0000</pubDate>
+      
+      <guid>https://hexromas.github.io/2017-05-19-Build_%28dis%29agreement_dataset_from_youtube/</guid>
+      <description>
+
+&lt;h1 id=&#34;youtube-debating-video-dataset&#34;&gt;Youtube Debating Video Dataset&lt;/h1&gt;
+
+&lt;p&gt;Plan:&lt;br /&gt;
+1. Find out google youtube8m format&lt;br /&gt;
+2. Adjust code for download&lt;br /&gt;
+3. Filter the timea zzzz&lt;br /&gt;
+4. Reform the code&lt;br /&gt;
+5. Add more user, channel, list to form a completed list &amp;amp; filter it.&lt;/p&gt;
+
+&lt;h2 id=&#34;youtube8m&#34;&gt;youtube8m&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://research.google.com/youtube8m/index.html&#34;&gt;official youtube8m website&lt;/a&gt; provide the ground-truth csv file shown as following table. However, the table didnot contain metadata for the these youtube videos except the &lt;code&gt;the video identity&lt;/code&gt;. It need you to explore the metadata yourself accoding to &amp;lsquo;the video identity&amp;rsquo;. Refer to link &lt;a href=&#34;https://groups.google.com/forum/#!topic/youtube8m-users/tJJ_YU51rQU&#34;&gt;how to get list of youtube8m URLs&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;|umTrainVideos|KnowledgeGraphID|LabelName|FirstVertical|SecondVertical|ThirdVertical|&lt;br /&gt;
+|-|-|-|-|-|-|&lt;br /&gt;
+|539926|/m/07yv9|Vehicle|/Autos &amp;amp; Vehicles|||&lt;br /&gt;
+|386872|/m/01jddz|Concert|/Arts &amp;amp; Entertainment|||&lt;br /&gt;
+|290812|/m/0hcr|Animation|/Arts &amp;amp; Entertainment|||&lt;/p&gt;
+
+&lt;h2 id=&#34;explore-youtube-video&#34;&gt;Explore youtube video&lt;/h2&gt;
+
+&lt;p&gt;One need to request the metadata for video or video list according to their identities, such as &lt;code&gt;channel ids&lt;/code&gt;, &lt;code&gt;playlist ids&lt;/code&gt;, &lt;code&gt;video ids&lt;/code&gt;, and so on. You can refer to &lt;a href=&#34;https://developers.google.com/youtube/v3/docs/&#34;&gt;official youtube data api&lt;/a&gt; page and some &lt;a href=&#34;https://developers.google.com/youtube/v3/code_samples/code_snippets&#34;&gt;youtube api code snippets&lt;/a&gt; for more, or you can see the &lt;code&gt;Appendix-1&lt;/code&gt; exmaple.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Previous Process&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;youtube API permission&lt;/code&gt;: Before you use youtube api, you need to &lt;a href=&#34;https://developers.google.com/youtube/v3/docs/#calling-the-api&#34;&gt;apply for youtube API permission&lt;/a&gt; first. For python coder, you need to download the secret json file and then get authenticated via python library &lt;code&gt;oauth2client&lt;/code&gt; and &lt;code&gt;apiclient&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Usage&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Youtube server will only response according to your request head. For example, you need to request all the videos in the channel &lt;code&gt;UC_x5XG1OV2P6uZZ5FSM9Ttw&lt;/code&gt;, you can try the API in &lt;em&gt;&lt;a href=&#34;https://developers.google.com/youtube/v3/docs/channels/list&#34;&gt;list page&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here, we try to show all types of metadata that may be useful for us.&lt;/p&gt;
+
+&lt;p&gt;Only consider about what should be contained in the table.  video identity, video owner, channel, playlist, time length, video license, video title,&lt;/p&gt;
+
+&lt;h2 id=&#34;download-youtube-video&#34;&gt;Download youtube video&lt;/h2&gt;
+
+&lt;p&gt;Youtube8m provides the &lt;a href=&#34;http://data.yt8m.org/download.py&#34;&gt;python download script for youtube videos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;channels_list content for each video:&lt;/p&gt;
+
+&lt;h2 id=&#34;appendix-1-python-example&#34;&gt;Appendix-1: Python Example&lt;/h2&gt;
+
+&lt;p&gt;The following codes block will explain how the&lt;/p&gt;
+
+&lt;p&gt;In python,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;playlistitems_list_request&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;youtube&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;playlistItems()&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;list(playlistId&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;playlist_id,part&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;snippet,contentDetails&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;maxResults&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;execute()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The response for&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;[&lt;/span&gt;
+  &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;UExuM25IWHU1MHQ1elJoUVJrZEFfb3hqYU01MFJVV3VJTy4zRTkwOENEMUFBRTMwM0Ey&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;snippet&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;publishedAt&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;2017-05-19T15:04:53.000Z&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;playlistId&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;PLn3nHXu50t5zRhQRkdA_oxjaM50RUWuIO&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;position&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;This video is private.&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;channelId&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;UCiWLfSweyRNmLpgEHekhoAg&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;channelTitle&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;ESPN&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;resourceId&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;videoId&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;kBQEUVGC9qs&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;kind&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;youtube#video&amp;quot;&lt;/span&gt;
+        &lt;span style=&#34;color: #e7e9db&#34;&gt;},&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;Private video&amp;quot;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;etag&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;\&amp;quot;m2yskBQFythfE4irbTIeOgYYfBU/eaXHvXMfznVqpiLYW5R_bTxCAL4\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;contentDetails&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;videoId&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;kBQEUVGC9qs&amp;quot;&lt;/span&gt;
+    &lt;span style=&#34;color: #e7e9db&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;quot;kind&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;youtube#playlistItem&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Debate_videos_on_youtube</title>
@@ -967,14 +1327,16 @@ Recognition, 2008.&lt;/p&gt;
 
 &lt;h2 id=&#34;source-thanks&#34;&gt;Source &amp;amp; Thanks&lt;/h2&gt;
 
-&lt;p&gt;[Canal9 Website]: &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;http://canal9-db.sspnet.eu/&lt;/a&gt;&lt;br /&gt;
+&lt;p&gt;&lt;dd class=&#39;source&#39;&gt;
+[Canal9 Website]: &lt;a href=&#34;http://canal9-db.sspnet.eu/&#34;&gt;http://canal9-db.sspnet.eu/&lt;/a&gt;&lt;br /&gt;
 [CUHK Li&amp;rsquo;s algorithm]: &lt;a href=&#34;http://activity-net.org/challenges/2016/program.html#leaderboard&#34;&gt;http://activity-net.org/challenges/2016/program.html#leaderboard&lt;/a&gt;&lt;br /&gt;
 [Canal9]: &lt;a href=&#34;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&#34;&gt;http://publications.idiap.ch/downloads/papers/2009/Vinciarelli_ACII_2009.pdf&lt;/a&gt;&lt;br /&gt;
 [anet2016_cuhk]: &lt;a href=&#34;https://arxiv.org/abs/1608.00797&#34;&gt;https://arxiv.org/abs/1608.00797&lt;/a&gt;&lt;br /&gt;
 [github/anet2016_cuhk]: &lt;a href=&#34;https://github.com/yjxiong/anet2016-cuhk&#34;&gt;https://github.com/yjxiong/anet2016-cuhk&lt;/a&gt;&lt;br /&gt;
 [anet2016_cuhk_demo]: &lt;a href=&#34;http://action-demo.ie.cuhk.edu.hk/&#34;&gt;http://action-demo.ie.cuhk.edu.hk/&lt;/a&gt;&lt;br /&gt;
 [ActivityNet]: &lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&#34;&gt;http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf&lt;/a&gt;&lt;br /&gt;
-[MFCC]: &lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;http://fulltext.study/preview/pdf/531553.pdf&lt;/a&gt;&lt;/p&gt;
+[MFCC]: &lt;a href=&#34;http://fulltext.study/preview/pdf/531553.pdf&#34;&gt;http://fulltext.study/preview/pdf/531553.pdf&lt;/a&gt;&lt;br /&gt;
+&lt;/dd&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1250,299 +1612,6 @@ This will only display in the notes window.&lt;/p&gt;
 &lt;p&gt;结尾处,说一些个人生活上的感悟吧.最近搬家了，虽然心里是不舍的，但也必须尝试去开始新的生活。生活就是如此，充满了遗憾，又不随你的意志所改变；或许人生在一定程度上是遵循等价交换的原则的，精彩的瞬间需要你付出足够多的努力和耐心才能等到的；而在那一瞬间来临之前，你需要做的就是坚持自己的方向，不断前行，静静地等风来。只有让自己变得足够的好，你才不会失去更多。对我无力挽回的,我只能说一声抱歉.
 我是王大仙，一个漂泊迷茫的研究猿；这里是诺丁汉，我在这里等你。&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Potential PhD Thesis</title>
-      <link>https://hexromas.github.io/2016-03-16-Potential_PhD_Thesis/</link>
-      <pubDate>Thu, 17 Mar 2016 21:49:06 +0000</pubDate>
-      
-      <guid>https://hexromas.github.io/2016-03-16-Potential_PhD_Thesis/</guid>
-      <description>
-
-&lt;p&gt;Against the four potential PhD thesis provided by prof. Yorgos, I prefer &lt;code&gt;facial attributes&lt;/code&gt; (first one) and &lt;code&gt;social traits&lt;/code&gt; (second one) more. First three research topics come from the same CV group in cuhk led by TangXiaoOu, while the last one comes from &lt;code&gt;Robotical Institute (CSIC-UPC) &amp;amp; University of Toronto&lt;/code&gt;.
-The four topic issues will be concluded briefly as following:&lt;/p&gt;
-
-&lt;h2 id=&#34;facial-attibutes&#34;&gt;facial attibutes&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html&lt;/a&gt;  （ICCV2015)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Liu Z, Luo P, Wang X, et al. Deep learning face attributes in the wild[C]//Proceedings of the IEEE International Conference on Computer Vision. 2015: 3730-3738.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;Traditional attribute recognition methods will requires pre-boxing images dataset, however, this paper propose a deep learning framework for attribute prediction in the wild. Therefore it can be more practical for the real world images. The author claims to cascade two CNNs, LNet and ANet to generate prediction from raw pixels instead of analysis the accurate locations of object or landmarks. It is reported that its accuracy outperforms the state-of-art with a large margin. Moreover, it will analysis the semantical attribute concept discovered by ANet automatically. It links the attribute to a sparse linear combination of these concepts, which is very interesting.&lt;/p&gt;
-
-&lt;h2 id=&#34;social-traits&#34;&gt;social traits&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html&lt;/a&gt; (ICCV2015)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Zhang Z, Luo P, Loy C C, et al. Learning Social Relation Traits from Face Images[C]//Proceedings of the IEEE International Conference on Computer Vision. 2015: 3631-3639.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;Try to analysis the social relation between two people via the analysis of photographics. The main method is using deep convolutional network to learns from raw pixels of two people&amp;rsquo;s face, and then category these faces into basic emotion or attributes, like &lt;code&gt;gender&lt;/code&gt;, &lt;code&gt;smiling&lt;/code&gt;, &lt;code&gt;angry&lt;/code&gt; and &lt;code&gt;young&lt;/code&gt;. Then with the attributes and additional spatial information to analysis the social relationship between them. The relation is descripted by a eight-pair- creiterion. And the framework uses posterior porbability to predict them.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Pros&lt;/code&gt;:
-This topic is interesting and it is claimed to be the first attempt to analysis the social relationship via images.
-It belongs to an interdisciplinary application, including psychological studies to reveal the social relation.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
-However, the preparation of the dataset is too expensive, since it is labelled by five performing arts students to identify the relation indepedently.&lt;/p&gt;
-
-&lt;h2 id=&#34;face-detection&#34;&gt;face detection&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace&#34;&gt;http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Yang S, Luo P, Loy C C, et al. WIDER FACE: A Face Detection Benchmark[J]. arXiv preprint arXiv:1511.06523, 2015.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;This paper is not published yet. However, it mainly introduce the face dataset provided by their lab team. The dataset is more practical in real-world, which contains complex face variations, like &lt;code&gt;poses&lt;/code&gt;, &lt;code&gt;lightings&lt;/code&gt;, and &lt;code&gt;occlusions&lt;/code&gt;. The authors test existed facial categories methods on their dataset and find out that the accuracy is not as high as other dataset, since the background is moer complicated in their new dataset.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
-There is no explicit further work for this paper. Maybe we need to find out or develop a new topic based on their work.&lt;/p&gt;
-
-&lt;h2 id=&#34;fashion&#34;&gt;fashion&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hi.cs.waseda.ac.jp/~esimo/en/research/fashionability/&#34;&gt;http://hi.cs.waseda.ac.jp/~esimo/en/research/fashionability/&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Simo-Serra E, Fidler S, Moreno-Noguer F, et al. Neuroaesthetics in fashion: Modeling the perception of fashionability[C]//Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015: 869-877.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;Core Concept &amp;amp; Main Method&lt;/code&gt;:
-This paper aims to learn and predict how fashionable a person looks on a photograph and suggest the subtle improvments how to imporve user&amp;rsquo;s appeal. Basically, this paper use current netural network techniques, like rekognition &amp;amp; Caffe pre-trained network, to extract features from images or their related descriptions. The features are evaluated in four aspects, i.e. User, Outfit, Setting, Fashion. Finally, these outputs from four different networks will used as features in maxSoft layer in the fashion judgement network. After traning by 144K dataset, the netural network will learn and recommend the best outfits for different people.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Pros&lt;/code&gt;:
-This topic issue has much relationship with society.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Cons&lt;/code&gt;:
-However, it is not so easy to continuelly find out the next target of this research topic. The dataset is provided by largest fashion website chictopia.com, which is not general enough. Author regards that each &lt;em&gt;like&lt;/em&gt; for a image as the fashionability of one outfits.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Domain-Transform-for-Edge-Aware-Image-and-Video-Processing</title>
-      <link>https://hexromas.github.io/2016-01-03-Domain_Transform/</link>
-      <pubDate>Sun, 03 Jan 2016 22:10:01 +0000</pubDate>
-      
-      <guid>https://hexromas.github.io/2016-01-03-Domain_Transform/</guid>
-      <description>
-
-&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;h2 id=&#34;abstract-in-my-own-words&#34;&gt;Abstract in my own words&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;这篇文章提出的思想就是，将图像处理的公式降阶处理，能提高其运算效率。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;关键代码解析&lt;/code&gt;
-&lt;code&gt;NC.m&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #776e71&#34;&gt;%  NC.m&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  NC  Domain transform normalized convolution edge-preserving filter.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;% &lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  F = NC(img, sigma_s, sigma_r, num_iterations, joint_image)&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  Parameters:&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    img             Input image to be filtered.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    sigma_s         Filter spatial standard deviation.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    sigma_r         Filter range standard deviation.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    num_iterations  Number of iterations to perform (default: 3).&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    joint_image     Optional image for joint filtering.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  This is the reference implementation of the domain transform NC filter&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  described in the paper:&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;% &lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    Domain Transform for Edge-Aware Image and Video Processing&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    Eduardo S. L. Gastal  and  Manuel M. Oliveira&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    ACM Transactions on Graphics. Volume 30 (2011), Number 4.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%    Proceedings of SIGGRAPH 2011, Article 69.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  Please refer to the publication above if you use this software. For an&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  up-to-date version go to:&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  &lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%             http://inf.ufrgs.br/~eslgastal/DomainTransform/&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  THIS SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot; WITHOUT ANY EXPRESSED OR IMPLIED WARRANTIES&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  OF ANY KIND, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  OUT OF OR IN CONNECTION WITH THIS SOFTWARE OR THE USE OR OTHER DEALINGS IN&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  THIS SOFTWARE.&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%  Version 1.0 - August 2011.&lt;/span&gt;
-
-&lt;span style=&#34;color: #815ba4&#34;&gt;function&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt; &lt;/span&gt;F &lt;span style=&#34;color: #e7e9db&#34;&gt;= &lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;NC&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;(&lt;/span&gt;img, sigma_s, sigma_r, num_iterations, joint_image&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
-
-&lt;span style=&#34;color: #e7e9db&#34;&gt;    I&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;double(img);&lt;/span&gt;
-
-    &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;exist(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;num_iterations&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color: #e7e9db&#34;&gt;num_iterations&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f99b15&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-    
-    &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;exist(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;joint_image&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;isempty(joint_image)&lt;/span&gt;
-        &lt;span style=&#34;color: #e7e9db&#34;&gt;J&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;double(joint_image);&lt;/span&gt;
-    
-        &lt;span style=&#34;color: #815ba4&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(size(I,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;(size(I,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;~=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J,&lt;/span&gt;&lt;span style=&#34;color: #f99b15&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;))&lt;/span&gt;
-            &lt;span style=&#34;color: #e7e9db&#34;&gt;error(&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;#39;Input and joint images must have equal width and height.&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-    &lt;span style=&#34;color: #815ba4&#34;&gt;else&lt;/span&gt;
-        &lt;span style=&#34;color: #e7e9db&#34;&gt;J&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;I;&lt;/span&gt;
-    &lt;span style=&#34;color: #815ba4&#34;&gt;end&lt;/span&gt;
-    
-    &lt;span style=&#34;color: #e7e9db&#34;&gt;[h&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;w&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;num_joint_channels]&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e7e9db&#34;&gt;size(J);&lt;/span&gt;
-
-    &lt;span style=&#34;color: #776e71&#34;&gt;%% Compute the domain transform (Equation 11 of our paper).&lt;/span&gt;
-    &lt;span style=&#34;color: #776e71&#34;&gt;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&lt;/span&gt;
-&lt;span style=&#34;color: #776e71&#34;&gt;%{&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;利用 finite数值差距 来估算倒数&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%}
-    % Estimate horizontal and vertical partial derivatives using finite
-    % differences.
-    dIcdx = diff(J, 1, 2);
-    dIcdy = diff(J, 1, 1);
-    
-    dIdx = zeros(h,w);
-    dIdy = zeros(h,w);
-    
-    % Compute the l1-norm distance of neighbor pixels.
-    for c = 1:num_joint_channels
-        dIdx(:,2:end) = dIdx(:,2:end) + abs( dIcdx(:,:,c) );
-        dIdy(2:end,:) = dIdy(2:end,:) + abs( dIcdy(:,:,c) );
-    end
-    
-    % Compute the derivatives of the horizontal and vertical domain transforms.
-    dHdx = (1 + sigma_s/sigma_r * dIdx);
-    dVdy = (1 + sigma_s/sigma_r * dIdy);
-    
-    % Integrate the domain transforms.
-    ct_H = cumsum(dHdx, 2);
-    ct_V = cumsum(dVdy, 1);
-    
-    % The vertical pass is performed using a transposed image.
-    ct_V = ct_V&#39;;
-    
-    %% Perform the filtering.
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    N = num_iterations;
-    F = I;
-
-    sigma_H = sigma_s;
-    
-    for i = 0:num_iterations - 1
-        
-        % Compute the sigma value for this iteration (Equation 14 of our paper).
-        sigma_H_i = sigma_H * sqrt(3) * 2^(N - (i + 1)) / sqrt(4^N - 1);
-        
-        % Compute the radius of the box filter with the desired variance.
-        box_radius = sqrt(3) * sigma_H_i;
-        
-        F = TransformedDomainBoxFilter_Horizontal(F, ct_H, box_radius);
-        F = image_transpose(F);
-
-        F = TransformedDomainBoxFilter_Horizontal(F, ct_V, box_radius);
-        F = image_transpose(F);
-        
-    end
-    
-    F = cast(F, class(img));
-
-end
-
-%% Box filter normalized convolution in the transformed domain.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function F = TransformedDomainBoxFilter_Horizontal(I, xform_domain_position, box_radius)
-
-    [h w num_channels] = size(I);
-
-    % Compute the lower and upper limits of the box kernel in the transformed domain.
-    l_pos = xform_domain_position - box_radius;
-    u_pos = xform_domain_position + box_radius;
-
-    % Find the indices of the pixels associated with the lower and upper limits
-    % of the box kernel.
-    %
-    % This loop is much faster in a compiled language.  If you are using a
-    % MATLAB version which supports the &#39;parallel for&#39; construct, you can
-    % improve performance by replacing the following &#39;for&#39; by a &#39;parfor&#39;.
-
-    l_idx = zeros(size(xform_domain_position));
-    u_idx = zeros(size(xform_domain_position));
-
-    for row = 1:h
-        xform_domain_pos_row = [xform_domain_position(row,:) inf];
-
-        l_pos_row = l_pos(row,:);
-        u_pos_row = u_pos(row,:);
-
-        local_l_idx = zeros(1, w);
-        local_u_idx = zeros(1, w);
-
-        local_l_idx(1) = find(xform_domain_pos_row &amp;gt; l_pos_row(1), 1, &#39;first&#39;);
-        local_u_idx(1) = find(xform_domain_pos_row &amp;gt; u_pos_row(1), 1, &#39;first&#39;);
-
-        for col = 2:w
-            local_l_idx(col) = local_l_idx(col-1) + ...
-                find(xform_domain_pos_row(local_l_idx(col-1):end) &amp;gt; l_pos_row(col), 1, &#39;first&#39;) - 1;
-
-            local_u_idx(col) = local_u_idx(col-1) + ...
-                find(xform_domain_pos_row(local_u_idx(col-1):end) &amp;gt; u_pos_row(col), 1, &#39;first&#39;) - 1;
-        end
-
-        l_idx(row,:) = local_l_idx;
-        u_idx(row,:) = local_u_idx;
-    end
-    
-    l_pos
-    l_idx
-
-    % Compute the box filter using a summed area table.
-    SAT            = zeros([h w+1 num_channels]);
-    SAT(:,2:end,:) = cumsum(I, 2);
-    row_indices    = repmat((1:h)&#39;, 1, w);
-    F              = zeros(size(I));
-
-    for c = 1:num_channels
-        a = sub2ind(size(SAT), row_indices, l_idx, repmat(c, h, w));
-        b = sub2ind(size(SAT), row_indices, u_idx, repmat(c, h, w));
-        F(:,:,c) = (SAT(b) - SAT(a)) ./ (u_idx - l_idx);
-    end
-    
-end
-
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function T = image_transpose(I)
-
-    [h w num_channels] = size(I);
-    
-    T = zeros([w h num_channels], class(I));
-    
-    for c = 1:num_channels
-        T(:,:,c) = I(:,:,c)&#39;;
-    end
-    
-end
-
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

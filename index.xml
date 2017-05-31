@@ -22,11 +22,9 @@
 
 &lt;ol&gt;
 &lt;li&gt;Combine two all necessary presentation element in one file.&lt;/li&gt;
-&lt;li&gt;Clearly intitle the two type, &lt;code&gt;black&lt;/code&gt; &amp;amp; &lt;code&gt;white&lt;/code&gt; styles with version.&lt;/li&gt;
+&lt;li&gt;Clearly entitle the two type, &lt;code&gt;black&lt;/code&gt; &amp;amp; &lt;code&gt;white&lt;/code&gt; styles with version.&lt;/li&gt;
 &lt;li&gt;Create the new black version of &lt;code&gt;Atom&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://hexromas.github.io/codesnippet/get_youtube_video_info.py&#34;&gt;codes&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;common-part&#34;&gt;Common Part&lt;/h2&gt;
 
@@ -219,17 +217,6 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;li&gt;&lt;strong&gt;stylesheet&lt;/strong&gt;: You need to include at least three stylesheet for present the markdown based page, i.e. &lt;code&gt;reveal.css&lt;/code&gt;, &lt;code&gt;zenburn.css&lt;/code&gt; and &lt;code&gt;yourown_style.css&lt;/code&gt;. First one can split pages, second one syntax highlighting of code, third one is your customized style.
 &lt;!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Note:
-Look at the link &lt;a href=&#34;https://github.com/hakimel/reveal.js/#speaker-notes&#34;&gt;https://github.com/hakimel/reveal.js/#speaker-notes&lt;/a&gt;, that you can find more detail about this.&lt;/p&gt;
-
-&lt;p&gt;Note: Just curious that whether it will show more.&lt;/p&gt;
-
-&lt;p&gt;Note:asdlfkjskdjfwke. asldkfj
-Just curious.&lt;/p&gt;
-
-&lt;p&gt;Note:asdlfkjskdjfwke. Can u see this&lt;br /&gt;
-Just curious.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;reveal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;slides&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;data-markdown&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://example.com/your_blog.md&amp;quot;&lt;/span&gt;
@@ -264,6 +251,9 @@ Just curious.&lt;/p&gt;
   &lt;span style=&#34;color: #e7e9db&#34;&gt;});&lt;/span&gt;
 &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note:
+Each slide can contain one note at the end of the slide. That you cannot see that.&lt;/p&gt;
 
 &lt;h2 id=&#34;report-style&#34;&gt;Report style&lt;/h2&gt;
 

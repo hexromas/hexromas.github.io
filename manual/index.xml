@@ -4001,13 +4001,36 @@ Reveal.addEventListener( &#39;customevent&#39;, function() {
 	&lt;body&gt;
 		&lt;div class=&#34;reveal&#34;&gt;
 			&lt;div class=&#34;slides&#34;&gt;
-				&lt;section data-markdown=&#34;https://rawgit.com/BeRANDON/ResearchReport/master/2016-01-01-Tools-List.md&#34;
-						 data-separator=&#34;^\n\n\n&#34;  
-						 data-separator-vertical=&#34;^\n\n&#34;  
-						 data-separator-notes=&#34;^Note:&#34;  
-						 data-charset=&#34;utf-8&#34;&gt;
+				&lt;section data-markdown data-separator=&#34;^\n\n\n&#34;  data-separator-vertical=&#34;^\n\n&#34;  data-separator-notes=&#34;^Note:&#34;&gt;
+					&lt;script type=&#34;text/template&#34;&gt;
+						## Markdown support
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						```
+						&lt;section data-markdown&gt;
+						  ## Markdown support
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						&lt;/section&gt;
+						```
+						Note:
+						# asdfppwefasdfwefasdfwefasdf  
+						## asdfljkj
+						&gt; apsdijoe
 
 
+
+						## asdjlk aksldjf
+						aslkdjflaksjd
+						asdfaljskd
+						FirstFirstFirstFirstFirstFirstFirstFirstFirstFirst
+						FirstFirstFirstFirst
+						FirstFirstFirst
+						SecondSecondSecondSecond
+						Note:
+						asdlkflkwj
+						asldfjklwkje
+					&lt;/script&gt;
 				&lt;/section&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -4024,7 +4047,7 @@ Reveal.addEventListener( &#39;customevent&#39;, function() {
 				dependencies: [
 					{ src: &#39;plugin/markdown/marked.js&#39; },
 					{ src: &#39;plugin/markdown/markdown.js&#39; },
-					// { src: &#39;plugin/notes/notes.js&#39;, async: true },
+					{ src: &#39;plugin/notes/notes.js&#39;, async: true },
 					{ src: &#39;plugin/highlight/highlight.js&#39;, async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});

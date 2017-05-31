@@ -25,13 +25,36 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="https://rawgit.com/BeRANDON/ResearchReport/master/2016-01-01-Tools-List.md"
-						 data-separator="^\n\n\n"  
-						 data-separator-vertical="^\n\n"  
-						 data-separator-notes="^Note:"  
-						 data-charset="utf-8">
+				<section data-markdown data-separator="^\n\n\n"  data-separator-vertical="^\n\n"  data-separator-notes="^Note:">
+					<script type="text/template">
+						## Markdown support
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https:
+						```
+						<section data-markdown>
+						  ## Markdown support
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https:
+						</section>
+						```
+						Note:
+						# asdfppwefasdfwefasdfwefasdf  
+						## asdfljkj
+						> apsdijoe
 
 
+
+						## asdjlk aksldjf
+						aslkdjflaksjd
+						asdfaljskd
+						FirstFirstFirstFirstFirstFirstFirstFirstFirstFirst
+						FirstFirstFirstFirst
+						FirstFirstFirst
+						SecondSecondSecondSecond
+						Note:
+						asdlkflkwj
+						asldfjklwkje
+					</script>
 				</section>
 			</div>
 		</div>
@@ -48,7 +71,7 @@
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
-					
+					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});

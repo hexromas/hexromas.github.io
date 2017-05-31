@@ -184,19 +184,21 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Bascially, I myself prefer to use the markdown writing style shown below. Markdown render tool will treat &lt;code&gt;\[MFCC]&lt;/code&gt; as normal text since the begining &lt;code&gt;\&lt;/code&gt;. Moreover, we need to cliam the links &lt;code&gt;[MFCC]&lt;/code&gt; (without &lt;code&gt;\&lt;/code&gt;) at somewhere else to make &lt;code&gt;[[MFCC]]&lt;/code&gt; clickable.&lt;/p&gt;
-## Reference  
 
-&lt;dd class=&#39;ref&#39;&gt;
+&lt;pre&gt;&lt;code&gt;## Reference  
+
+&amp;lt;dd class=&#39;ref&#39;&amp;gt;
 [[ActivityNet]] B. G. Fabian Caba Heilbron, Victor Escorcia and J. C. Niebles. Activitynet: A large-scale video benchmark for human activity understanding. In CVPR, pages 961–970, 2015  
 [[MFCC]] D. OShaughnessy. Invited paper: Automatic speech recognition: History, methods and challenges. Pattern Recognition, 41(10):2965–2979, 2008  
-&lt;/dd&gt;
+&amp;lt;/dd&amp;gt;
 
-## Source &amp; Thanks  
+## Source &amp;amp; Thanks  
 
-&lt;dd class=&#39;source&#39;&gt;
+&amp;lt;dd class=&#39;source&#39;&amp;gt;
 \[ActivityNet]: http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Heilbron_ActivityNet_A_Large-Scale_2015_CVPR_paper.pdf  
 \[MFCC]: http://fulltext.study/preview/pdf/531553.pdf  
-&lt;/dd&gt;
+&amp;lt;/dd&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;unknown-issue&#34;&gt;Unknown Issue&lt;/h3&gt;
 
@@ -221,10 +223,13 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;p&gt;Note:
 Look at the link &lt;a href=&#34;https://github.com/hakimel/reveal.js/#speaker-notes&#34;&gt;https://github.com/hakimel/reveal.js/#speaker-notes&lt;/a&gt;, that you can find more detail about this.&lt;/p&gt;
 
-&lt;p&gt;Note:
-Just curious that whether it will show more.&lt;/p&gt;
+&lt;p&gt;Note: Just curious that whether it will show more.&lt;/p&gt;
 
-&lt;p&gt;Just curious.&lt;/p&gt;
+&lt;p&gt;Note:asdlfkjskdjfwke. asldkfj
+Just curious.&lt;/p&gt;
+
+&lt;p&gt;Note:asdlfkjskdjfwke. Can u see this&lt;br /&gt;
+Just curious.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;reveal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;slides&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;data-markdown&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://example.com/your_blog.md&amp;quot;&lt;/span&gt;

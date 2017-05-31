@@ -34,7 +34,7 @@
 						document.write('.md" ');
 					}
 					else{
-						document.write('data-markdown="https://raw.githubusercontent.com/BeRANDON/ResearchReport/master/2016-01-01-Tools-List.md" ');
+						document.write('data-markdown="https://raw.githubusercontent.com/BeRANDON/ResearchReport/master/2017-05-19-Representation_Style.md" ');
 					}
 					document.write('data-separator="^\n\n\n"  data-separator-vertical="^\n\n"  data-separator-notes="^Note:"  data-charset="utf-8"></section>');
 
@@ -65,7 +65,7 @@
 				dependencies: [
 					{ src: '/manual/reveal.js/plugin/markdown/marked.js' },
 					{ src: '/manual/reveal.js/plugin/markdown/markdown.js' },
-					
+					{ src: '/manual/reveal.js/plugin/notes/notes.js', async: true },
 					{ src: '/manual/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});

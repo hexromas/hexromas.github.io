@@ -4208,49 +4208,754 @@ Reveal.addEventListener( &#39;customevent&#39;, function() {
     
     <item>
       <title></title>
-      <link>https://hexromas.github.io/manual/reveal.js/test/examples/barebones/</link>
+      <link>https://hexromas.github.io/manual/reveal.js/plugin/notes/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/manual/reveal.js/test/examples/barebones/</guid>
+      <guid>https://hexromas.github.io/manual/reveal.js/plugin/notes/notes/</guid>
       <description>&lt;!doctype html&gt;
 &lt;html lang=&#34;en&#34;&gt;
-
 	&lt;head&gt;
 		&lt;meta charset=&#34;utf-8&#34;&gt;
 
-		&lt;title&gt;reveal.js - Barebones&lt;/title&gt;
+		&lt;title&gt;reveal.js - Slide Notes&lt;/title&gt;
 
-		&lt;link rel=&#34;stylesheet&#34; href=&#34;../../css/reveal.css&#34;&gt;
+		&lt;style&gt;
+			body {
+				font-family: Helvetica;
+				font-size: 18px;
+			}
+
+			#current-slide,
+			#upcoming-slide,
+			#speaker-controls {
+				padding: 6px;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+
+			#current-slide iframe,
+			#upcoming-slide iframe {
+				width: 100%;
+				height: 100%;
+				border: 1px solid #ddd;
+			}
+
+			#current-slide .label,
+			#upcoming-slide .label {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				z-index: 2;
+			}
+
+			.overlay-element {
+				height: 34px;
+				line-height: 34px;
+				padding: 0 10px;
+				text-shadow: none;
+				background: rgba( 220, 220, 220, 0.8 );
+				color: #222;
+				font-size: 14px;
+			}
+
+			.overlay-element.interactive:hover {
+				background: rgba( 220, 220, 220, 1 );
+			}
+
+			#current-slide {
+				position: absolute;
+				width: 60%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				padding-right: 0;
+			}
+
+			#upcoming-slide {
+				position: absolute;
+				width: 40%;
+				height: 40%;
+				right: 0;
+				top: 0;
+			}
+
+			/* Speaker controls */
+			#speaker-controls {
+				position: absolute;
+				top: 40%;
+				right: 0;
+				width: 40%;
+				height: 60%;
+				overflow: auto;
+				font-size: 18px;
+			}
+
+				.speaker-controls-time.hidden,
+				.speaker-controls-notes.hidden {
+					display: none;
+				}
+
+				.speaker-controls-time .label,
+				.speaker-controls-pace .label,
+				.speaker-controls-notes .label {
+					text-transform: uppercase;
+					font-weight: normal;
+					font-size: 0.66em;
+					color: #666;
+					margin: 0;
+				}
+
+				.speaker-controls-time, .speaker-controls-pace {
+					border-bottom: 1px solid rgba( 200, 200, 200, 0.5 );
+					margin-bottom: 10px;
+					padding: 10px 16px;
+					padding-bottom: 20px;
+					cursor: pointer;
+				}
+
+				.speaker-controls-time .reset-button {
+					opacity: 0;
+					float: right;
+					color: #666;
+					text-decoration: none;
+				}
+				.speaker-controls-time:hover .reset-button {
+					opacity: 1;
+				}
+
+				.speaker-controls-time .timer,
+				.speaker-controls-time .clock {
+					width: 50%;
+				}
+
+				.speaker-controls-time .timer,
+				.speaker-controls-time .clock,
+				.speaker-controls-time .pacing .hours-value,
+				.speaker-controls-time .pacing .minutes-value,
+				.speaker-controls-time .pacing .seconds-value {
+					font-size: 1.9em;
+				}
+
+				.speaker-controls-time .timer {
+					float: left;
+				}
+
+				.speaker-controls-time .clock {
+					float: right;
+					text-align: right;
+				}
+
+				.speaker-controls-time span.mute {
+					opacity: 0.3;
+				}
+
+				.speaker-controls-time .pacing-title {
+					margin-top: 5px;
+				}
+
+				.speaker-controls-time .pacing.ahead {
+					color: blue;
+				}
+
+				.speaker-controls-time .pacing.on-track {
+					color: green;
+				}
+
+				.speaker-controls-time .pacing.behind {
+					color: red;
+				}
+
+				.speaker-controls-notes {
+					padding: 10px 16px;
+				}
+
+				.speaker-controls-notes .value {
+					margin-top: 5px;
+					line-height: 1.4;
+					font-size: 1.2em;
+				}
+
+			/* Layout selector */
+			#speaker-layout {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				color: #222;
+				z-index: 10;
+			}
+				#speaker-layout select {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					border: 0;
+					box-shadow: 0;
+					cursor: pointer;
+					opacity: 0;
+
+					font-size: 1em;
+					background-color: transparent;
+
+					-moz-appearance: none;
+					-webkit-appearance: none;
+					-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				}
+
+				#speaker-layout select:focus {
+					outline: none;
+					box-shadow: none;
+				}
+
+			.clear {
+				clear: both;
+			}
+
+			/* Speaker layout: Wide */
+			body[data-speaker-layout=&#34;wide&#34;] #current-slide,
+			body[data-speaker-layout=&#34;wide&#34;] #upcoming-slide {
+				width: 50%;
+				height: 45%;
+				padding: 6px;
+			}
+
+			body[data-speaker-layout=&#34;wide&#34;] #current-slide {
+				top: 0;
+				left: 0;
+			}
+
+			body[data-speaker-layout=&#34;wide&#34;] #upcoming-slide {
+				top: 0;
+				left: 50%;
+			}
+
+			body[data-speaker-layout=&#34;wide&#34;] #speaker-controls {
+				top: 45%;
+				left: 0;
+				width: 100%;
+				height: 50%;
+				font-size: 1.25em;
+			}
+
+			/* Speaker layout: Tall */
+			body[data-speaker-layout=&#34;tall&#34;] #current-slide,
+			body[data-speaker-layout=&#34;tall&#34;] #upcoming-slide {
+				width: 45%;
+				height: 50%;
+				padding: 6px;
+			}
+
+			body[data-speaker-layout=&#34;tall&#34;] #current-slide {
+				top: 0;
+				left: 0;
+			}
+
+			body[data-speaker-layout=&#34;tall&#34;] #upcoming-slide {
+				top: 50%;
+				left: 0;
+			}
+
+			body[data-speaker-layout=&#34;tall&#34;] #speaker-controls {
+				padding-top: 40px;
+				top: 0;
+				left: 45%;
+				width: 55%;
+				height: 100%;
+				font-size: 1.25em;
+			}
+
+			/* Speaker layout: Notes only */
+			body[data-speaker-layout=&#34;notes-only&#34;] #current-slide,
+			body[data-speaker-layout=&#34;notes-only&#34;] #upcoming-slide {
+				display: none;
+			}
+
+			body[data-speaker-layout=&#34;notes-only&#34;] #speaker-controls {
+				padding-top: 40px;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 1.25em;
+			}
+
+			@media screen and (max-width: 1080px) {
+				body[data-speaker-layout=&#34;default&#34;] #speaker-controls {
+					font-size: 16px;
+				}
+			}
+
+			@media screen and (max-width: 900px) {
+				body[data-speaker-layout=&#34;default&#34;] #speaker-controls {
+					font-size: 14px;
+				}
+			}
+
+			@media screen and (max-width: 800px) {
+				body[data-speaker-layout=&#34;default&#34;] #speaker-controls {
+					font-size: 12px;
+				}
+			}
+
+		&lt;/style&gt;
 	&lt;/head&gt;
 
 	&lt;body&gt;
 
-		&lt;div class=&#34;reveal&#34;&gt;
+		&lt;div id=&#34;current-slide&#34;&gt;&lt;/div&gt;
+		&lt;div id=&#34;upcoming-slide&#34;&gt;&lt;span class=&#34;overlay-element label&#34;&gt;Upcoming&lt;/span&gt;&lt;/div&gt;
+		&lt;div id=&#34;speaker-controls&#34;&gt;
+			&lt;div class=&#34;speaker-controls-time&#34;&gt;
+				&lt;h4 class=&#34;label&#34;&gt;Time &lt;span class=&#34;reset-button&#34;&gt;Click to Reset&lt;/span&gt;&lt;/h4&gt;
+				&lt;div class=&#34;clock&#34;&gt;
+					&lt;span class=&#34;clock-value&#34;&gt;0:00 AM&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;div class=&#34;timer&#34;&gt;
+					&lt;span class=&#34;hours-value&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;minutes-value&#34;&gt;:00&lt;/span&gt;&lt;span class=&#34;seconds-value&#34;&gt;:00&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
 
-			&lt;div class=&#34;slides&#34;&gt;
-
-				&lt;section&gt;
-					&lt;h2&gt;Barebones Presentation&lt;/h2&gt;
-					&lt;p&gt;This example contains the bare minimum includes and markup required to run a reveal.js presentation.&lt;/p&gt;
-				&lt;/section&gt;
-
-				&lt;section&gt;
-					&lt;h2&gt;No Theme&lt;/h2&gt;
-					&lt;p&gt;There&#39;s no theme included, so it will fall back on browser defaults.&lt;/p&gt;
-				&lt;/section&gt;
-
+				&lt;h4 class=&#34;label pacing-title&#34; style=&#34;display: none&#34;&gt;Pacing – Time to finish current slide&lt;/h4&gt;
+				&lt;div class=&#34;pacing&#34; style=&#34;display: none&#34;&gt;
+					&lt;span class=&#34;hours-value&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;minutes-value&#34;&gt;:00&lt;/span&gt;&lt;span class=&#34;seconds-value&#34;&gt;:00&lt;/span&gt;
+				&lt;/div&gt;
 			&lt;/div&gt;
 
+			&lt;div class=&#34;speaker-controls-notes hidden&#34;&gt;
+				&lt;h4 class=&#34;label&#34;&gt;Notes&lt;/h4&gt;
+				&lt;div class=&#34;value&#34;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div id=&#34;speaker-layout&#34; class=&#34;overlay-element interactive&#34;&gt;
+			&lt;span class=&#34;speaker-layout-label&#34;&gt;&lt;/span&gt;
+			&lt;select class=&#34;speaker-layout-dropdown&#34;&gt;&lt;/select&gt;
 		&lt;/div&gt;
 
-		&lt;script src=&#34;../../js/reveal.js&#34;&gt;&lt;/script&gt;
-
+		&lt;script src=&#34;../../plugin/markdown/marked.js&#34;&gt;&lt;/script&gt;
 		&lt;script&gt;
 
-			Reveal.initialize();
+			(function() {
+
+				var notes,
+					notesValue,
+					currentState,
+					currentSlide,
+					upcomingSlide,
+					layoutLabel,
+					layoutDropdown,
+					connected = false;
+
+				var SPEAKER_LAYOUTS = {
+					&#39;default&#39;: &#39;Default&#39;,
+					&#39;wide&#39;: &#39;Wide&#39;,
+					&#39;tall&#39;: &#39;Tall&#39;,
+					&#39;notes-only&#39;: &#39;Notes only&#39;
+				};
+
+				setupLayout();
+
+				window.addEventListener( &#39;message&#39;, function( event ) {
+
+					var data = JSON.parse( event.data );
+
+					// The overview mode is only useful to the reveal.js instance
+					// where navigation occurs so we don&#39;t sync it
+					if( data.state ) delete data.state.overview;
+
+					// Messages sent by the notes plugin inside of the main window
+					if( data &amp;&amp; data.namespace === &#39;reveal-notes&#39; ) {
+						if( data.type === &#39;connect&#39; ) {
+							handleConnectMessage( data );
+						}
+						else if( data.type === &#39;state&#39; ) {
+							handleStateMessage( data );
+						}
+					}
+					// Messages sent by the reveal.js inside of the current slide preview
+					else if( data &amp;&amp; data.namespace === &#39;reveal&#39; ) {
+						if( /ready/.test( data.eventName ) ) {
+							// Send a message back to notify that the handshake is complete
+							window.opener.postMessage( JSON.stringify({ namespace: &#39;reveal-notes&#39;, type: &#39;connected&#39;} ), &#39;*&#39; );
+						}
+						else if( /slidechanged|fragmentshown|fragmenthidden|paused|resumed/.test( data.eventName ) &amp;&amp; currentState !== JSON.stringify( data.state ) ) {
+
+							window.opener.postMessage( JSON.stringify({ method: &#39;setState&#39;, args: [ data.state ]} ), &#39;*&#39; );
+
+						}
+					}
+
+				} );
+
+				/**
+				 * Called when the main window is trying to establish a
+				 * connection.
+				 */
+				function handleConnectMessage( data ) {
+
+					if( connected === false ) {
+						connected = true;
+
+						setupIframes( data );
+						setupKeyboard();
+						setupNotes();
+						setupTimer();
+					}
+
+				}
+
+				/**
+				 * Called when the main window sends an updated state.
+				 */
+				function handleStateMessage( data ) {
+
+					// Store the most recently set state to avoid circular loops
+					// applying the same state
+					currentState = JSON.stringify( data.state );
+
+					// No need for updating the notes in case of fragment changes
+					if ( data.notes ) {
+						notes.classList.remove( &#39;hidden&#39; );
+						notesValue.style.whiteSpace = data.whitespace;
+						if( data.markdown ) {
+							notesValue.innerHTML = marked( data.notes );
+						}
+						else {
+							notesValue.innerHTML = data.notes;
+						}
+					}
+					else {
+						notes.classList.add( &#39;hidden&#39; );
+					}
+
+					// Update the note slides
+					currentSlide.contentWindow.postMessage( JSON.stringify({ method: &#39;setState&#39;, args: [ data.state ] }), &#39;*&#39; );
+					upcomingSlide.contentWindow.postMessage( JSON.stringify({ method: &#39;setState&#39;, args: [ data.state ] }), &#39;*&#39; );
+					upcomingSlide.contentWindow.postMessage( JSON.stringify({ method: &#39;next&#39; }), &#39;*&#39; );
+
+				}
+
+				// Limit to max one state update per X ms
+				handleStateMessage = debounce( handleStateMessage, 200 );
+
+				/**
+				 * Forward keyboard events to the current slide window.
+				 * This enables keyboard events to work even if focus
+				 * isn&#39;t set on the current slide iframe.
+				 */
+				function setupKeyboard() {
+
+					document.addEventListener( &#39;keydown&#39;, function( event ) {
+						currentSlide.contentWindow.postMessage( JSON.stringify({ method: &#39;triggerKey&#39;, args: [ event.keyCode ] }), &#39;*&#39; );
+					} );
+
+				}
+
+				/**
+				 * Creates the preview iframes.
+				 */
+				function setupIframes( data ) {
+
+					var params = [
+						&#39;receiver&#39;,
+						&#39;progress=false&#39;,
+						&#39;history=false&#39;,
+						&#39;transition=none&#39;,
+						&#39;autoSlide=0&#39;,
+						&#39;backgroundTransition=none&#39;
+					].join( &#39;&amp;&#39; );
+
+					var urlSeparator = /\?/.test(data.url) ? &#39;&amp;&#39; : &#39;?&#39;;
+					var hash = &#39;#/&#39; + data.state.indexh + &#39;/&#39; + data.state.indexv;
+					var currentURL = data.url + urlSeparator + params + &#39;&amp;postMessageEvents=true&#39; + hash;
+					var upcomingURL = data.url + urlSeparator + params + &#39;&amp;controls=false&#39; + hash;
+
+					currentSlide = document.createElement( &#39;iframe&#39; );
+					currentSlide.setAttribute( &#39;width&#39;, 1280 );
+					currentSlide.setAttribute( &#39;height&#39;, 1024 );
+					currentSlide.setAttribute( &#39;src&#39;, currentURL );
+					document.querySelector( &#39;#current-slide&#39; ).appendChild( currentSlide );
+
+					upcomingSlide = document.createElement( &#39;iframe&#39; );
+					upcomingSlide.setAttribute( &#39;width&#39;, 640 );
+					upcomingSlide.setAttribute( &#39;height&#39;, 512 );
+					upcomingSlide.setAttribute( &#39;src&#39;, upcomingURL );
+					document.querySelector( &#39;#upcoming-slide&#39; ).appendChild( upcomingSlide );
+
+				}
+
+				/**
+				 * Setup the notes UI.
+				 */
+				function setupNotes() {
+
+					notes = document.querySelector( &#39;.speaker-controls-notes&#39; );
+					notesValue = document.querySelector( &#39;.speaker-controls-notes .value&#39; );
+
+				}
+
+				function getTimings() {
+
+					var slides = Reveal.getSlides();
+					var defaultTiming = Reveal.getConfig().defaultTiming;
+					if (defaultTiming == null) {
+						return null;
+					}
+					var timings = [];
+					for ( var i in slides ) {
+						var slide = slides[i];
+						var timing = defaultTiming;
+						if( slide.hasAttribute( &#39;data-timing&#39; )) {
+							var t = slide.getAttribute( &#39;data-timing&#39; );
+							timing = parseInt(t);
+							if( isNaN(timing) ) {
+								console.warn(&#34;Could not parse timing &#39;&#34; + t + &#34;&#39; of slide &#34; + i + &#34;; using default of &#34; + defaultTiming);
+								timing = defaultTiming;
+							}
+						}
+						timings.push(timing);
+					}
+					return timings;
+
+				}
+
+				/**
+				 * Return the number of seconds allocated for presenting
+				 * all slides up to and including this one.
+				 */
+				function getTimeAllocated(timings) {
+
+					var slides = Reveal.getSlides();
+					var allocated = 0;
+					var currentSlide = Reveal.getSlidePastCount();
+					for (var i in slides.slice(0, currentSlide + 1)) {
+						allocated += timings[i];
+					}
+					return allocated;
+
+				}
+
+				/**
+				 * Create the timer and clock and start updating them
+				 * at an interval.
+				 */
+				function setupTimer() {
+
+					var start = new Date(),
+					timeEl = document.querySelector( &#39;.speaker-controls-time&#39; ),
+					clockEl = timeEl.querySelector( &#39;.clock-value&#39; ),
+					hoursEl = timeEl.querySelector( &#39;.hours-value&#39; ),
+					minutesEl = timeEl.querySelector( &#39;.minutes-value&#39; ),
+					secondsEl = timeEl.querySelector( &#39;.seconds-value&#39; ),
+					pacingTitleEl = timeEl.querySelector( &#39;.pacing-title&#39; ),
+					pacingEl = timeEl.querySelector( &#39;.pacing&#39; ),
+					pacingHoursEl = pacingEl.querySelector( &#39;.hours-value&#39; ),
+					pacingMinutesEl = pacingEl.querySelector( &#39;.minutes-value&#39; ),
+					pacingSecondsEl = pacingEl.querySelector( &#39;.seconds-value&#39; );
+
+					var timings = getTimings();
+					if (timings !== null) {
+						pacingTitleEl.style.removeProperty(&#39;display&#39;);
+						pacingEl.style.removeProperty(&#39;display&#39;);
+					}
+
+					function _displayTime( hrEl, minEl, secEl, time) {
+
+						var sign = Math.sign(time) == -1 ? &#34;-&#34; : &#34;&#34;;
+						time = Math.abs(Math.round(time / 1000));
+						var seconds = time % 60;
+						var minutes = Math.floor( time / 60 ) % 60 ;
+						var hours = Math.floor( time / ( 60 * 60 )) ;
+						hrEl.innerHTML = sign + zeroPadInteger( hours );
+						if (hours == 0) {
+							hrEl.classList.add( &#39;mute&#39; );
+						}
+						else {
+							hrEl.classList.remove( &#39;mute&#39; );
+						}
+						minEl.innerHTML = &#39;:&#39; + zeroPadInteger( minutes );
+						if (hours == 0 &amp;&amp; minutes == 0) {
+							minEl.classList.add( &#39;mute&#39; );
+						}
+						else {
+							minEl.classList.remove( &#39;mute&#39; );
+						}
+						secEl.innerHTML = &#39;:&#39; + zeroPadInteger( seconds );
+					}
+
+					function _updateTimer() {
+
+						var diff, hours, minutes, seconds,
+						now = new Date();
+
+						diff = now.getTime() - start.getTime();
+
+						clockEl.innerHTML = now.toLocaleTimeString( &#39;en-US&#39;, { hour12: true, hour: &#39;2-digit&#39;, minute:&#39;2-digit&#39; } );
+						_displayTime( hoursEl, minutesEl, secondsEl, diff );
+						if (timings !== null) {
+							_updatePacing(diff);
+						}
+
+					}
+
+					function _updatePacing(diff) {
+
+						var slideEndTiming = getTimeAllocated(timings) * 1000;
+						var currentSlide = Reveal.getSlidePastCount();
+						var currentSlideTiming = timings[currentSlide] * 1000;
+						var timeLeftCurrentSlide = slideEndTiming - diff;
+						if (timeLeftCurrentSlide &lt; 0) {
+							pacingEl.className = &#39;pacing behind&#39;;
+						}
+						else if (timeLeftCurrentSlide &lt; currentSlideTiming) {
+							pacingEl.className = &#39;pacing on-track&#39;;
+						}
+						else {
+							pacingEl.className = &#39;pacing ahead&#39;;
+						}
+						_displayTime( pacingHoursEl, pacingMinutesEl, pacingSecondsEl, timeLeftCurrentSlide );
+
+					}
+
+					// Update once directly
+					_updateTimer();
+
+					// Then update every second
+					setInterval( _updateTimer, 1000 );
+
+					function _resetTimer() {
+
+						if (timings == null) {
+							start = new Date();
+						}
+						else {
+							// Reset timer to beginning of current slide
+							var slideEndTiming = getTimeAllocated(timings) * 1000;
+							var currentSlide = Reveal.getSlidePastCount();
+							var currentSlideTiming = timings[currentSlide] * 1000;
+							var previousSlidesTiming = slideEndTiming - currentSlideTiming;
+							var now = new Date();
+							start = new Date(now.getTime() - previousSlidesTiming);
+						}
+						_updateTimer();
+
+					}
+
+					timeEl.addEventListener( &#39;click&#39;, function() {
+						_resetTimer();
+						return false;
+					} );
+
+				}
+
+				/**
+				 * Sets up the speaker view layout and layout selector.
+				 */
+				function setupLayout() {
+
+					layoutDropdown = document.querySelector( &#39;.speaker-layout-dropdown&#39; );
+					layoutLabel = document.querySelector( &#39;.speaker-layout-label&#39; );
+
+					// Render the list of available layouts
+					for( var id in SPEAKER_LAYOUTS ) {
+						var option = document.createElement( &#39;option&#39; );
+						option.setAttribute( &#39;value&#39;, id );
+						option.textContent = SPEAKER_LAYOUTS[ id ];
+						layoutDropdown.appendChild( option );
+					}
+
+					// Monitor the dropdown for changes
+					layoutDropdown.addEventListener( &#39;change&#39;, function( event ) {
+
+						setLayout( layoutDropdown.value );
+
+					}, false );
+
+					// Restore any currently persisted layout
+					setLayout( getLayout() );
+
+				}
+
+				/**
+				 * Sets a new speaker view layout. The layout is persisted
+				 * in local storage.
+				 */
+				function setLayout( value ) {
+
+					var title = SPEAKER_LAYOUTS[ value ];
+
+					layoutLabel.innerHTML = &#39;Layout&#39; + ( title ? ( &#39;: &#39; + title ) : &#39;&#39; );
+					layoutDropdown.value = value;
+
+					document.body.setAttribute( &#39;data-speaker-layout&#39;, value );
+
+					// Persist locally
+					if( window.localStorage ) {
+						window.localStorage.setItem( &#39;reveal-speaker-layout&#39;, value );
+					}
+
+				}
+
+				/**
+				 * Returns the ID of the most recently set speaker layout
+				 * or our default layout if none has been set.
+				 */
+				function getLayout() {
+
+					if( window.localStorage ) {
+						var layout = window.localStorage.getItem( &#39;reveal-speaker-layout&#39; );
+						if( layout ) {
+							return layout;
+						}
+					}
+
+					// Default to the first record in the layouts hash
+					for( var id in SPEAKER_LAYOUTS ) {
+						return id;
+					}
+
+				}
+
+				function zeroPadInteger( num ) {
+
+					var str = &#39;00&#39; + parseInt( num );
+					return str.substring( str.length - 2 );
+
+				}
+
+				/**
+				 * Limits the frequency at which a function can be called.
+				 */
+				function debounce( fn, ms ) {
+
+					var lastTime = 0,
+						timeout;
+
+					return function() {
+
+						var args = arguments;
+						var context = this;
+
+						clearTimeout( timeout );
+
+						var timeSinceLastCall = Date.now() - lastTime;
+						if( timeSinceLastCall &gt; ms ) {
+							fn.apply( context, args );
+							lastTime = Date.now();
+						}
+						else {
+							timeout = setTimeout( function() {
+								fn.apply( context, args );
+								lastTime = Date.now();
+							}, ms - timeSinceLastCall );
+						}
+
+					}
+
+				}
+
+			})();
 
 		&lt;/script&gt;
-
 	&lt;/body&gt;
 &lt;/html&gt;
 </description>

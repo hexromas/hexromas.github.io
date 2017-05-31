@@ -218,14 +218,13 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Note:&lt;br /&gt;
-Is this will be hide.&lt;/p&gt;
+&lt;p&gt;Note:
+Look at the link &lt;a href=&#34;https://github.com/hakimel/reveal.js/#speaker-notes&#34;&gt;https://github.com/hakimel/reveal.js/#speaker-notes&lt;/a&gt;, that you can find more detail about this.&lt;/p&gt;
 
-&lt;p&gt;sdfwe&lt;/p&gt;
+&lt;p&gt;Note:
+Just curious that whether it will show more.&lt;/p&gt;
 
-&lt;p&gt;Note:&lt;/p&gt;
-
-&lt;p&gt;How many will be hide.&lt;/p&gt;
+&lt;p&gt;Just curious.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;reveal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;slides&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;data-markdown&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://example.com/your_blog.md&amp;quot;&lt;/span&gt;

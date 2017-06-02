@@ -10,10 +10,14 @@
 		
 		
 		<link rel="stylesheet" href="/manual/reveal.js/lib/css/zenburn.css">
-
-		<link rel="stylesheet" href="/css/bo_current.css">
+		
 
 		
+		
+
+
+		<link rel="stylesheet" href="/css/bo_ppt.css">
+		<link rel="stylesheet" href="/css/bo_common.css">
 		
 		
 	</head>
@@ -46,6 +50,7 @@
 
 		<script src="/manual/reveal.js/lib/js/head.min.js"></script>
 		<script src="/manual/reveal.js/js/reveal.js"></script>
+		
 
 		<script>
 			
@@ -67,9 +72,14 @@
 					{ src: '/manual/reveal.js/plugin/markdown/marked.js' },
 					{ src: '/manual/reveal.js/plugin/markdown/markdown.js' },
 					{ src: '/manual/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: '/manual/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>
+
+
+		
+		
+		
 	</body>
 </html>

@@ -47,6 +47,7 @@
     </head>
     <body>
         <header id="header">
+        
             <a id="logo" href="https://hexromas.github.io/"><img src="https://www.gravatar.com/avatar/ff5d38839459fb133112d5404390c0f7?s=1000" alt="" /></a>
             <h1><a href="https://hexromas.github.io/"></a></h1>
             <p></p>
@@ -59,10 +60,12 @@
 	
 </div>  
             <h6><a href="http://www.thinktouch.net">About</a></h6>
-<h6><a href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
+<h6 ><a style="color:salmon;" href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/github_style.black.bo.css')">Github Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/strong_color.black.bo.css')">Strong Black Style</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
 
 <script type="text/javascript">
 function go2ppt() {
@@ -80,12 +83,18 @@ function go2page(pagepath) {
 		var pageurl   = protocol+'//'+baseurl+pagepath;
 		return pageurl;
 } 
+function loadcss(cssId) {
+		var head  = document.getElementsByTagName('footer')[0];
+		var link  = document.createElement('link');
+		link.id   = cssId;
+		link.rel  = 'stylesheet';
+		link.type = 'text/css';
+		link.href = cssId;
+		link.media = 'all';
+		head.appendChild(link);
+}
 </script>
 
-            <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
-    <script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
-    <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
-    
         </header>
 		<main id="content">
 
@@ -136,7 +145,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2017-03-06-@QuickReport@_Labels_in_Canal9/">@QuickReport@_Labels_in_Canal9</a>
+		<a href="https://hexromas.github.io/2017-03-06-$QuickReport$_Labels_in_Canal9/">@QuickReport@_Labels_in_Canal9</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2017-03-06T10:27:05Z">
             6 Mar 2017
@@ -150,7 +159,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2017-01-25-@QuickReport@_Canal9_Dataset_Clips/">@QuickReport@_Canal9_Dataset_Clips</a>
+		<a href="https://hexromas.github.io/2017-01-25-$QuickReport$_Canal9_Dataset_Clips/">@QuickReport@_Canal9_Dataset_Clips</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2017-01-25T11:27:05Z">
             25 Jan 2017
@@ -178,7 +187,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2017-01-20-@QuickReport@_Review_of_Previous_Work/">@QuickReport@_Review_of_Previous_Work</a>
+		<a href="https://hexromas.github.io/2017-01-20-$QuickReport$_Review_of_Previous_Work/">@QuickReport@_Review_of_Previous_Work</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2017-01-20T08:31:26Z">
             20 Jan 2017
@@ -192,7 +201,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-12-13-@QuickReport@_Database_of_Canal9/">@QuickReport@_Database_of_Canal9</a>
+		<a href="https://hexromas.github.io/2016-12-13-$QuickReport$_Database_of_Canal9/">@QuickReport@_Database_of_Canal9</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-12-13T08:31:26Z">
             13 Dec 2016
@@ -206,7 +215,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-11-28-@QuickReport@_Prior_Works_on_Video_Recognition/">@QuickReport@_Prior_Works_on_Video_Recognition</a>
+		<a href="https://hexromas.github.io/2016-11-28-$QuickReport$_Prior_Works_on_Video_Recognition/">@QuickReport@_Prior_Works_on_Video_Recognition</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-11-28T14:21:15Z">
             28 Nov 2016
@@ -220,7 +229,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-11-22-@QuickReport@_State-of-art_for_Agreement_Disagreement_Database/">@QuickReport@_State-of-art_for_Agreement_Disagreement_Database</a>
+		<a href="https://hexromas.github.io/2016-11-22-$QuickReport$_State-of-art_for_Agreement_Disagreement_Database/">@QuickReport@_State-of-art_for_Agreement_Disagreement_Database</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-11-22T13:33:19Z">
             22 Nov 2016
@@ -234,7 +243,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-11-21-@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/">@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreement</a>
+		<a href="https://hexromas.github.io/2016-11-21-$QuickReport$_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/">@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreement</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-11-21T14:14:42Z">
             21 Nov 2016
@@ -248,7 +257,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-10-31-@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification/">@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification</a>
+		<a href="https://hexromas.github.io/2016-10-31-$QuickReport$_Canal9_dataset_&amp;_ActivityNet_Classification/">@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-10-31T14:27:29Z">
             31 Oct 2016
@@ -262,7 +271,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-10-25-@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/">@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet</a>
+		<a href="https://hexromas.github.io/2016-10-25-$QuickReport$_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/">@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-10-25T22:55:33Z">
             25 Oct 2016
@@ -290,7 +299,7 @@ function go2page(pagepath) {
         
 <section class="">
 	<h3 class="post-title">
-		<a href="https://hexromas.github.io/2016-09-11-@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People/">@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People</a>
+		<a href="https://hexromas.github.io/2016-09-11-$Podcast$_Facebook_can_tell_Dog-liked_or_Cat-liked_People/">$Podcast=_Facebook_can_tell_Dog-liked_or_Cat-liked_People</a>
 		<span class="separator"> &middot; </span>
 		<time datetime="2016-09-11T14:52:03Z">
             11 Sep 2016

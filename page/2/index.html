@@ -47,6 +47,7 @@
     </head>
     <body>
         <header id="header">
+        
             <a id="logo" href="https://hexromas.github.io/"><img src="https://www.gravatar.com/avatar/ff5d38839459fb133112d5404390c0f7?s=1000" alt="" /></a>
             <h1><a href="https://hexromas.github.io/"></a></h1>
             <p></p>
@@ -59,10 +60,12 @@
 	
 </div>  
             <h6><a href="http://www.thinktouch.net">About</a></h6>
-<h6><a href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
+<h6 ><a style="color:salmon;" href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/github_style.black.bo.css')">Github Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/strong_color.black.bo.css')">Strong Black Style</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
 
 <script type="text/javascript">
 function go2ppt() {
@@ -80,12 +83,18 @@ function go2page(pagepath) {
 		var pageurl   = protocol+'//'+baseurl+pagepath;
 		return pageurl;
 } 
+function loadcss(cssId) {
+		var head  = document.getElementsByTagName('footer')[0];
+		var link  = document.createElement('link');
+		link.id   = cssId;
+		link.rel  = 'stylesheet';
+		link.type = 'text/css';
+		link.href = cssId;
+		link.media = 'all';
+		head.appendChild(link);
+}
 </script>
 
-            <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
-    <script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
-    <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
-    
         </header>
 		<main id="content">
 

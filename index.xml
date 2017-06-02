@@ -40,6 +40,8 @@
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt; &lt;span style=&#34;color: #815ba4&#34;&gt;@import&lt;/span&gt; &lt;span style=&#34;color: #5bc4bf&#34;&gt;url(https://fonts&lt;/span&gt;&lt;span style=&#34;color: #fec418&#34;&gt;.googleapis.com&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;/css?family=Ubuntu)&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Note:&lt;/p&gt;
+
 &lt;h3 id=&#34;affacted-elements-in-css&#34;&gt;Affacted Elements in CSS&lt;/h3&gt;
 
 &lt;blockquote&gt;
@@ -143,6 +145,7 @@
 
 &lt;h3 id=&#34;codes-highlight&#34;&gt;Codes Highlight&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;application/javascript&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;hljs&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #06b6ef&#34;&gt;initHighlightingOnLoad&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;();&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -153,6 +156,8 @@
 Here are some english links, &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables&#34;&gt;Using CSS variables&lt;/a&gt;.
 Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017/05/css-variables.html&#34;&gt;阮一峰 CSS 变量教程&lt;/a&gt;, &lt;a href=&#34;http://www.cnblogs.com/coco1s/p/6068522.html&#34;&gt;引人瞩目的 CSS 变量&lt;/a&gt;, &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables&#34;&gt;MDN 使用 CSS 变量&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;Note:&lt;/p&gt;
+
 &lt;h3 id=&#34;fontawesome-icon&#34;&gt;fontawesome Icon&lt;/h3&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;fontawesome website&lt;/a&gt; provides online icon source, which you can embed in your html like:&lt;/p&gt;
@@ -161,6 +166,8 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;First line refers to the fontawesome css file, the second one define the icon you need. Find more in &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;fontawesome website&lt;/a&gt; and &lt;a href=&#34;http://fontawesome.io/get-started/&#34;&gt;fontawesome usage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
 
 &lt;h3 id=&#34;reference-source-list-style&#34;&gt;Reference &amp;amp; Source List style&lt;/h3&gt;
 
@@ -208,6 +215,8 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 
 &lt;p&gt;&lt;strong&gt;Render Tool&lt;/strong&gt;: It would be better for us to use js-based tool to render blog as ppt presentation. Among these tools, like &lt;a href=&#34;https://github.com/hakimel/reveal.js&#34;&gt;reveal.js&lt;/a&gt;, &lt;a href=&#34;http://flowtime-js.marcolago.com/&#34;&gt;flowtime.js&lt;/a&gt;, &lt;a href=&#34;https://github.com/impress/impress.js/wiki/Examples-and-demos&#34;&gt;impress.js&lt;/a&gt;, &lt;a href=&#34;https://github.com/shower/shower&#34;&gt;shower&lt;/a&gt;, we select &lt;a href=&#34;https://github.com/hakimel/reveal.js&#34;&gt;reveal.js&lt;/a&gt; since it can read markdown style blog easily.&lt;/p&gt;
 
+&lt;p&gt;Note:&lt;/p&gt;
+
 &lt;h3 id=&#34;reveal-js&#34;&gt;Reveal.js&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -217,6 +226,8 @@ Here are some chinese links, &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017
 &lt;li&gt;&lt;strong&gt;stylesheet&lt;/strong&gt;: You need to include at least three stylesheet for present the markdown based page, i.e. &lt;code&gt;reveal.css&lt;/code&gt;, &lt;code&gt;zenburn.css&lt;/code&gt; and &lt;code&gt;yourown_style.css&lt;/code&gt;. First one can split pages, second one syntax highlighting of code, third one is your customized style.
 &lt;!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #2f1e2e&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;reveal&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;slides&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #e7e9db&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color: #06b6ef&#34;&gt;data-markdown&lt;/span&gt;&lt;span style=&#34;color: #5bc4bf&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #48b685&#34;&gt;&amp;quot;https://example.com/your_blog.md&amp;quot;&lt;/span&gt;
@@ -270,6 +281,33 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
 &lt;li&gt;&lt;strong&gt;Table Content&lt;/strong&gt;: Add &lt;code&gt;{{.TableOfContents}}&lt;/code&gt; after title part to show the table content.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ending&lt;/strong&gt;:  Add &lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;image&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt; after blog content.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#34;ref&#34;&gt;&lt;/dd&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
+
+&lt;p&gt;&lt;dd class=&#34;source&#34;&gt;
+[google font]: &lt;a href=&#34;https://fonts.google.com/&#34;&gt;https://fonts.google.com/&lt;/a&gt;&lt;br /&gt;
+[Using CSS variables]: &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables&#34;&gt;https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables&lt;/a&gt;&lt;br /&gt;
+[阮一峰 CSS 变量教程]: &lt;a href=&#34;http://www.ruanyifeng.com/blog/2017/05/css-variables.html&#34;&gt;http://www.ruanyifeng.com/blog/2017/05/css-variables.html&lt;/a&gt;&lt;br /&gt;
+[引人瞩目的 CSS 变量]: &lt;a href=&#34;http://www.cnblogs.com/coco1s/p/6068522.html&#34;&gt;http://www.cnblogs.com/coco1s/p/6068522.html&lt;/a&gt;&lt;br /&gt;
+[MDN 使用 CSS 变量]: &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables&#34;&gt;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables&lt;/a&gt;&lt;br /&gt;
+[fontawesome usage]: &lt;a href=&#34;http://fontawesome.io/get-started/&#34;&gt;http://fontawesome.io/get-started/&lt;/a&gt;&lt;br /&gt;
+[fontawesome website]: &lt;a href=&#34;http://fontawesome.io/icons/&#34;&gt;http://fontawesome.io/icons/&lt;/a&gt;&lt;br /&gt;
+[reveal.js]: &lt;a href=&#34;https://github.com/hakimel/reveal.js&#34;&gt;https://github.com/hakimel/reveal.js&lt;/a&gt;&lt;br /&gt;
+[flowtime.js]: &lt;a href=&#34;http://flowtime-js.marcolago.com/&#34;&gt;http://flowtime-js.marcolago.com/&lt;/a&gt;&lt;br /&gt;
+[impress.js]: &lt;a href=&#34;https://github.com/impress/impress.js/wiki/Examples-and-demos&#34;&gt;https://github.com/impress/impress.js/wiki/Examples-and-demos&lt;/a&gt;&lt;br /&gt;
+[shower]: &lt;a href=&#34;https://github.com/shower/shower&#34;&gt;https://github.com/shower/shower&lt;/a&gt;&lt;br /&gt;
+[reveal.js configuration]: &lt;a href=&#34;https://github.com/hakimel/reveal.js#configuration&#34;&gt;https://github.com/hakimel/reveal.js#configuration&lt;/a&gt;&lt;br /&gt;
+[hugo themes]: &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;https://themes.gohugo.io/&lt;/a&gt;&lt;br /&gt;
+[hugo website]: &lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;https://gohugo.io/overview/introduction/&lt;/a&gt;&lt;br /&gt;
+[hugo-theme-crisp]: &lt;a href=&#34;https://github.com/Zenithar/hugo-theme-crisp&#34;&gt;https://github.com/Zenithar/hugo-theme-crisp&lt;/a&gt;&lt;br /&gt;
+[jekyll]: &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;br /&gt;
+&lt;/dd&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dd class=&#34;thanks&#34;&gt;&lt;/dd&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -425,10 +463,10 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
     
     <item>
       <title>@QuickReport@_Labels_in_Canal9</title>
-      <link>https://hexromas.github.io/2017-03-06-@QuickReport@_Labels_in_Canal9/</link>
+      <link>https://hexromas.github.io/2017-03-06-$QuickReport$_Labels_in_Canal9/</link>
       <pubDate>Mon, 06 Mar 2017 10:27:05 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2017-03-06-@QuickReport@_Labels_in_Canal9/</guid>
+      <guid>https://hexromas.github.io/2017-03-06-$QuickReport$_Labels_in_Canal9/</guid>
       <description>
 
 &lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
@@ -476,10 +514,10 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
     
     <item>
       <title>@QuickReport@_Canal9_Dataset_Clips</title>
-      <link>https://hexromas.github.io/2017-01-25-@QuickReport@_Canal9_Dataset_Clips/</link>
+      <link>https://hexromas.github.io/2017-01-25-$QuickReport$_Canal9_Dataset_Clips/</link>
       <pubDate>Wed, 25 Jan 2017 11:27:05 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2017-01-25-@QuickReport@_Canal9_Dataset_Clips/</guid>
+      <guid>https://hexromas.github.io/2017-01-25-$QuickReport$_Canal9_Dataset_Clips/</guid>
       <description>
 
 &lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
@@ -624,10 +662,10 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
     
     <item>
       <title>@QuickReport@_Review_of_Previous_Work</title>
-      <link>https://hexromas.github.io/2017-01-20-@QuickReport@_Review_of_Previous_Work/</link>
+      <link>https://hexromas.github.io/2017-01-20-$QuickReport$_Review_of_Previous_Work/</link>
       <pubDate>Fri, 20 Jan 2017 08:31:26 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2017-01-20-@QuickReport@_Review_of_Previous_Work/</guid>
+      <guid>https://hexromas.github.io/2017-01-20-$QuickReport$_Review_of_Previous_Work/</guid>
       <description>
 
 &lt;h2 id=&#34;review-last-destination&#34;&gt;Review &amp;amp; Last Destination&lt;/h2&gt;
@@ -712,10 +750,10 @@ Use LSTM to train based on the &lt;code&gt;single-view&lt;/code&gt; clips and gr
     
     <item>
       <title>@QuickReport@_Database_of_Canal9</title>
-      <link>https://hexromas.github.io/2016-12-13-@QuickReport@_Database_of_Canal9/</link>
+      <link>https://hexromas.github.io/2016-12-13-$QuickReport$_Database_of_Canal9/</link>
       <pubDate>Tue, 13 Dec 2016 08:31:26 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-12-13-@QuickReport@_Database_of_Canal9/</guid>
+      <guid>https://hexromas.github.io/2016-12-13-$QuickReport$_Database_of_Canal9/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
@@ -805,10 +843,10 @@ Recognition, 2008.&lt;/p&gt;
     
     <item>
       <title>@QuickReport@_Prior_Works_on_Video_Recognition</title>
-      <link>https://hexromas.github.io/2016-11-28-@QuickReport@_Prior_Works_on_Video_Recognition/</link>
+      <link>https://hexromas.github.io/2016-11-28-$QuickReport$_Prior_Works_on_Video_Recognition/</link>
       <pubDate>Mon, 28 Nov 2016 14:21:15 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-11-28-@QuickReport@_Prior_Works_on_Video_Recognition/</guid>
+      <guid>https://hexromas.github.io/2016-11-28-$QuickReport$_Prior_Works_on_Video_Recognition/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
@@ -845,10 +883,10 @@ Recognition, 2008.&lt;/p&gt;
     
     <item>
       <title>@QuickReport@_State-of-art_for_Agreement_Disagreement_Database</title>
-      <link>https://hexromas.github.io/2016-11-22-@QuickReport@_State-of-art_for_Agreement_Disagreement_Database/</link>
+      <link>https://hexromas.github.io/2016-11-22-$QuickReport$_State-of-art_for_Agreement_Disagreement_Database/</link>
       <pubDate>Tue, 22 Nov 2016 13:33:19 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-11-22-@QuickReport@_State-of-art_for_Agreement_Disagreement_Database/</guid>
+      <guid>https://hexromas.github.io/2016-11-22-$QuickReport$_State-of-art_for_Agreement_Disagreement_Database/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
@@ -1086,10 +1124,10 @@ Recognition, 2008.&lt;/p&gt;
     
     <item>
       <title>@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreement</title>
-      <link>https://hexromas.github.io/2016-11-21-@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</link>
+      <link>https://hexromas.github.io/2016-11-21-$QuickReport$_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</link>
       <pubDate>Mon, 21 Nov 2016 14:14:42 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-11-21-@QuickReport@_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</guid>
+      <guid>https://hexromas.github.io/2016-11-21-$QuickReport$_Dataset_for_ActivityNet_&amp;_Agreement_Disagreemen/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
@@ -1234,10 +1272,10 @@ Recognition, 2008.&lt;/p&gt;
     
     <item>
       <title>@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification</title>
-      <link>https://hexromas.github.io/2016-10-31-@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification/</link>
+      <link>https://hexromas.github.io/2016-10-31-$QuickReport$_Canal9_dataset_&amp;_ActivityNet_Classification/</link>
       <pubDate>Mon, 31 Oct 2016 14:27:29 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-10-31-@QuickReport@_Canal9_dataset_&amp;_ActivityNet_Classification/</guid>
+      <guid>https://hexromas.github.io/2016-10-31-$QuickReport$_Canal9_dataset_&amp;_ActivityNet_Classification/</guid>
       <description>
 
 &lt;h2 id=&#34;purpose-destination&#34;&gt;Purpose / Destination&lt;/h2&gt;
@@ -1336,10 +1374,10 @@ Recognition, 2008.&lt;/p&gt;
     
     <item>
       <title>@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet</title>
-      <link>https://hexromas.github.io/2016-10-25-@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</link>
+      <link>https://hexromas.github.io/2016-10-25-$QuickReport$_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</link>
       <pubDate>Tue, 25 Oct 2016 22:55:33 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-10-25-@QuickReport@_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</guid>
+      <guid>https://hexromas.github.io/2016-10-25-$QuickReport$_Social_Event_Keywords_for_youtube8M_&amp;_wordnet/</guid>
       <description>
 
 &lt;h2 id=&#34;social-events-in-wordnet&#34;&gt;&amp;lsquo;Social Events&amp;rsquo; in WordNet&lt;/h2&gt;
@@ -1559,11 +1597,11 @@ This will only display in the notes window.&lt;/p&gt;
     </item>
     
     <item>
-      <title>@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People</title>
-      <link>https://hexromas.github.io/2016-09-11-@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</link>
+      <title>$Podcast=_Facebook_can_tell_Dog-liked_or_Cat-liked_People</title>
+      <link>https://hexromas.github.io/2016-09-11-$Podcast$_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</link>
       <pubDate>Sun, 11 Sep 2016 14:52:03 +0000</pubDate>
       
-      <guid>https://hexromas.github.io/2016-09-11-@Podcast@_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</guid>
+      <guid>https://hexromas.github.io/2016-09-11-$Podcast$_Facebook_can_tell_Dog-liked_or_Cat-liked_People/</guid>
       <description>
 
 &lt;blockquote&gt;

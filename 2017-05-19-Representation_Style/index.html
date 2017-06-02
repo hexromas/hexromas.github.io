@@ -57,7 +57,7 @@
         },
         "datePublished": "2017-05-19",
         "description": "",
-        "wordCount":  1117 
+        "wordCount":  1173 
     }
     </script>
     
@@ -71,6 +71,7 @@
     </head>
     <body>
         <header id="header">
+        
             <a id="logo" href="https://hexromas.github.io/"><img src="https://www.gravatar.com/avatar/ff5d38839459fb133112d5404390c0f7?s=1000" alt="" /></a>
             <h1><a href="https://hexromas.github.io/"></a></h1>
             <p></p>
@@ -83,10 +84,12 @@
 	
 </div>  
             <h6><a href="http://www.thinktouch.net">About</a></h6>
-<h6><a href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
-<h6><a href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
+<h6 ><a style="color:salmon;" href="javascript:window.open(go2ppt(),'_blank')">PPT Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/github_style.black.bo.css')">Github Style</a></h6>
+<h6><a style="color:salmon;" href="javascript:loadcss('/css/strong_color.black.bo.css')">Strong Black Style</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/keyboard/'),'_blank')">Keyboard Shortcut</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/pdf_annotation/'),'_blank')">PDF annotation</a></h6>
+<h6><a style="color:#4169e1;" href="javascript:window.open(go2page('/manual/deeplearning/'),'_blank')">Deep Learning</a></h6>
 
 <script type="text/javascript">
 function go2ppt() {
@@ -104,12 +107,18 @@ function go2page(pagepath) {
 		var pageurl   = protocol+'//'+baseurl+pagepath;
 		return pageurl;
 } 
+function loadcss(cssId) {
+		var head  = document.getElementsByTagName('footer')[0];
+		var link  = document.createElement('link');
+		link.id   = cssId;
+		link.rel  = 'stylesheet';
+		link.type = 'text/css';
+		link.href = cssId;
+		link.media = 'all';
+		head.appendChild(link);
+}
 </script>
 
-            <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
-    <script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
-    <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
-    
         </header>
 
 
@@ -128,7 +137,6 @@ function go2page(pagepath) {
     </div>
 
 
-<link rel="stylesheet" href="/css/bo_current.css">
 
 <div class="reveal">
     <div class="blog">
@@ -161,6 +169,8 @@ function go2page(pagepath) {
 <li><a href="#default-single-html"><strong>_default/single.html</strong></a></li>
 </ul></li>
 </ul></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#source">Source</a></li>
 </ul></li>
 </ul>
 </nav> 
@@ -189,6 +199,8 @@ function go2page(pagepath) {
 <p>In css:</p>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span> <span style="color: #815ba4">@import</span> <span style="color: #5bc4bf">url(https://fonts</span><span style="color: #fec418">.googleapis.com</span><span style="color: #5bc4bf">/css?family=Ubuntu)</span><span style="color: #e7e9db">;</span>
 </pre></div>
+
+<p>Note:</p>
 
 <h3 id="affacted-elements-in-css">Affacted Elements in CSS</h3>
 
@@ -293,6 +305,7 @@ function go2page(pagepath) {
 
 <h3 id="codes-highlight">Codes Highlight</h3>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">link</span> <span style="color: #06b6ef">rel</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;stylesheet&quot;</span> <span style="color: #06b6ef">href</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css&quot;</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
 <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
 <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">type</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;application/javascript&quot;</span><span style="color: #e7e9db">&gt;</span><span style="color: #06b6ef">hljs</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">initHighlightingOnLoad</span><span style="color: #e7e9db">();&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
 </pre></div>
@@ -303,6 +316,8 @@ function go2page(pagepath) {
 Here are some english links, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS variables</a>.
 Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css-variables.html">阮一峰 CSS 变量教程</a>, <a href="http://www.cnblogs.com/coco1s/p/6068522.html">引人瞩目的 CSS 变量</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables">MDN 使用 CSS 变量</a>.</p>
 
+<p>Note:</p>
+
 <h3 id="fontawesome-icon">fontawesome Icon</h3>
 
 <p>The <a href="http://fontawesome.io/icons/">fontawesome website</a> provides online icon source, which you can embed in your html like:</p>
@@ -311,6 +326,8 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 </pre></div>
 
 <p>First line refers to the fontawesome css file, the second one define the icon you need. Find more in <a href="http://fontawesome.io/icons/">fontawesome website</a> and <a href="http://fontawesome.io/get-started/">fontawesome usage</a>.</p>
+
+<p>Note:</p>
 
 <h3 id="reference-source-list-style">Reference &amp; Source List style</h3>
 
@@ -358,6 +375,8 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 
 <p><strong>Render Tool</strong>: It would be better for us to use js-based tool to render blog as ppt presentation. Among these tools, like <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="http://flowtime-js.marcolago.com/">flowtime.js</a>, <a href="https://github.com/impress/impress.js/wiki/Examples-and-demos">impress.js</a>, <a href="https://github.com/shower/shower">shower</a>, we select <a href="https://github.com/hakimel/reveal.js">reveal.js</a> since it can read markdown style blog easily.</p>
 
+<p>Note:</p>
+
 <h3 id="reveal-js">Reveal.js</h3>
 
 <ul>
@@ -367,6 +386,8 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 <li><strong>stylesheet</strong>: You need to include at least three stylesheet for present the markdown based page, i.e. <code>reveal.css</code>, <code>zenburn.css</code> and <code>yourown_style.css</code>. First one can split pages, second one syntax highlighting of code, third one is your customized style.
 <!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --></li>
 </ul>
+
+<p>Note:</p>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">div</span> <span style="color: #06b6ef">class</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;reveal&quot;</span><span style="color: #e7e9db">&gt;</span>
   <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">div</span> <span style="color: #06b6ef">class</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;slides&quot;</span><span style="color: #e7e9db">&gt;</span>
     <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">section</span> <span style="color: #06b6ef">data-markdown</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;https://example.com/your_blog.md&quot;</span>
@@ -421,11 +442,43 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
 <li><strong>Ending</strong>:  Add <code>&lt;div&gt;&lt;image&gt;&lt;/div&gt;</code> after blog content.</li>
 </ul>
 
-    <div align="center"><img src='/images/fin.jpg' height="50px" /></div>
+<h2 id="reference">Reference</h2>
+
+<p><dd class="ref"></dd></p>
+
+<h2 id="source">Source</h2>
+
+<p><dd class="source">
+[google font]: <a href="https://fonts.google.com/">https://fonts.google.com/</a><br />
+[Using CSS variables]: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables</a><br />
+[阮一峰 CSS 变量教程]: <a href="http://www.ruanyifeng.com/blog/2017/05/css-variables.html">http://www.ruanyifeng.com/blog/2017/05/css-variables.html</a><br />
+[引人瞩目的 CSS 变量]: <a href="http://www.cnblogs.com/coco1s/p/6068522.html">http://www.cnblogs.com/coco1s/p/6068522.html</a><br />
+[MDN 使用 CSS 变量]: <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables">https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables</a><br />
+[fontawesome usage]: <a href="http://fontawesome.io/get-started/">http://fontawesome.io/get-started/</a><br />
+[fontawesome website]: <a href="http://fontawesome.io/icons/">http://fontawesome.io/icons/</a><br />
+[reveal.js]: <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a><br />
+[flowtime.js]: <a href="http://flowtime-js.marcolago.com/">http://flowtime-js.marcolago.com/</a><br />
+[impress.js]: <a href="https://github.com/impress/impress.js/wiki/Examples-and-demos">https://github.com/impress/impress.js/wiki/Examples-and-demos</a><br />
+[shower]: <a href="https://github.com/shower/shower">https://github.com/shower/shower</a><br />
+[reveal.js configuration]: <a href="https://github.com/hakimel/reveal.js#configuration">https://github.com/hakimel/reveal.js#configuration</a><br />
+[hugo themes]: <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a><br />
+[hugo website]: <a href="https://gohugo.io/overview/introduction/">https://gohugo.io/overview/introduction/</a><br />
+[hugo-theme-crisp]: <a href="https://github.com/Zenithar/hugo-theme-crisp">https://github.com/Zenithar/hugo-theme-crisp</a><br />
+[jekyll]: <a href="https://jekyllrb.com/">https://jekyllrb.com/</a><br />
+</dd></p>
+
+<p><dd class="thanks"></dd></p>
+
 
     </div>
 </div>
 
+
+<link rel="stylesheet" href="/css/bo_blog.css">
+<link rel="stylesheet" href="/css/bo_common.css">
+<link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
+<script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
+<script type="application/javascript">hljs.initHighlightingOnLoad();</script>
 
 
 
@@ -462,7 +515,7 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
           </a>
       </li>
 			<li class="linkedin">
-          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-05-19-Representation_Style/&amp;title=Representation_Style&amp;summary=Representation%20Style%20Plan%3a%0a%20Combine%20two%20all%20necessary%20presentation%20element%20in%20one%20file.%20Clearly%20entitle%20the%20two%20type%2c%20black%20%26amp%3b%20white%20styles%20with%20version.%20Create%20the%20new%20black%20version%20of%20Atom.%20%20Common%20Part%20Font%20Import%20Some%20online%20fonts%2c%20like%20google%20font%2c%20one%20can%20easily%20use%20following%20codes%20in%20html%20or%20css%20files.%0aIn%20html%3a%0a%26lt%3blink%20href%3d%26%2339%3b%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%26%2339%3b%20rel%3d%26%2339%3bstylesheet%26%2339%3b%20type%3d%26%2339%3btext%2fcss%26%2339%3b%26gt%3b%20%20In%20css%3a%0a%20%40import%20url%28https%3a%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%29%3b%20%20Affacted%20Elements%20in%20CSS%20%20In%20CSS%20file%2c%20the%20defined%20attribute%20will%20affect%20different%20range%20of%20elements%2c%20one%20can%20specify%20for%20elements%20with%20specific%20markup%28tag%29%2c%20class%2c%20id%20or%20even%20in%20hierarchy...." class="popup">
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-05-19-Representation_Style/&amp;title=Representation_Style&amp;summary=Representation%20Style%20Plan%3a%0a%20Combine%20two%20all%20necessary%20presentation%20element%20in%20one%20file.%20Clearly%20entitle%20the%20two%20type%2c%20black%20%26amp%3b%20white%20styles%20with%20version.%20Create%20the%20new%20black%20version%20of%20Atom.%20%20Common%20Part%20Font%20Import%20Some%20online%20fonts%2c%20like%20google%20font%2c%20one%20can%20easily%20use%20following%20codes%20in%20html%20or%20css%20files.%0aIn%20html%3a%0a%26lt%3blink%20href%3d%26%2339%3b%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%26%2339%3b%20rel%3d%26%2339%3bstylesheet%26%2339%3b%20type%3d%26%2339%3btext%2fcss%26%2339%3b%26gt%3b%20%20In%20css%3a%0a%20%40import%20url%28https%3a%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%29%3b%20%20Note%3a%0aAffacted%20Elements%20in%20CSS%20%20In%20CSS%20file%2c%20the%20defined%20attribute%20will%20affect%20different%20range%20of%20elements%2c%20one%20can%20specify%20for%20elements%20with%20specific%20markup%28tag%29%2c%20class%2c%20id%20or%20even%20in%20hierarchy...." class="popup">
               <span class="icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
                       <path d="M25.424,15.887v8.447h-4.896v-7.882c0-1.979-0.709-3.331-2.48-3.331c-1.354,0-2.158,0.911-2.514,1.803 c-0.129,0.315-0.162,0.753-0.162,1.194v8.216h-4.899c0,0,0.066-13.349,0-14.731h4.899v2.088c-0.01,0.016-0.023,0.032-0.033,0.048 h0.033V11.69c0.65-1.002,1.812-2.435,4.414-2.435C23.008,9.254,25.424,11.361,25.424,15.887z M5.348,2.501 c-1.676,0-2.772,1.092-2.772,2.539c0,1.421,1.066,2.538,2.717,2.546h0.032c1.709,0,2.771-1.132,2.771-2.546 C8.054,3.593,7.019,2.501,5.343,2.501H5.348z M2.867,24.334h4.897V9.603H2.867V24.334z"/>

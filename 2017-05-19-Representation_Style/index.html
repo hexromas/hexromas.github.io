@@ -57,7 +57,7 @@
         },
         "datePublished": "2017-05-19",
         "description": "",
-        "wordCount":  1173 
+        "wordCount":  1473 
     }
     </script>
     
@@ -148,6 +148,10 @@ function loadcss(cssId) {
 <ul>
 <li><a href="#common-part">Common Part</a>
 <ul>
+<li><a href="#latex-formula">Latex Formula</a></li>
+<li><a href="#flowchart">Flowchart</a></li>
+<li><a href="#mermaid-diagram">Mermaid Diagram</a></li>
+<li><a href="#sequence-diagram">Sequence Diagram</a></li>
 <li><a href="#font-import">Font Import</a></li>
 <li><a href="#affacted-elements-in-css">Affacted Elements in CSS</a></li>
 <li><a href="#quote-style">Quote style</a></li>
@@ -188,6 +192,157 @@ function loadcss(cssId) {
 
 <h2 id="common-part">Common Part</h2>
 
+<h3 id="latex-formula">Latex Formula</h3>
+
+<p>I prefer to use mathjax to render the latex-style formula. The markdown text example $a_b = \frac{c}{d}$ is shown as following.</p>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">type</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;text/javascript&quot;</span> <span style="color: #06b6ef">async</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML&quot;</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">type</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;text/x-mathjax-config&quot;</span><span style="color: #e7e9db">&gt;</span>
+  <span style="color: #06b6ef">MathJax</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">Hub</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">Config</span><span style="color: #e7e9db">({</span><span style="color: #06b6ef">tex2jax</span><span style="color: #5bc4bf">:</span> <span style="color: #e7e9db">{</span><span style="color: #06b6ef">inlineMath</span><span style="color: #5bc4bf">:</span> <span style="color: #e7e9db">[[</span><span style="color: #48b685">&#39;$&#39;</span><span style="color: #e7e9db">,</span><span style="color: #48b685">&#39;$&#39;</span><span style="color: #e7e9db">],</span> <span style="color: #e7e9db">[</span><span style="color: #48b685">&#39;\\(&#39;</span><span style="color: #e7e9db">,</span><span style="color: #48b685">&#39;\\)&#39;</span><span style="color: #e7e9db">]]}});</span>
+<span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+Inline codes are `$a_b = \frac{c}{d}$` as $a_b = \frac{c}{d}$.
+The center formualrs can be represented as $$\color{blue}{x} = {\color{green}{-b} \pm \color{orange}{\sqrt{b^2-4ac}} \over \color{red}{2a}}$$.
+</pre></div>
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<p>Note:<br />
+I wrote a blog about how to include multi-media elements into markdown-based blog. I wrote all solutions that I knwo there, but only my favorite one will be presented here.</p>
+
+<h3 id="flowchart">Flowchart</h3>
+
+<p>Using as following:</p>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #815ba4">var</span> <span style="color: #06b6ef">chart</span> <span style="color: #5bc4bf">=</span> <span style="color: #06b6ef">flowchart</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">parse</span><span style="color: #e7e9db">(</span><span style="color: #48b685">&quot;...&quot;</span><span style="color: #e7e9db">);</span>
+<span style="color: #06b6ef">chart</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">drawSVG</span><span style="color: #e7e9db">(</span><span style="color: #48b685">&quot;chart&quot;</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">{</span><span style="color: #06b6ef">theme</span><span style="color: #5bc4bf">:</span> <span style="color: #e7e9db">...});</span>
+<span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://flowchart.js.org/flowchart-latest.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+</pre></div>
+
+<div  class="flowchart">
+st=>start: STAER|past
+e=>end: END|future
+
+op1=>operation: getDefaultProps|past
+op2=>operation: getInitialState|current
+op3=>operation: componentWillMount|current
+op4=>operation: render|current
+op5=>operation: componentDidMount|current
+op6=>operation: componentWillReceiveProps|current
+op7=>operation: componentWillMount|current
+op8=>operation: componentWillUpdate|current
+op9=>operation: render|current
+op0=>operation: componentDidUpdate|current
+
+sub1=>condition: Running|invalid
+cond1=>condition: shouldComponentUpdate|approved
+cond2=>condition: Good idea|rejected
+
+st->op1->op2->op3->op4->op5->sub1
+sub1(yes, left)->op6
+sub1(no, right)->op7
+sub1->cond1
+cond1(yes)->op8
+cond1(no, right)->sub1
+op8->op9->op0
+op0(right)->sub1
+op7->e
+</div>
+
+<h3 id="mermaid-diagram">Mermaid Diagram</h3>
+
+<p><a href="http://knsv.github.io/mermaid">mermaid js diagram</a> provides powerful diagram ability. One can use it as following.</p>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;https://unpkg.com/mermaid@7.0.3/dist/mermaid.min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">link</span> <span style="color: #06b6ef">href</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&#39;https://unpkg.com/mermaid@7.0.3/dist/mermaid.min.css&#39;</span> <span style="color: #06b6ef">rel</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&#39;stylesheet&#39;</span> <span style="color: #06b6ef">type</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&#39;text/css&#39;</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span><span style="color: #06b6ef">mermaid</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">initialize</span><span style="color: #e7e9db">({</span><span style="color: #06b6ef">startOnLoad</span><span style="color: #5bc4bf">:</span><span style="color: #815ba4">true</span><span style="color: #e7e9db">});&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+</pre></div>
+
+<div class="mermaid">
+graph TD
+
+st(STAER)
+e(END)
+
+op1(getDefaultProps)
+op2(getInitialState)
+op3(componentWillMount)
+op4(render)
+op5(componentDidMount)
+op6(componentWillReceiveProps)
+op7(componentWillMount)
+op8(componentWillUpdate)
+op9(render)
+op0(componentDidUpdate)
+
+sub1((Running))
+cond1{shouldComponentUpdate}
+
+st-->op1
+op1-->op2
+op2-->op3
+op3-->op4
+op4-->op5
+
+op5-->sub1
+sub1-->op6
+sub1-->cond1
+sub1-->op7
+
+op6-->cond1
+
+cond1-->op8
+cond1-->sub1
+
+op8-->op9
+op9-->op0
+op0-->sub1
+
+op7-->e
+
+classDef sta fill:#34495d,stroke-width:0px;
+classDef ex fill:#db5960,stroke-width:0px;
+classDef normal fill:#3ab881,stroke-width:0px;
+classDef deci fill:#fcb738,stroke-width:0px;
+classDef ed fill:#ffffff,stroke:#db5960,stroke-width:4px;
+
+class st sta;
+class op4,op9 ex;
+class sub1 ex;
+class op1,op2,op3,op5,op6,op7,op8,op0 normal;
+class cond1 deci;
+class e ed;
+
+</div>
+
+<h3 id="sequence-diagram">Sequence Diagram</h3>
+
+<p>Using as following:</p>
+<div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">div</span> <span style="color: #06b6ef">id</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;diagram1&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">div</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #815ba4">var</span> <span style="color: #06b6ef">diagram</span> <span style="color: #5bc4bf">=</span> <span style="color: #06b6ef">Diagram</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">parse</span><span style="color: #e7e9db">(</span><span style="color: #48b685">&quot;\r\n\</span>
+<span style="color: #48b685">Alice-&gt;Bob: Hello Bob, how are you? \r\n\</span>
+<span style="color: #48b685">Note right of Bob: Bob thinks \r\n\</span>
+<span style="color: #48b685">Bob--&gt;Alice: I am good thanks!&quot;</span><span style="color: #e7e9db">);</span>
+  <span style="color: #06b6ef">diagram</span><span style="color: #e7e9db">.</span><span style="color: #06b6ef">drawSVG</span><span style="color: #e7e9db">(</span><span style="color: #48b685">&quot;diagram1&quot;</span><span style="color: #e7e9db">,</span> <span style="color: #e7e9db">{</span><span style="color: #06b6ef">theme</span><span style="color: #5bc4bf">:</span> <span style="color: #48b685">&#39;hand&#39;</span><span style="color: #e7e9db">});</span>
+<span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://bramp.github.io/js-sequence-diagrams/js/underscore-min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
+<span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">script</span> <span style="color: #06b6ef">src</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;http://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js&quot;</span><span style="color: #e7e9db">&gt;&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span> 
+</pre></div>
+
+<div class="diagram">
+Alice->Bob: Hello Boddb, hxow are you?
+Note right of Bob: Bob thinks
+Note left of Alice: fuck
+Bob-->Alice: I am good thanks!
+</div>
+
 <h3 id="font-import">Font Import</h3>
 
 <p>Some online fonts, like <a href="https://fonts.google.com/">google font</a>, one can easily use following codes in html or css files.</p>
@@ -199,8 +354,6 @@ function loadcss(cssId) {
 <p>In css:</p>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span> <span style="color: #815ba4">@import</span> <span style="color: #5bc4bf">url(https://fonts</span><span style="color: #fec418">.googleapis.com</span><span style="color: #5bc4bf">/css?family=Ubuntu)</span><span style="color: #e7e9db">;</span>
 </pre></div>
-
-<p>Note:</p>
 
 <h3 id="affacted-elements-in-css">Affacted Elements in CSS</h3>
 
@@ -316,8 +469,6 @@ function loadcss(cssId) {
 Here are some english links, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS variables</a>.
 Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css-variables.html">阮一峰 CSS 变量教程</a>, <a href="http://www.cnblogs.com/coco1s/p/6068522.html">引人瞩目的 CSS 变量</a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables">MDN 使用 CSS 变量</a>.</p>
 
-<p>Note:</p>
-
 <h3 id="fontawesome-icon">fontawesome Icon</h3>
 
 <p>The <a href="http://fontawesome.io/icons/">fontawesome website</a> provides online icon source, which you can embed in your html like:</p>
@@ -326,8 +477,6 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 </pre></div>
 
 <p>First line refers to the fontawesome css file, the second one define the icon you need. Find more in <a href="http://fontawesome.io/icons/">fontawesome website</a> and <a href="http://fontawesome.io/get-started/">fontawesome usage</a>.</p>
-
-<p>Note:</p>
 
 <h3 id="reference-source-list-style">Reference &amp; Source List style</h3>
 
@@ -375,8 +524,6 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 
 <p><strong>Render Tool</strong>: It would be better for us to use js-based tool to render blog as ppt presentation. Among these tools, like <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="http://flowtime-js.marcolago.com/">flowtime.js</a>, <a href="https://github.com/impress/impress.js/wiki/Examples-and-demos">impress.js</a>, <a href="https://github.com/shower/shower">shower</a>, we select <a href="https://github.com/hakimel/reveal.js">reveal.js</a> since it can read markdown style blog easily.</p>
 
-<p>Note:</p>
-
 <h3 id="reveal-js">Reveal.js</h3>
 
 <ul>
@@ -386,8 +533,6 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 <li><strong>stylesheet</strong>: You need to include at least three stylesheet for present the markdown based page, i.e. <code>reveal.css</code>, <code>zenburn.css</code> and <code>yourown_style.css</code>. First one can split pages, second one syntax highlighting of code, third one is your customized style.
 <!-- - Other considerations, such as page words counts, font size, line space, scroll hint, and so on.   --></li>
 </ul>
-
-<p>Note:</p>
 <div class="highlight" style="background: #2f1e2e"><pre style="line-height: 125%"><span></span><span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">div</span> <span style="color: #06b6ef">class</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;reveal&quot;</span><span style="color: #e7e9db">&gt;</span>
   <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">div</span> <span style="color: #06b6ef">class</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;slides&quot;</span><span style="color: #e7e9db">&gt;</span>
     <span style="color: #e7e9db">&lt;</span><span style="color: #5bc4bf">section</span> <span style="color: #06b6ef">data-markdown</span><span style="color: #5bc4bf">=</span><span style="color: #48b685">&quot;https://example.com/your_blog.md&quot;</span>
@@ -423,8 +568,7 @@ Here are some chinese links, <a href="http://www.ruanyifeng.com/blog/2017/05/css
 <span style="color: #e7e9db">&lt;/</span><span style="color: #5bc4bf">script</span><span style="color: #e7e9db">&gt;</span>
 </pre></div>
 
-<p>Note:
-Each slide can contain one note at the end of the slide. That you cannot see that.</p>
+<p>Each slide can contain one note at the end of the slide. That you cannot see that.</p>
 
 <h2 id="report-style">Report style</h2>
 
@@ -474,13 +618,30 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
 </div>
 
 
-<link rel="stylesheet" href="/css/bo_blog.css">
-<link rel="stylesheet" href="/css/bo_common.css">
+
+
 <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/hopscotch.css">
 <script src="http://cdn.jsdelivr.net/highlight.js/9.8.0/highlight.min.js"></script>
 <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
 
 
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/flowchart-latest.js"></script>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://bramp.github.io/js-sequence-diagrams/js/underscore-min.js"></script>
+<script src="http://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
+
+<link href='/css/mermaid.min.css' rel='stylesheet' type='text/css'>
+<script src="/js/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
+<script src="/js/pharseChart.js"></script>
+<link rel="stylesheet" href="/css/bo_blog.css">
+<link rel="stylesheet" href="/css/bo_common.css">
 
     <div id="social-bar">
 	<ul class="rrssb-buttons clearfix">
@@ -515,7 +676,7 @@ Each slide can contain one note at the end of the slide. That you cannot see tha
           </a>
       </li>
 			<li class="linkedin">
-          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-05-19-Representation_Style/&amp;title=Representation_Style&amp;summary=Representation%20Style%20Plan%3a%0a%20Combine%20two%20all%20necessary%20presentation%20element%20in%20one%20file.%20Clearly%20entitle%20the%20two%20type%2c%20black%20%26amp%3b%20white%20styles%20with%20version.%20Create%20the%20new%20black%20version%20of%20Atom.%20%20Common%20Part%20Font%20Import%20Some%20online%20fonts%2c%20like%20google%20font%2c%20one%20can%20easily%20use%20following%20codes%20in%20html%20or%20css%20files.%0aIn%20html%3a%0a%26lt%3blink%20href%3d%26%2339%3b%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%26%2339%3b%20rel%3d%26%2339%3bstylesheet%26%2339%3b%20type%3d%26%2339%3btext%2fcss%26%2339%3b%26gt%3b%20%20In%20css%3a%0a%20%40import%20url%28https%3a%2f%2ffonts.googleapis.com%2fcss%3ffamily%3dUbuntu%29%3b%20%20Note%3a%0aAffacted%20Elements%20in%20CSS%20%20In%20CSS%20file%2c%20the%20defined%20attribute%20will%20affect%20different%20range%20of%20elements%2c%20one%20can%20specify%20for%20elements%20with%20specific%20markup%28tag%29%2c%20class%2c%20id%20or%20even%20in%20hierarchy...." class="popup">
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hexromas.github.io/2017-05-19-Representation_Style/&amp;title=Representation_Style&amp;summary=Representation%20Style%20Plan%3a%0a%20Combine%20two%20all%20necessary%20presentation%20element%20in%20one%20file.%20Clearly%20entitle%20the%20two%20type%2c%20black%20%26amp%3b%20white%20styles%20with%20version.%20Create%20the%20new%20black%20version%20of%20Atom.%20%20Common%20Part%20Latex%20Formula%20I%20prefer%20to%20use%20mathjax%20to%20render%20the%20latex-style%20formula.%20The%20markdown%20text%20example%20%24a_b%20%3d%20%5cfrac%7bc%7d%7bd%7d%24%20is%20shown%20as%20following.%0a%26lt%3bscript%20type%3d%26quot%3btext%2fjavascript%26quot%3b%20async%20src%3d%26quot%3bhttps%3a%2f%2fcdn.mathjax.org%2fmathjax%2flatest%2fMathJax.js%3fconfig%3dTeX-AMS_CHTML%26quot%3b%26gt%3b%20%26lt%3b%2fscript%26gt%3b%20%26lt%3bscript%20type%3d%26quot%3btext%2fx-mathjax-config%26quot%3b%26gt%3b%20MathJax.Hub.Config%28%7btex2jax%3a%20%7binlineMath%3a%20%5b%5b%26%2339%3b%24%26%2339%3b%2c%26%2339%3b%24%26%2339%3b%5d%2c%20%5b%26%2339%3b%5c%5c%28%26%2339%3b%2c%26%2339%3b%5c%5c%29%26%2339%3b%5d%5d%7d%7d%29%3b%20%26lt%3b%2fscript%26gt%3b%20Inline%20codes%20are%20%60%24a_b%20%3d%20%5cfrac%7bc%7d%7bd%7d%24%60%20as%20%24a_b%20%3d%20%5cfrac%7bc%7d%7bd%7d%24...." class="popup">
               <span class="icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
                       <path d="M25.424,15.887v8.447h-4.896v-7.882c0-1.979-0.709-3.331-2.48-3.331c-1.354,0-2.158,0.911-2.514,1.803 c-0.129,0.315-0.162,0.753-0.162,1.194v8.216h-4.899c0,0,0.066-13.349,0-14.731h4.899v2.088c-0.01,0.016-0.023,0.032-0.033,0.048 h0.033V11.69c0.65-1.002,1.812-2.435,4.414-2.435C23.008,9.254,25.424,11.361,25.424,15.887z M5.348,2.501 c-1.676,0-2.772,1.092-2.772,2.539c0,1.421,1.066,2.538,2.717,2.546h0.032c1.709,0,2.771-1.132,2.771-2.546 C8.054,3.593,7.019,2.501,5.343,2.501H5.348z M2.867,24.334h4.897V9.603H2.867V24.334z"/>
